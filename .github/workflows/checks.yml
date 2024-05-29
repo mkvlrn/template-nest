@@ -4,6 +4,9 @@ on:
   push:
     branches:
       - main
+  pull_request:
+    branches:
+      - main
 
 jobs:
   run-checks:
@@ -16,5 +19,5 @@ jobs:
     - run: yarn install
     - run: yarn tsc --noEmit
     - run: yarn eslint src
-    - run: yarn prettier src
+    - run: yarn prettier src --check
     - run: yarn test
