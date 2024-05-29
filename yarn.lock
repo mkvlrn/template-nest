@@ -596,10 +596,10 @@
     eslint-plugin-vitest "^0.5.4"
     typescript-eslint "^7.11.0"
 
-"@mkvlrn/prettier-config@^24.5.2":
-  version "24.5.2"
-  resolved "https://registry.yarnpkg.com/@mkvlrn/prettier-config/-/prettier-config-24.5.2.tgz#4dcec3f20acc01a15ecc405e446cfccf6f70a720"
-  integrity sha512-CdIn+475XCv9eQj+cAhUhXkMbksRLdOhLBHc4jvR0OW2kd1j9KtBNuyhgii+g8qvKeWu1xfL7jKmOHbAvTZDsw==
+"@mkvlrn/prettier-config@^24.5.3":
+  version "24.5.3"
+  resolved "https://registry.yarnpkg.com/@mkvlrn/prettier-config/-/prettier-config-24.5.3.tgz#db55189b1615c9a8bb801191d9fa0988dfefc633"
+  integrity sha512-l9UfHUSqHIc6+e0KHT+hWZ8Bo4ZrHnCyCQ57r6j65NhpFsSZjDpqX0/dteznyIXzQvrpVYnL9ilasX0kuau86g==
   dependencies:
     "@trivago/prettier-plugin-sort-imports" "^4.3.0"
     prettier "^3.2.5"
