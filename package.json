@@ -2,6 +2,7 @@
   "name": "template-nest",
   "description": "A template for NestJS projects",
   "version": "1.0.0",
+  "license": "MIT",
   "private": true,
   "type": "module",
   "author": "Mike Valeriano <mkvlrn@gmail.com>",
