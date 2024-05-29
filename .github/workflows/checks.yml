@@ -20,4 +20,8 @@ jobs:
     - run: yarn tsc --noEmit
     - run: yarn eslint src
     - run: yarn prettier src --check
-    - run: yarn test
+    - run: yarn test:cov
+    - uses: SonarSource/sonarcloud-github-action@master
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
