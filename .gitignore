@@ -1,0 +1,52 @@
+# output
+.next
+build
+dist
+out
+
+# dependencies
+node_modules
+.pnp
+.pnp.js
+.yarn/install-state.gz
+
+# tests
+.nyc_output
+coverage
+
+# environment variables
+.env
+.env.development.local
+.env.test.local
+.env.production.local
+.env.local
+
+# logs
+logs
+*.log
+npm-debug.log*
+pnpm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+
+# temp directory
+.temp
+.tmp
+temp
+tmp
+
+# ides & editors
+.idea
+.project
+.classpath
+.c9
+*.launch
+.settings
+*.sublime-workspace
+
+# typescript
+*.tsbuildinfo
+
+# vercel
+.vercel

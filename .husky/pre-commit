@@ -1,0 +1,3 @@
+npx tsc --noemit
+npx lint-staged
+npm run test
