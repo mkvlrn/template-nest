@@ -596,13 +596,13 @@
     eslint-plugin-vitest "^0.5.4"
     typescript-eslint "^7.11.0"
 
-"@mkvlrn/prettier-config@^24.5.3":
-  version "24.5.3"
-  resolved "https://registry.yarnpkg.com/@mkvlrn/prettier-config/-/prettier-config-24.5.3.tgz#db55189b1615c9a8bb801191d9fa0988dfefc633"
-  integrity sha512-l9UfHUSqHIc6+e0KHT+hWZ8Bo4ZrHnCyCQ57r6j65NhpFsSZjDpqX0/dteznyIXzQvrpVYnL9ilasX0kuau86g==
+"@mkvlrn/prettier-config@^24.6.1":
+  version "24.6.1"
+  resolved "https://registry.yarnpkg.com/@mkvlrn/prettier-config/-/prettier-config-24.6.1.tgz#e2f04f0575af084d26a225173150e95c800a771f"
+  integrity sha512-aRuTrhYTVRnlkt4jY88lQEQnCajNrLWqrffMZpCvyRD3TrU0UwhtRzUoYl8p9U0Buk+2V2T5YhNba6y2lEl+rg==
   dependencies:
     "@trivago/prettier-plugin-sort-imports" "^4.3.0"
-    prettier "^3.2.5"
+    prettier "^3.3.0"
 
 "@mole-inc/bin-wrapper@^8.0.1":
   version "8.0.1"
@@ -5023,10 +5023,10 @@ prelude-ls@^1.2.1:
   resolved "https://registry.yarnpkg.com/prelude-ls/-/prelude-ls-1.2.1.tgz#debc6489d7a6e6b0e7611888cec880337d316396"
   integrity sha512-vkcDPrRZo1QZLbn5RLGPpg/WmIQ65qoWWhcGKf/b5eplkkarX0m9z8ppCat4mlOqUsWpyNuYgO3VRyrYHSzX5g==
 
-prettier@^3.2.5:
-  version "3.2.5"
-  resolved "https://registry.yarnpkg.com/prettier/-/prettier-3.2.5.tgz#e52bc3090586e824964a8813b09aba6233b28368"
-  integrity sha512-3/GWa9aOC0YeD7LUfvOG2NiDyhOWRvt1k+rcKhOuYnMY24iiCphgneUfJDyFXd6rZCAnuLBv6UeAULtrhT/F4A==
+prettier@^3.3.0:
+  version "3.3.0"
+  resolved "https://registry.yarnpkg.com/prettier/-/prettier-3.3.0.tgz#d173ea0524a691d4c0b1181752f2b46724328cdf"
+  integrity sha512-J9odKxERhCQ10OC2yb93583f6UnYutOeiV5i0zEDS7UGTdUt0u+y8erxl3lBKvwo/JHyyoEdXjwp4dke9oyZ/g==
 
 pretty-format@^29.7.0:
   version "29.7.0"
