@@ -5,6 +5,7 @@ dist
 out
 .swc
 *.tsbuildinfo
+.turbo
 
 # dependencies
 node_modules
