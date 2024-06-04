@@ -3,6 +3,8 @@
 build
 dist
 out
+.swc
+*.tsbuildinfo
 
 # dependencies
 node_modules
@@ -44,9 +46,6 @@ tmp
 *.launch
 .settings
 *.sublime-workspace
-
-# typescript
-*.tsbuildinfo
 
 # vercel
 .vercel

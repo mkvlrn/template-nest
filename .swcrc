@@ -1,13 +1,25 @@
 {
   "$schema": "https://json.schemastore.org/swcrc",
   "module": {
-    "type": "es6",
+    "type": "nodenext",
+    "resolveFully": true,
     "strict": true,
     "strictMode": true
   },
   "jsc": {
     "experimental": {
-      "keepImportAssertions": true
+      "keepImportAssertions": true,
+      "plugins": [
+        [
+          "@swc/plugin-transform-imports",
+          {
+            "^(.*?)\\.ts(x)?$": {
+              "skipDefaultConversion": true,
+              "transform": "{{matches.[1]}}.js"
+            }
+          }
+        ]
+      ]
     },
     "target": "esnext",
     "parser": {
