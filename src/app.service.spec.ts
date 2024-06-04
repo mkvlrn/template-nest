@@ -13,8 +13,8 @@ describe('AppService', () => {
     appService = module.get<AppService>(AppService);
   });
 
-  test('should return "Hello World!"', async () => {
-    const result = await appService.getHello();
+  test('should return "Hello World!"', () => {
+    const result = appService.getHello();
 
     expect(result).toBe('Hello World!');
   });
