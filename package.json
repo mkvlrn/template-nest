@@ -20,6 +20,7 @@
     "prepare": "husky",
     "dev": "node --import @swc-node/register/esm-register --watch src/index.ts",
     "lint": "eslint src --fix",
+    "lint-staged": "lint-staged",
     "format": "prettier --write src",
     "type-check": "tsc --noEmit",
     "build": "rimraf dist && nest build && rimraf -g dist/**/*.spec.js",

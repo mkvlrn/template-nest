@@ -20,8 +20,4 @@ jobs:
     - run: npx tsc --noEmit
     - run: npx eslint src
     - run: npx prettier src --check
-    - run: npm run test:cov
-    - uses: SonarSource/sonarcloud-github-action@master
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+    - run: npx vitest --run

@@ -1,0 +1,24 @@
+name: sonar
+
+on:
+  workflow_run:
+    branches:
+      - main
+    workflows: ['checks']
+    types:
+      - completed
+
+jobs:
+  run-checks:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+    - uses: actions/setup-node@v4
+      with:
+        node-version: 20
+    - run: npm install
+    - run: npx vitest run --coverage
+    - uses: SonarSource/sonarcloud-github-action@master
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
