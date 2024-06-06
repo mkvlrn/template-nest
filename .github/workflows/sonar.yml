@@ -13,6 +13,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v4
+      with:
+        fetch-depth: 0
     - uses: actions/setup-node@v4
       with:
         node-version: 20
@@ -22,3 +24,14 @@ jobs:
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+      with:
+        args: >
+          -Dsonar.organization=${{ secrets.SONAR_ORG }}
+          -Dsonar.projectKey=${{ secrets.SONAR_PROJECT }}
+          -Dsonar.language=ts
+          -Dsonar.javascript.lcov.reportPaths=./coverage/lcov.info
+          -Dsonar.sources=./src
+          -Dsonar.exclusions=*.spec.ts,*.spec.tsx
+          -Dsotar.tests=./src
+          -Dsonar.test.inclusions=**/*.spec.ts,**/*.spec.tsx
+          -Dsonar.coverage.exclusions=**/*.spec.ts,**/*.spec.tsx,**/index.ts,**/index.tsx
