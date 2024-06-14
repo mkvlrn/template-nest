@@ -4,7 +4,7 @@ import supertest from 'supertest';
 import { afterEach, beforeEach, describe, expect, test } from 'vitest';
 import { AppModule } from '~/app.module.ts';
 
-describe('AppController', () => {
+describe(`AppController`, () => {
   let app: INestApplication;
 
   beforeEach(async () => {
@@ -20,10 +20,10 @@ describe('AppController', () => {
     await app.close();
   });
 
-  test('GET /', async () => {
-    const response = await supertest(app.getHttpServer()).get('/');
+  test(`GET /`, async () => {
+    const response = await supertest(app.getHttpServer()).get(`/`);
 
     expect(response.status).toBe(200);
-    expect(response.text).toBe('Hello World!');
+    expect(response.text).toBe(`Hello World!`);
   });
 });

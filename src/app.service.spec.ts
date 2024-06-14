@@ -2,7 +2,7 @@ import { Test } from '@nestjs/testing';
 import { beforeEach, describe, expect, test } from 'vitest';
 import { AppService } from '~/app.service.ts';
 
-describe('AppService', () => {
+describe(`AppService`, () => {
   let appService: AppService;
 
   beforeEach(async () => {
@@ -13,9 +13,9 @@ describe('AppService', () => {
     appService = module.get<AppService>(AppService);
   });
 
-  test('should return "Hello World!"', () => {
+  test(`should return "Hello World!"`, () => {
     const result = appService.getHello();
 
-    expect(result).toBe('Hello World!');
+    expect(result).toBe(`Hello World!`);
   });
 });
