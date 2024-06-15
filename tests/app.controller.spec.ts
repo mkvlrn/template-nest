@@ -3,6 +3,7 @@ import { Test } from '@nestjs/testing';
 import supertest from 'supertest';
 import { afterEach, beforeEach, describe, expect, test } from 'vitest';
 import { AppModule } from '~/app.module.ts';
+import { MockAppService } from '#/mocks/app-service.mock.ts';
 
 describe(`AppController`, () => {
   let app: INestApplication;
@@ -10,7 +11,10 @@ describe(`AppController`, () => {
   beforeEach(async () => {
     const module = await Test.createTestingModule({
       imports: [AppModule],
-    }).compile();
+    })
+      .overrideProvider(`IAppService`)
+      .useClass(MockAppService)
+      .compile();
 
     app = module.createNestApplication();
     await app.init();
@@ -24,6 +28,6 @@ describe(`AppController`, () => {
     const response = await supertest(app.getHttpServer()).get(`/`);
 
     expect(response.status).toBe(200);
-    expect(response.text).toBe(`Hello World!`);
+    expect(response.text).toBe(`hello from mock app service`);
   });
 });

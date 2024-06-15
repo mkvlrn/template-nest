@@ -23,13 +23,13 @@
     "lint-staged": "lint-staged",
     "format": "prettier --write src",
     "type-check": "tsc --noEmit",
-    "build": "rimraf dist && nest build && rimraf -g dist/**/*.spec.js",
+    "build": "rimraf dist && nest build",
     "start": "node dist"
   },
   "devDependencies": {
     "@commitlint/cli": "^19.3.0",
     "@commitlint/config-conventional": "^19.2.2",
-    "@mkvlrn/eslint-config": "^24.6.8",
+    "@mkvlrn/eslint-config": "^24.6.9",
     "@mkvlrn/prettier-config": "^24.6.4",
     "@nestjs/cli": "^10.3.2",
     "@nestjs/schematics": "^10.1.1",
