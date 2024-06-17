@@ -37,7 +37,7 @@
     "@swc-node/register": "^1.9.2",
     "@swc/cli": "^0.3.12",
     "@swc/core": "1.5.29",
-    "@swc/plugin-transform-imports": "^2.0.5",
+    "@swc/plugin-transform-imports": "^2.0.6",
     "@swc/types": "^0.1.8",
     "@types/express": "^4.17.21",
     "@types/node": "^20.14.2",
