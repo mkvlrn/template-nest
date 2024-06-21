@@ -7,6 +7,6 @@ export interface IAppService {
 @Injectable()
 export class AppService implements IAppService {
   getHello(): string {
-    return `Hello World!`;
+    return 'Hello World!';
   }
 }
