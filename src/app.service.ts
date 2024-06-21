@@ -1,4 +1,4 @@
-import { Injectable } from '@nestjs/common';
+import { Injectable } from "@nestjs/common";
 
 export interface IAppService {
   getHello(): string;
@@ -7,6 +7,6 @@ export interface IAppService {
 @Injectable()
 export class AppService implements IAppService {
   getHello(): string {
-    return 'Hello World!';
+    return "Hello World!";
   }
 }

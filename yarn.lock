@@ -581,10 +581,10 @@
   resolved "https://registry.yarnpkg.com/@lukeed/csprng/-/csprng-1.1.0.tgz#1e3e4bd05c1cc7a0b2ddbd8a03f39f6e4b5e6cfe"
   integrity sha512-Z7C/xXCiGWsg0KuKsHTKJxbWhpI3Vs5GwLfOean7MGyVFGqdRgBbAjOCh6u4bbjPc/8MJ2pZmK/0DLdCbivLDA==
 
-"@mkvlrn/eslint-config@^24.6.18":
-  version "24.6.18"
-  resolved "https://registry.yarnpkg.com/@mkvlrn/eslint-config/-/eslint-config-24.6.18.tgz#c5ffaa0a0d8d69b2669f04f680513797dae63850"
-  integrity sha512-CGkhkHvqc9axpXevLt0/cNdtshFMmaJ16Hl3ImywPUCA5gIJbKYPtjIBYOumcBF+imefm6bXVtaG4eJuipxwEg==
+"@mkvlrn/eslint-config@^24.6.20":
+  version "24.6.20"
+  resolved "https://registry.yarnpkg.com/@mkvlrn/eslint-config/-/eslint-config-24.6.20.tgz#f88f0ea39ba98bf30d04f8a2bac4d7c4f58c0f85"
+  integrity sha512-gbE9AaXMMR/96VljN3V5x2d1lN6F1mP9MyLdrTbYnUKJ6ofBwnnImeEi9R7Lt1BjFDzF/94YUVMt51qtgcbSkg==
   dependencies:
     "@eslint/js" "^9.5.0"
     "@next/eslint-plugin-next" "^14.2.4"
@@ -598,10 +598,10 @@
     eslint-plugin-vitest "^0.5.4"
     typescript-eslint "^7.13.1"
 
-"@mkvlrn/prettier-config@^24.6.6":
-  version "24.6.6"
-  resolved "https://registry.yarnpkg.com/@mkvlrn/prettier-config/-/prettier-config-24.6.6.tgz#dbf602b5d9d2fa201a179b334ed96516364fbdc3"
-  integrity sha512-asfPxD3iSZ9uYc8HEzcidRECosy+rkreU/NIXAlZbskNREJSIzymru6sUY/yktn0GatOnwK0TDEaxrx7v/1cDg==
+"@mkvlrn/prettier-config@^24.6.7":
+  version "24.6.7"
+  resolved "https://registry.yarnpkg.com/@mkvlrn/prettier-config/-/prettier-config-24.6.7.tgz#2d42f8fee680894b0f24f90ac08321b64b2e7e17"
+  integrity sha512-8F+0tbnSMgNv8e3OfzxFIr+Ll02PA22JjB/eWEDmslaznSpNCVZyB85F+OkIYqKXKVDkt9nMImnmofkaEUZCmA==
   dependencies:
     "@trivago/prettier-plugin-sort-imports" "^4.3.0"
     prettier "^3.3.2"

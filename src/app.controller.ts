@@ -1,9 +1,9 @@
-import { Controller, Get, Inject } from '@nestjs/common';
-import { type IAppService } from '~/app.service.ts';
+import { Controller, Get, Inject } from "@nestjs/common";
+import { type IAppService } from "~/app.service.ts";
 
 @Controller()
 export class AppController {
-  constructor(@Inject('IAppService') private appService: IAppService) {}
+  constructor(@Inject("IAppService") private appService: IAppService) {}
 
   @Get()
   getHello(): string {

@@ -19,9 +19,9 @@
     "test:cov": "rimraf coverage && vitest run --coverage",
     "prepare": "husky",
     "dev": "node --import @swc-node/register/esm-register --watch src/index.ts",
-    "lint": "eslint src --fix",
+    "lint": "eslint --fix src tests",
     "lint-staged": "lint-staged",
-    "format": "prettier --write src",
+    "format": "prettier --write src tests",
     "type-check": "tsc --noEmit",
     "build": "rimraf dist && nest build",
     "start": "node dist"
@@ -29,8 +29,8 @@
   "devDependencies": {
     "@commitlint/cli": "^19.3.0",
     "@commitlint/config-conventional": "^19.2.2",
-    "@mkvlrn/eslint-config": "^24.6.18",
-    "@mkvlrn/prettier-config": "^24.6.6",
+    "@mkvlrn/eslint-config": "^24.6.20",
+    "@mkvlrn/prettier-config": "^24.6.7",
     "@nestjs/cli": "^10.3.2",
     "@nestjs/schematics": "^10.1.1",
     "@nestjs/testing": "^10.3.9",
