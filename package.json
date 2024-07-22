@@ -29,8 +29,8 @@
   "devDependencies": {
     "@commitlint/cli": "^19.3.0",
     "@commitlint/config-conventional": "^19.2.2",
-    "@mkvlrn/eslint-config": "^24.7.4",
-    "@mkvlrn/prettier-config": "^24.7.0",
+    "@mkvlrn/eslint-config": "^24.7.6",
+    "@mkvlrn/prettier-config": "^24.7.2",
     "@nestjs/cli": "^10.4.2",
     "@nestjs/schematics": "^10.1.2",
     "@nestjs/testing": "^10.3.10",
@@ -38,11 +38,11 @@
     "@swc/cli": "^0.4.0",
     "@swc/core": "1.7.0",
     "@swc/plugin-transform-imports": "^2.0.10",
-    "@swc/types": "^0.1.9",
+    "@swc/types": "^0.1.12",
     "@types/express": "^4.17.21",
     "@types/node": "^20.14.11",
     "@types/supertest": "^6.0.2",
-    "@vitest/coverage-v8": "^2.0.3",
+    "@vitest/coverage-v8": "^2.0.4",
     "eslint": "^9.7.0",
     "husky": "^9.1.1",
     "lint-staged": "^15.2.7",
@@ -52,7 +52,7 @@
     "typescript": "^5.5.3",
     "unplugin-swc": "^1.5.1",
     "vite-tsconfig-paths": "^4.3.2",
-    "vitest": "^2.0.3"
+    "vitest": "^2.0.4"
   },
   "dependencies": {
     "@nestjs/common": "^10.3.10",
