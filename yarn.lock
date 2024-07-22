@@ -613,10 +613,10 @@
     eslint-plugin-vitest "^0.5.4"
     typescript-eslint "^7.16.1"
 
-"@mkvlrn/prettier-config@^24.7.0":
-  version "24.7.0"
-  resolved "https://registry.yarnpkg.com/@mkvlrn/prettier-config/-/prettier-config-24.7.0.tgz#73b1227d9499922973acd1949395c0a28117837e"
-  integrity sha512-y/g8v5YipmetxqcNK/Ne75W/dDX3mcAfK9YbVenDXHAMXex7UiDWg0O5H1tZMcOSXdP23aV62UOlWMgKjgiqtg==
+"@mkvlrn/prettier-config@^24.7.1":
+  version "24.7.1"
+  resolved "https://registry.yarnpkg.com/@mkvlrn/prettier-config/-/prettier-config-24.7.1.tgz#6f97d4999be4e887177ae3dda5e31fbae7eb5959"
+  integrity sha512-ou58ud1GttUaje46iTHbGtqie3qScwRZ/RFPFJjjFzNmCX4iaXFNoVsokjrleOUvShzLvcvCOl/o4yN9rkKrjg==
   dependencies:
     "@trivago/prettier-plugin-sort-imports" "^4.3.0"
     prettier "^3.3.3"
