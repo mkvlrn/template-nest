@@ -43,7 +43,7 @@
     "@types/node": "^20.14.12",
     "@types/supertest": "^6.0.2",
     "@vitest/coverage-v8": "^2.0.4",
-    "eslint": "^9.7.0",
+    "eslint": "^9.8.0",
     "husky": "^9.1.1",
     "lint-staged": "^15.2.7",
     "prettier": "^3.3.3",
