@@ -1,1 +1,8 @@
-export { base as default } from "@mkvlrn/eslint-config";
+import { base } from "@mkvlrn/eslint-config";
+
+export default [
+  ...base,
+  {
+    ignores: ["dist"],
+  },
+];
