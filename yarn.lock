@@ -612,13 +612,13 @@
     eslint-plugin-vitest "^0.5.4"
     typescript-eslint "^8.0.0"
 
-"@mkvlrn/prettier-config@^24.8.0":
-  version "24.8.0"
-  resolved "https://registry.yarnpkg.com/@mkvlrn/prettier-config/-/prettier-config-24.8.0.tgz#86e1fdc6f996c66bb45e934a34e80db9c4a9bda0"
-  integrity sha512-PBdZkNfapgV/lkPWYWWxEVh189nLCpu+at1W8jACfCwQ6wp3Ha2fYPBBPEb61Op/O0YKQ7sgl2fGR5LSAQ82JQ==
+"@mkvlrn/prettier-config@^24.8.1":
+  version "24.8.1"
+  resolved "https://registry.yarnpkg.com/@mkvlrn/prettier-config/-/prettier-config-24.8.1.tgz#cfe198008bd538a290b666f73e3796112a5b436a"
+  integrity sha512-HkELD7bQQI0w8tuX5Ia3ymPsdJYEVCPbB6KYUFOjS3cawkrB73cqEWcllUBZNvX7jPWFmPlThc1T4PH8i8l+Uw==
   dependencies:
     "@trivago/prettier-plugin-sort-imports" "^4.3.0"
-    prettier-plugin-tailwindcss "^0.6.5"
+    prettier-plugin-tailwindcss "^0.6.6"
 
 "@mole-inc/bin-wrapper@^8.0.1":
   version "8.0.1"
@@ -5164,10 +5164,10 @@ prelude-ls@^1.2.1:
   resolved "https://registry.yarnpkg.com/prelude-ls/-/prelude-ls-1.2.1.tgz#debc6489d7a6e6b0e7611888cec880337d316396"
   integrity sha512-vkcDPrRZo1QZLbn5RLGPpg/WmIQ65qoWWhcGKf/b5eplkkarX0m9z8ppCat4mlOqUsWpyNuYgO3VRyrYHSzX5g==
 
-prettier-plugin-tailwindcss@^0.6.5:
-  version "0.6.5"
-  resolved "https://registry.yarnpkg.com/prettier-plugin-tailwindcss/-/prettier-plugin-tailwindcss-0.6.5.tgz#e05202784a3f41889711ae38c75c5b8cad72f368"
-  integrity sha512-axfeOArc/RiGHjOIy9HytehlC0ZLeMaqY09mm8YCkMzznKiDkwFzOpBvtuhuv3xG5qB73+Mj7OCe2j/L1ryfuQ==
+prettier-plugin-tailwindcss@^0.6.6:
+  version "0.6.6"
+  resolved "https://registry.yarnpkg.com/prettier-plugin-tailwindcss/-/prettier-plugin-tailwindcss-0.6.6.tgz#93e524d3c30f3fb45dc9e99de985b2a584ff063f"
+  integrity sha512-OPva5S7WAsPLEsOuOWXATi13QrCKACCiIonFgIR6V4lYv4QLp++UXVhZSzRbZxXGimkQtQT86CC6fQqTOybGng==
 
 prettier@^3.3.3:
   version "3.3.3"
