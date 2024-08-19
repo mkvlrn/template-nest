@@ -1037,10 +1037,10 @@
   resolved "https://registry.yarnpkg.com/@swc/counter/-/counter-0.1.3.tgz#cc7463bd02949611c6329596fccd2b0ec782b0e9"
   integrity sha512-e2BR4lsJkkRlKZ/qCHPw9ZaSxc0MVUd7gtbtaB7aMvHeJVYe8sOB8DBZkP2DtISHGSku9sCK6T6cnY0CtXrOCQ==
 
-"@swc/plugin-transform-imports@^2.0.11":
-  version "2.0.11"
-  resolved "https://registry.yarnpkg.com/@swc/plugin-transform-imports/-/plugin-transform-imports-2.0.11.tgz#9c44522c70be9d262345f1eeb77468773d996541"
-  integrity sha512-TQSOI4chAzRaV6gbYxkeUjyF/vBLB0+MiIWz2DmglBlFEnL2HLw+80+bPTxrOCG11G/mrQDq1r82EU11rYJnow==
+"@swc/plugin-transform-imports@^2.0.12":
+  version "2.0.12"
+  resolved "https://registry.yarnpkg.com/@swc/plugin-transform-imports/-/plugin-transform-imports-2.0.12.tgz#20d60b9c35ad22479517210bf57363d343acfb3b"
+  integrity sha512-7nq4ESD/8JmfYfilO0pRuXPZkrQ3hmnA+KFm0P8vCHN8Een8V7RTiOt5DSBaYDep+CP774ltm4IKwCdE4YOB6g==
   dependencies:
     "@swc/counter" "^0.1.3"
 
