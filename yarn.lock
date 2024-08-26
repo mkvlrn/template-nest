@@ -596,10 +596,10 @@
   resolved "https://registry.yarnpkg.com/@lukeed/csprng/-/csprng-1.1.0.tgz#1e3e4bd05c1cc7a0b2ddbd8a03f39f6e4b5e6cfe"
   integrity sha512-Z7C/xXCiGWsg0KuKsHTKJxbWhpI3Vs5GwLfOean7MGyVFGqdRgBbAjOCh6u4bbjPc/8MJ2pZmK/0DLdCbivLDA==
 
-"@mkvlrn/eslint-config@^24.8.8":
-  version "24.8.8"
-  resolved "https://registry.yarnpkg.com/@mkvlrn/eslint-config/-/eslint-config-24.8.8.tgz#f365c1ba97e0ebe5ce113bf02a14385cca153553"
-  integrity sha512-A4IbWPMtD4y1cWqSRaT6TtDJWG/tYtgxWGKKr/8QrFI17QTwVSNWdup+2F46LQXHItqf7Nn6/J0UpPGUHPzA2g==
+"@mkvlrn/eslint-config@^24.8.9":
+  version "24.8.9"
+  resolved "https://registry.yarnpkg.com/@mkvlrn/eslint-config/-/eslint-config-24.8.9.tgz#f87647e597a9c8045f73d6cd4b867fdcbed5c40f"
+  integrity sha512-HaEeuGXIqkNgvdIdZeZioBNfZ+Bncyfg5tzCxDHsUmZU97qTgtLwYWhu4SSrIUa6J5dYEDr/AUBT7snw2XvUgw==
   dependencies:
     "@eslint/js" "^9.9.1"
     "@next/eslint-plugin-next" "^14.2.6"

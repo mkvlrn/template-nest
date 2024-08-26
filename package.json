@@ -29,7 +29,7 @@
   "devDependencies": {
     "@commitlint/cli": "^19.4.0",
     "@commitlint/config-conventional": "^19.2.2",
-    "@mkvlrn/eslint-config": "^24.8.8",
+    "@mkvlrn/eslint-config": "^24.8.9",
     "@mkvlrn/prettier-config": "^24.8.1",
     "@nestjs/cli": "^10.4.4",
     "@nestjs/schematics": "^10.1.4",
