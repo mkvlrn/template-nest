@@ -6,6 +6,7 @@ out
 .swc
 *.tsbuildinfo
 .turbo
+.vercel
 
 # dependencies
 node_modules
@@ -47,9 +48,6 @@ tmp
 *.launch
 .settings
 *.sublime-workspace
-
-# vercel
-.vercel
 
 # terraform
 .terraform
