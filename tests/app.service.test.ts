@@ -1,20 +1,20 @@
 import { Test } from "@nestjs/testing";
 import { beforeEach, describe, expect, test } from "vitest";
-import { AppService, type IAppService } from "~/app.service.ts";
+import { AppService } from "~/app.service.js";
 
 describe("AppService", () => {
-  let appService: IAppService;
+  let appService: AppService;
 
   beforeEach(async () => {
     const module = await Test.createTestingModule({
-      providers: [{ provide: "IAppService", useClass: AppService }],
+      providers: [AppService],
     }).compile();
 
-    appService = module.get<IAppService>("IAppService");
+    appService = module.get<AppService>(AppService);
   });
 
   test('should return "Hello World!"', () => {
-    const result = appService.getHello();
+    const result = appService.sayHello();
 
     expect(result).toBe("Hello World!");
   });

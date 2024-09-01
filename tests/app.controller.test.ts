@@ -2,8 +2,9 @@ import { INestApplication } from "@nestjs/common";
 import { Test } from "@nestjs/testing";
 import supertest from "supertest";
 import { afterEach, beforeEach, describe, expect, test } from "vitest";
-import { AppModule } from "~/app.module.ts";
-import { MockAppService } from "#/mocks/app-service.mock.ts";
+import { AppModule } from "~/app.module.js";
+import { AppService } from "~/app.service.js";
+import { MockAppService } from "#/mocks/app-service.mock.js";
 
 describe("AppController", () => {
   let app: INestApplication;
@@ -12,7 +13,7 @@ describe("AppController", () => {
     const module = await Test.createTestingModule({
       imports: [AppModule],
     })
-      .overrideProvider("IAppService")
+      .overrideProvider(AppService)
       .useClass(MockAppService)
       .compile();
 

@@ -1,30 +1,26 @@
 {
   "compilerOptions": {
-    "allowImportingTsExtensions": true,
     "allowJs": true,
     "allowSyntheticDefaultImports": true,
-    "baseUrl": ".",
+    "baseUrl": "./",
     "declaration": false,
     "emitDecoratorMetadata": true,
     "esModuleInterop": true,
     "experimentalDecorators": true,
+    "incremental": true,
     "isolatedModules": true,
     "lib": ["Dom", "DOM.Iterable", "ESNext", "ESNext.Decorators"],
     "module": "NodeNext",
     "moduleResolution": "NodeNext",
     "noEmit": true,
-    "outDir": "dist",
+    "outDir": "./dist",
     "paths": { "~/*": ["./src/*"], "#/*": ["./tests/*"] },
     "preserveSymlinks": true,
     "removeComments": true,
     "resolveJsonModule": true,
-    "rootDir": ".",
+    "rootDir": "./",
     "skipLibCheck": true,
     "strict": true,
     "target": "esnext"
-  },
-
-  "exclude": ["node_modules"],
-
-  "include": ["./src/**/*.*", "./tests/**/*.*", "*.d.ts", "**/*.d.ts", "*.js", "*.ts"]
+  }
 }

@@ -4,4 +4,23 @@
 
 A sane, opinionated template for nestjs projects.
 
-Uses typescript, eslint, prettier, commitlint, vitest, lint-staged, husky, swc, and more.
+Uses typescript, eslint, prettier, commitlint, vitest, lint-staged, husky, esbuild, and more.
+
+## Notes
+
+Constructor injection **needs** to use the `Inject` decorator because of tsx and esbuild support - decorators are still experimental on those tools. This is a small price to pay for such convenience. Example below:
+
+```ts
+import { Controller, Get, Inject } from "@nestjs/common";
+import { AppService } from "~/app.service.js";
+
+@Controller()
+export class AppController {
+  constructor(@Inject(AppService) private readonly appService: AppService) {}
+
+  @Get()
+  getHello(): string {
+    return this.appService.sayHello();
+  }
+}
+```
