@@ -1,0 +1,4 @@
+yarn tsc --noEmit
+yarn eslint src tests
+yarn prettier --check src tests
+yarn vitest --run

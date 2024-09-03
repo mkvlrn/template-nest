@@ -1,8 +1,8 @@
-import { base } from "@mkvlrn/eslint-config";
+import { base } from "@mkvlrn/eslint";
 
 export default [
   ...base,
   {
-    ignores: ["dist"],
+    ignores: ["dist", "node_modules"],
   },
 ];

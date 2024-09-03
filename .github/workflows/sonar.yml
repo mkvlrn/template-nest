@@ -17,9 +17,9 @@ jobs:
         fetch-depth: 0
     - uses: actions/setup-node@v4
       with:
-        node-version: 20
-    - run: npm install
-    - run: npx vitest run --coverage
+        node-version: 22
+    - run: yarn install
+    - run: rm -rf coverage && yarn vitest run --coverage
     - uses: SonarSource/sonarcloud-github-action@master
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -31,7 +31,7 @@ jobs:
           -Dsonar.language=ts
           -Dsonar.javascript.lcov.reportPaths=./coverage/lcov.info
           -Dsonar.sources=./src
-          -Dsonar.exclusions=*.spec.ts,*.spec.tsx
+          -Dsonar.exclusions=*.spec.ts,*.spec.tsx,*.test.ts,*.test.tsx
           -Dsotar.tests=./src
-          -Dsonar.test.inclusions=**/*.spec.ts,**/*.spec.tsx
-          -Dsonar.coverage.exclusions=**/*.spec.ts,**/*.spec.tsx,**/index.ts,**/index.tsx
+          -Dsonar.test.inclusions=**/*.spec.ts,**/*.spec.tsx,**/*.test.ts,**/*.test.tsx
+          -Dsonar.coverage.exclusions=**/*.spec.ts,**/*.spec.tsx,**/*.test.ts,**/*.test.tsx,**/index.ts,**/index.tsx,src/main.ts
