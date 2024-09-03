@@ -1,5 +1,5 @@
 {
-  "extends": "@mkvlrn/tsconfig/tsconfig.node.json",
+  "extends": "@mkvlrn/tsconfig/tsconfig.nest.json",
   "compilerOptions": {
     "rootDir": "./",
     "baseUrl": "./",
