@@ -2,6 +2,7 @@
   "extends": "@mkvlrn/tsconfig/tsconfig.nest.json",
   "compilerOptions": {
     "rootDir": "./",
+    "outDir": "./dist",
     "baseUrl": "./",
     "paths": { "~/*": ["./src/*"], "#/*": ["./tests/*"] }
   }
