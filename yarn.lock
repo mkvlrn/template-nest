@@ -696,34 +696,34 @@
   resolved "https://registry.yarnpkg.com/@lukeed/csprng/-/csprng-1.1.0.tgz#1e3e4bd05c1cc7a0b2ddbd8a03f39f6e4b5e6cfe"
   integrity sha512-Z7C/xXCiGWsg0KuKsHTKJxbWhpI3Vs5GwLfOean7MGyVFGqdRgBbAjOCh6u4bbjPc/8MJ2pZmK/0DLdCbivLDA==
 
-"@mkvlrn/eslint@^0.1.1":
-  version "0.1.1"
-  resolved "https://registry.yarnpkg.com/@mkvlrn/eslint/-/eslint-0.1.1.tgz#f1a4cb72fd5038692d2ac10e7b8df8906c11d465"
-  integrity sha512-SyRh3rrwVWOXQbz/ywal1hJvROhTr+o3tqAidGw5l5ophKdsxfgByS5bnpPR+JmB83vZEEiF/EBGMbkTSMtk+g==
+"@mkvlrn/eslint@^0.1.2":
+  version "0.1.2"
+  resolved "https://registry.yarnpkg.com/@mkvlrn/eslint/-/eslint-0.1.2.tgz#43dd784460b169ae7bb8776c55d04eb394f212c1"
+  integrity sha512-qsqLQX+a5r+ruJ/Bh/qZf0UBEXyaj9tyrxHjGRRuiJbI5lrnwcgtZ20jdXirJv2ZmiaGAmVVEXAig0Rxo7rDkg==
   dependencies:
     "@eslint/js" "^9.9.1"
-    "@next/eslint-plugin-next" "^14.2.7"
+    "@next/eslint-plugin-next" "^14.2.8"
     eslint-config-prettier "^9.1.0"
     eslint-import-resolver-typescript "^3.6.3"
     eslint-plugin-import "^2.30.0"
-    eslint-plugin-react "^7.35.1"
+    eslint-plugin-react "^7.35.2"
     eslint-plugin-react-hooks "^4.6.2"
     eslint-plugin-unicorn "^55.0.0"
     eslint-plugin-vitest "^0.5.4"
     typescript-eslint "^8.4.0"
 
-"@mkvlrn/prettier@^0.0.1":
-  version "0.0.1"
-  resolved "https://registry.yarnpkg.com/@mkvlrn/prettier/-/prettier-0.0.1.tgz#f8a98f9042ea602827b442a06620c75971afd7fd"
-  integrity sha512-HN+Fu8DZhZMBAoKQr0F3cSAkMEarL57NAbRYpF3wLj4T2u9PN4Kb57NM4KPdMSFMsqyQg3hPRXy6/f2vwvzHsg==
+"@mkvlrn/prettier@^0.0.5":
+  version "0.0.5"
+  resolved "https://registry.yarnpkg.com/@mkvlrn/prettier/-/prettier-0.0.5.tgz#d818179ca668e3faf1634d40c64652ea9279a22b"
+  integrity sha512-fqEiOOF4UUC8z0i435TKo/Ro+O+iPjwmlObRfBfMV8AXyftLXg/uUV48tjfLdNVT8/lV4iSkoVRJMtp+sgyFYg==
   dependencies:
     "@trivago/prettier-plugin-sort-imports" "^4.3.0"
     prettier-plugin-tailwindcss "^0.6.6"
 
-"@mkvlrn/tsconfig@^0.0.2":
-  version "0.0.2"
-  resolved "https://registry.yarnpkg.com/@mkvlrn/tsconfig/-/tsconfig-0.0.2.tgz#df1b87715faeb52af6ec29b698ed960c902c1884"
-  integrity sha512-82kUGap90K84oLV/oEE6pfHbOfxeZocFFfH2LFLacP0ssxnodZOAqso9NvMYePkDd1C9qKm3gZEK+2Bk0fEt0A==
+"@mkvlrn/tsconfig@^0.0.4":
+  version "0.0.4"
+  resolved "https://registry.yarnpkg.com/@mkvlrn/tsconfig/-/tsconfig-0.0.4.tgz#a4ee05ea0f907cdd10d7dee70a7288bc4140cdb1"
+  integrity sha512-mEXxMfmcBRaPrq3y23F5+tt7y3N7HKzcp4Bd8Bc10N3VZ8fVvwfCZx7WIXww69pDbtlPKDhBAOu1ctf5wy+TIQ==
 
 "@nestjs/cli@^10.4.5":
   version "10.4.5"
@@ -800,10 +800,10 @@
   dependencies:
     tslib "2.6.3"
 
-"@next/eslint-plugin-next@^14.2.7":
-  version "14.2.7"
-  resolved "https://registry.yarnpkg.com/@next/eslint-plugin-next/-/eslint-plugin-next-14.2.7.tgz#22154d5833124fdd439d158b91a9cf87ea53f5fa"
-  integrity sha512-+7xh142AdhZGjY9/L0iFo7mqRBMJHe+q+uOL+hto1Lfo9DeWCGcR6no4StlFbVSVcA6fQLKEX6y6qhMsSKbgNQ==
+"@next/eslint-plugin-next@^14.2.8":
+  version "14.2.8"
+  resolved "https://registry.yarnpkg.com/@next/eslint-plugin-next/-/eslint-plugin-next-14.2.8.tgz#eccae5b08b323b2be24cced6188394e8716890ed"
+  integrity sha512-ue5vcq9Fjk3asACRDrzYjcGMEN7pMMDQ5zUD+FenkqvlPCVUD1x7PxBNOLfPYDZOrk/Vnl4GHmjj2mZDqPW8TQ==
   dependencies:
     glob "10.3.10"
 
@@ -1028,10 +1028,10 @@
   dependencies:
     undici-types "~6.19.2"
 
-"@types/node@^22.5.3":
-  version "22.5.3"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-22.5.3.tgz#91a374e42c6e7ccb5893a87f1775f36ce1671d65"
-  integrity sha512-njripolh85IA9SQGTAqbmnNZTdxv7X/4OYGPz8tgy5JDr8MP+uDBa921GpYEoDDnwm0Hmn5ZPeJgiiSTPoOzkQ==
+"@types/node@^22.5.4":
+  version "22.5.4"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-22.5.4.tgz#83f7d1f65bc2ed223bdbf57c7884f1d5a4fa84e8"
+  integrity sha512-FDuKUJQm/ju9fT/SeX/6+gBzoPzlVCzfzmGkwKvRHQVxi4BntVbyIwf6a4Xn62mrvndLiml6z/UBXIdEVjQLXg==
   dependencies:
     undici-types "~6.19.2"
 
@@ -2614,10 +2614,10 @@ eslint-plugin-react-hooks@^4.6.2:
   resolved "https://registry.yarnpkg.com/eslint-plugin-react-hooks/-/eslint-plugin-react-hooks-4.6.2.tgz#c829eb06c0e6f484b3fbb85a97e57784f328c596"
   integrity sha512-QzliNJq4GinDBcD8gPB5v0wh6g8q3SUi6EFF0x8N/BL9PoVs0atuGc47ozMRyOWAKdwaZ5OnbOEa3WR+dSGKuQ==
 
-eslint-plugin-react@^7.35.1:
-  version "7.35.1"
-  resolved "https://registry.yarnpkg.com/eslint-plugin-react/-/eslint-plugin-react-7.35.1.tgz#afc80387031aa99dd6e0a14437c77d02e5700b47"
-  integrity sha512-B5ok2JgbaaWn/zXbKCGgKDNL2tsID3Pd/c/yvjcpsd9HQDwyYc/TQv3AZMmOvrJgCs3AnYNUHRCQEMMQAYJ7Yg==
+eslint-plugin-react@^7.35.2:
+  version "7.35.2"
+  resolved "https://registry.yarnpkg.com/eslint-plugin-react/-/eslint-plugin-react-7.35.2.tgz#d32500d3ec268656d5071918bfec78cfd8b070ed"
+  integrity sha512-Rbj2R9zwP2GYNcIak4xoAMV57hrBh3hTaR0k7hVjwCQgryE/pw5px4b13EYjduOI0hfXyZhwBxaGpOTbWSGzKQ==
   dependencies:
     array-includes "^3.1.8"
     array.prototype.findlast "^1.2.5"

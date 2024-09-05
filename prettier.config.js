@@ -1,1 +1,1 @@
-export { config as default } from "@mkvlrn/prettier";
+export { default } from "@mkvlrn/prettier";
