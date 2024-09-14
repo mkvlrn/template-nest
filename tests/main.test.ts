@@ -6,7 +6,7 @@ describe("main", () => {
     const stdoutSpy = vi.spyOn(process.stdout, "write").mockImplementation(() => false);
     const match = /.*Nest application successfully started.*/;
 
-    await import("~/main.js");
+    await import("~/main");
 
     expect(stdoutSpy).toHaveBeenCalledWith(expect.stringMatching(match));
   });

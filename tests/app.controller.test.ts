@@ -2,9 +2,9 @@ import { INestApplication } from "@nestjs/common";
 import { Test } from "@nestjs/testing";
 import supertest from "supertest";
 import { afterEach, beforeEach, describe, expect, test } from "vitest";
-import { AppModule } from "~/app.module.js";
-import { AppService } from "~/app.service.js";
-import { MockAppService } from "#/mocks/app-service.mock.js";
+import { AppModule } from "~/app.module";
+import { AppService } from "~/app.service";
+import { MockAppService } from "#/mocks/app-service.mock";
 
 describe("AppController", () => {
   let app: INestApplication;
