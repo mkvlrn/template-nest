@@ -22,7 +22,6 @@
     "lint": "eslint --fix src tests",
     "lint-staged": "lint-staged",
     "format": "prettier --write src tests",
-    "type-check": "tsc --noEmit",
     "build": "tsx esbuild.config.ts",
     "start": "node dist/main.js"
   },
