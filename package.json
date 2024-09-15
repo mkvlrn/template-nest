@@ -20,7 +20,6 @@
     "prepare": "husky",
     "dev": "tsx watch src/main.ts",
     "lint": "eslint --fix src tests",
-    "lint-staged": "lint-staged",
     "format": "prettier --write src tests",
     "build": "tsx esbuild.config.ts",
     "start": "node dist/main.js"
