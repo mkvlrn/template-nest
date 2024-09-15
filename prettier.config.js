@@ -1,1 +1,1 @@
-export { default } from "@mkvlrn/prettier";
+export { base as default } from "@mkvlrn/configurations/prettier";

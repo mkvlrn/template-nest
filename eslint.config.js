@@ -1,4 +1,4 @@
-import { base } from "@mkvlrn/eslint";
+import { base } from "@mkvlrn/configurations/eslint";
 
 /** @type {import("typescript-eslint").ConfigWithExtends[]} */
 export default [
