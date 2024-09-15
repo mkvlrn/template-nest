@@ -20,6 +20,7 @@ await build({
   outdir: outDir,
   treeShaking: true,
   bundle: true, // only to make the extension plugin work
+  external: ["*"],
   packages: "external",
   platform: "node",
   target: "ESNext",
