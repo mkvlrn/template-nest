@@ -3,6 +3,7 @@
 build
 dist
 out
+bin
 .swc
 *.tsbuildinfo
 .turbo

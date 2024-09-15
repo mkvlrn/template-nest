@@ -3,12 +3,12 @@ import fs from "node:fs/promises";
 import { promisify } from "node:util";
 import { build } from "esbuild";
 import { esbuildPluginFilePathExtensions } from "esbuild-plugin-file-path-extensions";
-import { glob } from "glob";
+import fastGlob from "fast-glob";
 import { replaceTscAliasPaths } from "tsc-alias";
 import { compilerOptions } from "./tsconfig.json";
 
 const execAsync = promisify(child_process.exec);
-const entryPoints = await glob("src/**/*.ts");
+const entryPoints = await fastGlob("src/**/*.ts");
 const { outDir } = compilerOptions;
 
 // clean up old dist
