@@ -1,4 +1,4 @@
-import type { AppService } from "#app.service.js";
+import type { AppService } from "~/app.service";
 
 export class MockAppService implements AppService {
   sayHello(): string {
