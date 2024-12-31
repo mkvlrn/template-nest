@@ -1,9 +1,24 @@
 {
-  "extends": "@mkvlrn/config/tsconfig-node",
+  "$schema": "https://json.schemastore.org/tsconfig",
   "compilerOptions": {
-    "outDir": "./dist",
-    "rootDir": "./",
-    "baseUrl": "./",
-    "paths": { "~/*": ["./src/*"], "#/*": ["./test/*"] }
+    "allowJs": true,
+    "baseUrl": ".",
+    "declaration": false,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "isolatedModules": true,
+    "lib": ["Dom", "DOM.Iterable", "ESNext", "ESNext.Decorators"],
+    "module": "ESNext",
+    "moduleDetection": "force",
+    "moduleResolution": "bundler",
+    "noEmit": true,
+    "outDir": "./build",
+    "paths": { "~/*": ["./src/*"] },
+    "preserveSymlinks": true,
+    "removeComments": true,
+    "resolveJsonModule": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "target": "esnext"
   }
 }
