@@ -1,6 +1,6 @@
 {
   "name": "template-nest",
-  "description": "A template for NestJS projects",
+  "description": "A revamped/modernized template for NestJS projects using esm",
   "version": "1.0.0",
   "license": "MIT",
   "private": true,
@@ -10,7 +10,7 @@
     "type": "git",
     "url": "git@github.com:mkvlrn/template-nest"
   },
-  "keywords": ["nest", "esm", "template"],
+  "keywords": ["nestjs", "esm", "template"],
   "scripts": {
     "swc": "node --import @swc-node/register/esm-register",
     "build": "nest build",
