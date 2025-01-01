@@ -1,3 +1,1 @@
-npm run typecheck
-npm run tidy
-npm run test
+npm run typecheck && npm run tidy && npm run test --bail

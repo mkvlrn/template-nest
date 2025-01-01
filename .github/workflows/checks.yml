@@ -17,6 +17,9 @@ jobs:
         with:
           node-version: 22
       - run: yarn install
-      - run: npm run typecheck
-      - run: npm run tidy
-      - run: npm run test
+      - run: |
+          if [ -f .husky/pre-push ]; then
+            bash .husky/pre-push
+          else
+            echo "No pre-push hook found"
+          fi

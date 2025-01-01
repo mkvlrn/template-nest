@@ -12,13 +12,13 @@
   },
   "keywords": ["nest", "esm", "template"],
   "scripts": {
+    "swc": "node --import @swc-node/register/esm-register",
     "build": "nest build",
-    "postbuild": "node --import @swc-node/register/esm-register scripts/post-build.ts",
-    "dev": "node --import @swc-node/register/esm-register --watch src/main.ts",
+    "dev": "npm run swc -- --watch src/main.ts",
     "start": "node build/main.js",
-    "test": "node --import @swc-node/register/esm-register scripts/test.ts",
-    "test:cov": "node --import @swc-node/register/esm-register scripts/test.ts --coverage",
-    "tidy": "npx @biomejs/biome check --write scripts src test",
+    "test": "npm run swc -- scripts/test.ts",
+    "test:cov": "npm run swc -- scripts/test.ts --coverage",
+    "tidy": "npm run swc -- scripts/tidy.ts",
     "typecheck": "npx tsc --noEmit",
     "prepare": "npx husky"
   },
