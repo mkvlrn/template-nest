@@ -19,6 +19,10 @@ Just check the scripts and figure it out, it's really not complicated to get it 
 
 Since this is an esm project and path aliases are configured (see tsconfig.json), all imports must be the full name of the file, e.g. `~/app.service.ts` instead of `~/app.service`.
 
-Node isn't happy with `.ts` extensions, so `.js` is used and vscode understands it just fine. So unless [you're not using vscode](https://i.imgflip.com/3gg3ge.jpg), you're good. Maybe other editors or IDEs will be fine too, I wouldn't know.
+It's the [rule for esm in node](https://nodejs.org/api/esm.html#mandatory-file-extensions).
 
- It's the [rule for esm in node](https://nodejs.org/api/esm.html#mandatory-file-extensions)
+Node isn't happy with importing from `.ts` extensions (it can be done but why bother?), so `.js` is used and vscode understands it just fine.
+
+### for non vscode users
+
+![to the gulag!](https://i.imgflip.com/3gg3ge.jpg)
