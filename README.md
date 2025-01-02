@@ -15,14 +15,60 @@ The cli is "fine", but it seems that project will drag its feet for what seems t
 
 Just check the scripts and figure it out, it's really not complicated to get it going.
 
-### important
+## running
 
-Since this is an esm project and path aliases are configured (see tsconfig.json), all imports must be the full name of the file, e.g. `~/app.service.ts` instead of `~/app.service`.
+### `yarn dev`
 
-It's the [rule for esm in node](https://nodejs.org/api/esm.html#mandatory-file-extensions).
+This will run the project in watch mode, and will automatically restart on changes. Uses swc to run the typescript code without transpiling to `./build`.
 
-Node isn't happy with importing from `.ts` extensions (it can be done but why bother?), so `.js` is used and vscode understands it just fine.
+### `yarn build`
 
-### for non vscode users
+This will build the project to `./build`. Again uses swc, but this time it will transpile to esm compatible javascript.
 
-![to the gulag!](https://i.imgflip.com/3gg3ge.jpg)
+### `yarn start`
+
+This will run the project in production mode. Uses the `./build` directory to run the project.
+
+### `yarn test`
+
+This will run vitest tests once. Use `--watch` to run in watch mode, and `--coverage` to generate coverage reports.
+
+### `yarn tidy`
+
+This will run biome in fix mode (only safe fixes) to lint and format the project. Directories `./src`, `./test`, and `./script`, along with all "loose" compatible files in the root of the project (js, ts, json, jsonc) will be processed.
+
+### `yarn typecheck`
+
+This will run the typescript compiler to check for type errors. Does not transpile any files, only checks the type errors.
+
+## vscode
+
+You might want to install the recommended extensions in vscode (workspace recommended):
+
+- [biomejs.biome](https://marketplace.visualstudio.com/items?itemName=biomejs.biome)
+- [EditorConfig.EditorConfig](https://marketplace.visualstudio.com/items?itemName=EditorConfig.EditorConfig)
+- [ms-vscode.test-adapter-converter](https://marketplace.visualstudio.com/items?itemName=ms-vscode.test-adapter-converter)
+- [vitest.explorer](https://marketplace.visualstudio.com/items?itemName=vitest.explorer)
+
+These are the recommended settings (not commited to git because ultimately they are personal). Should be in `.vscode/settings.json` as to not mess with your global settings:
+
+```json
+{
+  "[css][jsonc][json][javascript][javascriptreact][typescript][typescriptreact]": {
+    "editor.defaultFormatter": "biomejs.biome"
+  },
+  "[markdown][html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "biome.enabled": true,
+  "editor.codeActionsOnSave": {
+    "quickfix.biome": "explicit",
+    "source.fixAll": "never",
+    "source.fixAll.sortJSON": "never",
+    "source.organizeImports": "never",
+    "source.organizeImports.biome": "explicit",
+    "source.sortImports": "never"
+  },
+  "eslint.enable": false
+}
+```

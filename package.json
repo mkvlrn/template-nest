@@ -12,13 +12,13 @@
   },
   "keywords": ["nestjs", "esm", "template"],
   "scripts": {
-    "swc": "node --import @swc-node/register/esm-register",
     "build": "nest build",
-    "dev": "npm run swc -- --watch src/main.ts",
+    "postbuild": "npx tsc-alias -f",
+    "dev": "node --import @swc-node/register/esm-register --watch src/main.ts",
+    "prestart": "npm run build",
     "start": "node build/main.js",
-    "test": "npm run swc -- scripts/test.ts",
-    "test:cov": "npm run swc -- scripts/test.ts --coverage",
-    "tidy": "npm run swc -- scripts/tidy.ts",
+    "test": "npx vitest run",
+    "tidy": "npx biome check --write --no-errors-on-unmatched",
     "typecheck": "npx tsc --noEmit",
     "prepare": "npx husky"
   },
@@ -50,8 +50,5 @@
     "@nestjs/platform-express": "^10.4.15",
     "reflect-metadata": "^0.2.2",
     "rxjs": "^7.8.1"
-  },
-  "commitlint": {
-    "extends": ["@commitlint/config-conventional"]
   }
 }

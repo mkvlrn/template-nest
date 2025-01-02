@@ -49,7 +49,7 @@ tmp
 *.launch
 .settings
 *.sublime-workspace
-.vscode
+.vscode/*
 !.vscode/extensions.json
 
 # terraform

@@ -7,11 +7,13 @@
   },
   "files": {
     "ignoreUnknown": true,
+    "include": ["**/*"],
     "ignore": []
   },
   "formatter": {
     "enabled": true,
-    "useEditorconfig": true
+    "indentStyle": "space",
+    "formatWithErrors": true
   },
   "organizeImports": {
     "enabled": true
