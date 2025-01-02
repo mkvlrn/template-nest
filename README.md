@@ -35,7 +35,7 @@ This will run vitest tests once. Use `--watch` to run in watch mode, and `--cove
 
 ### `yarn tidy`
 
-This will run biome in fix mode (only safe fixes) to lint and format the project. Directories `./src`, `./test`, and `./script`, along with all "loose" compatible files in the root of the project (js, ts, json, jsonc) will be processed.
+This will run biome in fix mode (only safe fixes) to lint and format the project. Directories `./src` and `./test`, along with all "loose" compatible files in the root of the project (js, ts, json, jsonc) will be processed.
 
 ### `yarn typecheck`
 

@@ -1,1 +1,1 @@
-npm run typecheck && npm run tidy && npm run test --bail
+npm run typecheck && npx biome check --no-errors-on-unmatched && npm run test --bail
