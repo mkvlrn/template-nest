@@ -7,7 +7,7 @@ Uses biome, vitest, swc.
 ## why use this instead of nestjs-cli?
 
 - biome is a linter/formatter running on git hooks (pre-commit, pre-push)
-- vitest is a test runner
+- vitest as a test runner
 - project runs (`yarn dev`) in esm mode without having to compile first
 - builds with swc
 
