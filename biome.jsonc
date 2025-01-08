@@ -27,5 +27,11 @@
         "useImportType": "off"
       }
     }
+  },
+  "javascript": {
+    "parser": {
+      // for nest usage of function parameter decorators
+      "unsafeParameterDecoratorsEnabled": true
+    }
   }
 }

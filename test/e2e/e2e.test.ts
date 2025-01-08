@@ -1,34 +1,32 @@
 import { INestApplication } from "@nestjs/common";
 import { Test } from "@nestjs/testing";
 import supertest from "supertest";
+import type TestAgent from "supertest/lib/agent";
 import { afterEach, beforeEach, describe, expect, test } from "vitest";
 import { AppModule } from "~/app.module";
-import { AppService } from "~/app.service";
-import { MockAppService } from "🧪/_mocks/mock-app-service";
 
-describe("AppController", () => {
+describe("e2e", () => {
   let app: INestApplication;
+  let server: TestAgent;
 
   beforeEach(async () => {
     const module = await Test.createTestingModule({
       imports: [AppModule],
-    })
-      .overrideProvider(AppService)
-      .useClass(MockAppService)
-      .compile();
+    }).compile();
 
     app = module.createNestApplication();
     await app.init();
+    server = supertest(app.getHttpServer());
   });
 
   afterEach(async () => {
     await app.close();
   });
 
-  test("GET /", async () => {
-    const response = await supertest(app.getHttpServer()).get("/");
+  test("GET /hello", async () => {
+    const response = await server.get("/hello");
 
-    expect(response.status).toBe(200);
-    expect(response.text).toBe("hello from mock app service");
+    expect(response.status).toStrictEqual(200);
+    expect(response.text).toStrictEqual("Hello World!");
   });
 });

@@ -11,9 +11,9 @@ Uses biome, vitest, swc.
 - project runs (`yarn dev`) in esm mode without having to compile first
 - builds with swc
 
-The cli is "fine", but it seems that project will drag its feet for what seems to be a few years before they decide to modernize it by supporting esm, switch to vitest (or the native test runner), use biome (which is better than eslint/prettier overall, and they probably won't even upgrade eslint to the flat config which is at least beareble) and run without having to compile first.
+The cli is "fine", but it seems that project will take a long time before they decide to modernize it by supporting esm, switch to vitest (or the native test runner), use biome (which is better than eslint/prettier overall, and they probably won't even upgrade eslint to the flat config which is at least beareble) and run without having to compile first.
 
-Just check the scripts and figure it out, it's really not complicated to get it going.
+Just check what is in it, it't not that different from what you'd get with nestjs-cli.
 
 ## running
 
@@ -32,6 +32,14 @@ This will run the project in production mode. Uses the `./build` directory to ru
 ### `yarn test`
 
 This will run vitest tests once. Use `--watch` to run in watch mode, and `--coverage` to generate coverage reports.
+
+### `yarn test:integration`
+
+This will run vitest integration tests once.
+
+### `yarn test:e2e`
+
+This will run vitest e2e tests once.
 
 ### `yarn tidy`
 

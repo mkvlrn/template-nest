@@ -18,6 +18,8 @@
     "prestart": "npm run build",
     "start": "node build/main.js",
     "test": "npx vitest run",
+    "test:integration": "npx vitest run --config ./test/integration/vitest.config.ts",
+    "test:e2e": "npx vitest run --config ./test/e2e/vitest.config.ts",
     "tidy": "npx biome check --write --no-errors-on-unmatched",
     "typecheck": "npx tsc --noEmit",
     "prepare": "npx husky"
