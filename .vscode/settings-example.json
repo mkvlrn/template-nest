@@ -1,0 +1,18 @@
+{
+  "[css][jsonc][json][javascript][javascriptreact][typescript][typescriptreact]": {
+    "editor.defaultFormatter": "biomejs.biome"
+  },
+  "[markdown][html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "biome.enabled": true,
+  "editor.codeActionsOnSave": {
+    "quickfix.biome": "explicit",
+    "source.fixAll": "never",
+    "source.fixAll.sortJSON": "never",
+    "source.organizeImports": "never",
+    "source.organizeImports.biome": "explicit",
+    "source.sortImports": "never"
+  },
+  "eslint.enable": false
+}

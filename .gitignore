@@ -51,6 +51,7 @@ tmp
 *.sublime-workspace
 .vscode/*
 !.vscode/extensions.json
+!.vscode/settings-example.json
 
 # terraform
 .terraform
