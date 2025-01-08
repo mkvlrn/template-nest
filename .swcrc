@@ -1,20 +1,16 @@
 {
-  "$schema": "https://json.schemastore.org/swcrc",
+  "$schema": "https://swc.rs/schema.json",
   "jsc": {
     "baseUrl": ".",
-    "paths": { "~/*": ["./src/*"] },
+    "paths": { "~/*": ["./src/*"], "🧪/*": ["./test/*"] },
+    "minify": { "format": { "comments": false } },
     "parser": {
       "syntax": "typescript",
       "decorators": true,
       "dynamicImport": true
     },
     "target": "esnext",
-    "transform": {
-      "decoratorMetadata": true
-    }
+    "transform": { "decoratorMetadata": true }
   },
-  "module": {
-    "type": "es6",
-    "strict": true
-  }
+  "module": { "type": "es6", "strict": true }
 }

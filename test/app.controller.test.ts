@@ -4,7 +4,7 @@ import supertest from "supertest";
 import { afterEach, beforeEach, describe, expect, test } from "vitest";
 import { AppModule } from "~/app.module";
 import { AppService } from "~/app.service";
-import { MockAppService } from "./_mocks/mock-app-service.js";
+import { MockAppService } from "🧪/_mocks/mock-app-service";
 
 describe("AppController", () => {
   let app: INestApplication;

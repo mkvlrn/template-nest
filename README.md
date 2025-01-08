@@ -50,7 +50,9 @@ You might want to install the recommended extensions in vscode (workspace recomm
 - [ms-vscode.test-adapter-converter](https://marketplace.visualstudio.com/items?itemName=ms-vscode.test-adapter-converter)
 - [vitest.explorer](https://marketplace.visualstudio.com/items?itemName=vitest.explorer)
 
-These are the recommended settings (not commited to git because ultimately they are personal). Should be in `.vscode/settings.json` as to not mess with your global settings:
+If you have been using eslint and prettier and their extensions, you might want to disable eslint entirely and keep prettier as the formatter only for certain types of files.
+
+I suggest using this configuration (YMMV):
 
 ```json
 {
@@ -72,3 +74,5 @@ These are the recommended settings (not commited to git because ultimately they 
   "eslint.enable": false
 }
 ```
+
+These settings are in `.vscode/settings-example.json` and you should paste into your own `.vscode/settings.json`, or create a new one. I'm not commiting the `.vscode/settings.json` proper because it shouldn't be in VCS as it contains your personal settings.
