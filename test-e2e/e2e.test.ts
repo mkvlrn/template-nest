@@ -23,10 +23,24 @@ describe("e2e", () => {
     await app.close();
   });
 
+  test("GET / redirects to /hello", async () => {
+    const response = await server.get("/");
+
+    expect(response.status).toStrictEqual(302);
+    expect(response.headers["location"]).toStrictEqual("hello");
+  });
+
   test("GET /hello", async () => {
     const response = await server.get("/hello");
 
     expect(response.status).toStrictEqual(200);
     expect(response.text).toStrictEqual("Hello World!");
+  });
+
+  test("GET /hello?to=John", async () => {
+    const response = await server.get("/hello?to=John");
+
+    expect(response.status).toStrictEqual(200);
+    expect(response.text).toStrictEqual("Hello John!");
   });
 });

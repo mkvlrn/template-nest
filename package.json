@@ -20,7 +20,7 @@
     "test:integration": "vitest",
     "test:e2e": "vitest",
     "tidy": "biome check --fix --no-errors-on-unmatched",
-    "prepare": "npx husky"
+    "prepare": "husky"
   },
   "devDependencies": {
     "@biomejs/biome": "^1.9.4",

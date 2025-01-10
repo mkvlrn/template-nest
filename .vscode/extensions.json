@@ -1,7 +1,6 @@
 {
   "recommendations": [
     "biomejs.biome",
-    "EditorConfig.EditorConfig",
     "ms-vscode.test-adapter-converter",
     "vitest.explorer"
   ]

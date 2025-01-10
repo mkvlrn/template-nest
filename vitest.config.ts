@@ -2,6 +2,7 @@
 import { readdir } from "node:fs/promises";
 // biome-ignore lint/correctness/noNodejsModules: cli
 import { resolve } from "node:path";
+import swc from "vite-plugin-swc-transform";
 import tsconfigPaths from "vite-tsconfig-paths";
 import { defineConfig } from "vitest/config";
 
@@ -38,7 +39,10 @@ try {
 
 // biome-ignore lint/style/noDefaultExport: needed for vitest
 export default defineConfig({
-  plugins: [tsconfigPaths()],
+  plugins: [
+    swc({ swcOptions: { swcrc: true, configFile: true } }),
+    tsconfigPaths(),
+  ],
   test: {
     // this is based on what kind of tests are being run, defaults to unit tests
     include: [`./${testScript}/**/*.test.{ts,tsx}`],

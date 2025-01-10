@@ -9,10 +9,7 @@
   "editor.codeActionsOnSave": {
     "quickfix.biome": "explicit",
     "source.fixAll": "never",
-    "source.fixAll.sortJSON": "never",
-    "source.organizeImports": "never",
-    "source.organizeImports.biome": "explicit",
-    "source.sortImports": "never"
+    "source.organizeImports.biome": "never"
   },
   "eslint.enable": false
 }
