@@ -10,7 +10,6 @@ on:
 
 jobs:
   integration-e2e:
-    needs: run-checks
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
