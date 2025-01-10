@@ -16,12 +16,16 @@
     "formatWithErrors": true
   },
   "organizeImports": {
-    "enabled": true
+    "enabled": false
   },
   "linter": {
     "enabled": true,
     "rules": {
       "all": true,
+      "complexity": {
+        // this goes against typescript's noPropertyAccessFromIndexSignature
+        "useLiteralKeys": "off"
+      },
       "style": {
         // https://biomejs.dev/linter/rules/use-import-type/#caveat-with-typescript-experimental-decorators
         "useImportType": "off"

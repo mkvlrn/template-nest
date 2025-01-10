@@ -3,7 +3,7 @@ import { beforeEach, describe, expect, test } from "vitest";
 import { AppModule } from "~/app.module";
 import { HelloController } from "~/features/hello/hello.controller";
 import { HelloService } from "~/features/hello/services/hello.service";
-import { mockHelloService } from "🧪/integration/mocks/hello-service.mock";
+import { mockHelloService } from "🧪-integration/_mocks/hello-service.mock";
 
 describe("HelloController", () => {
   let helloController: HelloController;

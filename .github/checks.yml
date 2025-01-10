@@ -18,8 +18,8 @@ jobs:
           node-version: 22
       - run: yarn install
       - run: |
-          if [ -f .husky/pre-push ]; then
-            bash .husky/pre-push
-          else
-            echo "No pre-push hook found"
-          fi
+          # add node_modules/.bin to PATH
+          export PATH=$(pwd)/node_modules/.bin:$PATH
+
+          # run the pre-push hook directly
+          bash .husky/pre-push

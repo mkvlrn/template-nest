@@ -1,25 +1,51 @@
 {
   "$schema": "https://json.schemastore.org/tsconfig",
   "compilerOptions": {
-    "allowJs": true,
-    "baseUrl": ".",
-    "declaration": false,
-    "emitDecoratorMetadata": true,
-    "experimentalDecorators": true,
+    // the stricter, the better
+    // https://whatislove.dev/articles/the-strictest-typescript-config/
+    "allowJs": false,
+    "exactOptionalPropertyTypes": true,
+    "noPropertyAccessFromIndexSignature": true,
+    "noUncheckedIndexedAccess": true,
+    "strict": true,
+
+    // esm
     "isolatedModules": true,
     "lib": ["Dom", "DOM.Iterable", "ESNext", "ESNext.Decorators"],
     "module": "ESNext",
+    "target": "esnext",
+
+    // not using tsc to compile
+    // follow esm conventions
+    // tsc-alias needs outDir to be set
     "moduleDetection": "force",
     "moduleResolution": "bundler",
     "noEmit": true,
     "outDir": "./build",
-    "paths": { "~/*": ["./src/*"], "🧪/*": ["./test/*"] },
-    "preserveSymlinks": true,
-    "removeComments": true,
+
+    // paths for imports
+    // a separate alias for each test type is useful when importing mocks and such
+    // 🧪 is neat, don't be a hater
+    "baseUrl": ".",
+    "paths": {
+      "~/*": ["./src/*"],
+      "🧪/*": ["./test/*"],
+      "🧪-integration/*": ["./test-integration/*"],
+      "🧪-e2e/*": ["./test-e2e/*"]
+    },
     "rootDir": ".",
+
+    // pnpm compatibility
+    "preserveSymlinks": true,
+
+    // importing json happens more often than you think
     "resolveJsonModule": true,
-    "skipLibCheck": true,
-    "strict": true,
-    "target": "esnext"
-  }
+
+    // the weird typescript decorators that should have been
+    // replaced by the tc39 proposal, but tc39 is S.L.O.W.
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true
+  },
+
+  "exclude": ["node_modules", "build", "coverage", "dist"]
 }

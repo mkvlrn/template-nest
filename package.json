@@ -13,15 +13,13 @@
   "keywords": ["nestjs", "esm", "template"],
   "scripts": {
     "build": "nest build",
-    "postbuild": "npx tsc-alias -f",
+    "postbuild": "tsc-alias -f",
     "dev": "node --import @swc-node/register/esm-register --watch src/main.ts",
-    "prestart": "npm run build",
     "start": "node build/main.js",
-    "test": "npx vitest run",
-    "test:integration": "npx vitest run --config ./test/integration/vitest.config.ts",
-    "test:e2e": "npx vitest run --config ./test/e2e/vitest.config.ts",
-    "tidy": "npx biome check --write --no-errors-on-unmatched",
-    "typecheck": "npx tsc --noEmit",
+    "test": "vitest",
+    "test:integration": "vitest",
+    "test:e2e": "vitest",
+    "tidy": "biome check --fix --no-errors-on-unmatched",
     "prepare": "npx husky"
   },
   "devDependencies": {
