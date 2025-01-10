@@ -16,6 +16,7 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 22
+          cache: "yarn"
       - run: yarn install
       - run: |
           # add node_modules/.bin to PATH
