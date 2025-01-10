@@ -41,6 +41,9 @@
     // importing json happens more often than you think
     "resolveJsonModule": true,
 
+    // don't try to check for errors on imported libs
+    "skipLibCheck": true,
+
     // the weird typescript decorators that should have been
     // replaced by the tc39 proposal, but tc39 is S.L.O.W.
     "emitDecoratorMetadata": true,
