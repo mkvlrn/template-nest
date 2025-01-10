@@ -1,4 +1,4 @@
-name: checks
+name: integration and e2e tests
 
 on:
   workflow_run:
