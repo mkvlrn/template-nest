@@ -21,6 +21,7 @@ jobs:
       - run: |
           # add node_modules/.bin to PATH
           export PATH=$(pwd)/node_modules/.bin:$PATH
-
           # run the pre-push hook directly
           bash .husky/pre-push
+      - run: yarn test:integration --run --reporter basic
+      - run: yarn test:e2e --run --reporter basic
