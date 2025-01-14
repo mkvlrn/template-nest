@@ -17,9 +17,10 @@
     "dev": "node --import @swc-node/register/esm-register --watch src/main.ts",
     "start": "node build/main.js",
     "test": "vitest",
-    "test:integration": "vitest",
-    "test:e2e": "vitest",
-    "tidy": "biome check --fix --no-errors-on-unmatched",
+    "test:integration": "vitest --config test/integration/vitest.config.ts",
+    "test:e2e": "vitest --config test/e2e/vitest.config.ts",
+    "tidy": "biome check --fix --no-errors-on-unmatched --verbose",
+    "typecheck": "tsc --noEmit && echo 'tsc passed'",
     "prepare": "husky"
   },
   "devDependencies": {
@@ -33,7 +34,7 @@
     "@swc/cli": "^0.6.0",
     "@swc/core": "^1.10.7",
     "@types/express": "^5.0.0",
-    "@types/node": "^22.10.5",
+    "@types/node": "^22.10.6",
     "@types/supertest": "^6.0.2",
     "@vitest/coverage-v8": "^2.1.8",
     "husky": "^9.1.7",

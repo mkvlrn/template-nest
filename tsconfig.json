@@ -1,6 +1,12 @@
 {
   "$schema": "https://json.schemastore.org/tsconfig",
   "compilerOptions": {
+    // no emit by default, build config enables it
+    "noEmit": true,
+
+    // remove comments from output
+    "removeComments": true,
+
     // the stricter, the better
     // https://whatislove.dev/articles/the-strictest-typescript-config/
     "allowJs": false,
@@ -8,31 +14,25 @@
     "noPropertyAccessFromIndexSignature": true,
     "noUncheckedIndexedAccess": true,
     "strict": true,
+    "strictNullChecks": true,
 
     // esm
+    "esModuleInterop": true,
     "isolatedModules": true,
-    "lib": ["Dom", "DOM.Iterable", "ESNext", "ESNext.Decorators"],
+    "lib": ["ESNext"],
     "module": "ESNext",
     "target": "esnext",
 
-    // not using tsc to compile
     // follow esm conventions
     // tsc-alias needs outDir to be set
     "moduleDetection": "force",
     "moduleResolution": "bundler",
-    "noEmit": true,
     "outDir": "./build",
 
     // paths for imports
-    // a separate alias for each test type is useful when importing mocks and such
     // 🧪 is neat, don't be a hater
     "baseUrl": ".",
-    "paths": {
-      "~/*": ["./src/*"],
-      "🧪/*": ["./test/*"],
-      "🧪-integration/*": ["./test-integration/*"],
-      "🧪-e2e/*": ["./test-e2e/*"]
-    },
+    "paths": { "~/*": ["./src/*"], "🧪/*": ["./test/*"] },
     "rootDir": ".",
 
     // pnpm compatibility
@@ -44,10 +44,11 @@
     // don't try to check for errors on imported libs
     "skipLibCheck": true,
 
-    // the weird typescript decorators that should have been
-    // replaced by the tc39 proposal, but tc39 is S.L.O.W.
+    // nest uses these weird ass experimental decorators
+    // and incremental builds
+    "experimentalDecorators": true,
     "emitDecoratorMetadata": true,
-    "experimentalDecorators": true
+    "incremental": true
   },
 
   "exclude": ["node_modules", "build", "coverage", "dist"]

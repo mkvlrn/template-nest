@@ -4,11 +4,7 @@
     "baseUrl": ".",
     "paths": { "~/*": ["./src/*"] },
     "minify": { "format": { "comments": false } },
-    "parser": {
-      "syntax": "typescript",
-      "decorators": true,
-      "dynamicImport": true
-    },
+    "parser": { "syntax": "typescript", "decorators": true, "dynamicImport": true },
     "target": "esnext",
     "transform": { "decoratorMetadata": true }
   },

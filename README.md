@@ -2,7 +2,13 @@
 
 A sane, opinionated template for esm nestjs projects written in typescript.
 
-Uses biome, vitest, swc.
+Uses:
+
+- [biome](https://github.com/biomejs/biome) for linting and formatting
+- [swc](https://github.com/swc-project/swc) for builds
+- [vitest](https://github.com/vitest-dev/vitest) for tests
+- [commitlint](https://github.com/conventional-changelog/commitlint) for linting commit messages
+- [husky](https://github.com/typicode/husky) for git hooks
 
 ## why use this instead of nestjs-cli?
 
@@ -19,11 +25,11 @@ Just check what is in it, it't not that different from what you'd get with nestj
 
 ### `yarn dev`
 
-Runs the project in watch mode, automatically restarting on changes. Uses swc to run the typescript code without transpiling to `./build`.
+Runs the project in watch mode, automatically restarting on changes. Uses [swc-node](https://github.com/swc-project/swc-node) to run the typescript code without transpiling to `./build`.
 
 ### `yarn build`
 
-Builds the project to `./build`. Again uses swc, but this time it will transpile to esm compatible javascript.
+Builds/transpiles the code to `./build`. Again uses swc, but this time it will transpile to esm compatible javascript.
 
 ### `yarn start`
 
@@ -31,15 +37,15 @@ Runs the built project.
 
 ### `yarn test`, `yarn test:integration`, `yarn test:e2e`
 
-Vitest is configured to work in 3 different types of tests, indicated by the script name (`yarn test` without a specifier will run unit tests).
+Runs unit/integration/e2e tests with vitest.
 
 ### `yarn tidy`
 
-This will run biome in fix mode (only [safe fixes](https://biomejs.dev/linter/#safe-fixes)) to lint and format the project. Directories `./src` and `./test`, along with all "loose" compatible files in the root of the project (js, ts, json, jsonc) will be processed.
+Runs biome in fix mode (only [safe fixes](https://biomejs.dev/linter/#safe-fixes)) to lint and format the project. Not only `./src` and `./test`, but also all "loose" config files around root (js, ts, json, jsonc) or other directories.
 
 ### `yarn typecheck`
 
-Check for typescript type errors with `tsc`. No transpilation is done.
+Runs typechecking using tsc and the `tsconfig.json` file.
 
 ## that tsconfig.json seems very strict and opinionated
 
@@ -63,32 +69,8 @@ The tests are run with vitest, which is configured in `./vitest.config.ts`. This
 
 ## vscode
 
-You might want to install the recommended extensions in vscode (workspace recommended):
-
-- [biomejs.biome](https://marketplace.visualstudio.com/items?itemName=biomejs.biome)
-- [ms-vscode.test-adapter-converter](https://marketplace.visualstudio.com/items?itemName=ms-vscode.test-adapter-converter)
-- [vitest.explorer](https://marketplace.visualstudio.com/items?itemName=vitest.explorer)
+You might want to install the recommended extensions in vscode. Search for **@recommended** in the extensions tab, they'll show up as _"workspace recommendations"_.
 
 If you have been using eslint and prettier and their extensions, you might want to disable eslint entirely and keep prettier as the formatter only for certain types of files.
 
-I suggest using this configuration (YMMV):
-
-```json
-{
-  "[css][jsonc][json][javascript][javascriptreact][typescript][typescriptreact]": {
-    "editor.defaultFormatter": "biomejs.biome"
-  },
-  "[markdown][html]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "biome.enabled": true,
-  "editor.codeActionsOnSave": {
-    "quickfix.biome": "explicit",
-    "source.fixAll": "never",
-    "source.organizeImports.biome": "never"
-  },
-  "eslint.enable": false
-}
-```
-
-These settings are in `.vscode/settings-example.json` and you should paste into your own `.vscode/settings.json`, or create a new one. I'm not commiting the `.vscode/settings.json` proper because it shouldn't be in VCS as it contains your personal settings.
+I suggesting using the settings in `.vscode/settings-example.json`, that should be pasted into your own `.vscode/settings.json`. I'm not commiting the `.vscode/settings.json` proper because it shouldn't be in VCS as it contains your personal settings.

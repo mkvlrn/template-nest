@@ -3,15 +3,8 @@
   "collection": "@nestjs/schematics",
   "sourceRoot": "src",
   "compilerOptions": {
-    "builder": {
-      "type": "swc",
-      "options": {
-        "outDir": "./build"
-      }
-    },
+    "builder": { "type": "swc", "options": { "outDir": "./build" } },
     "deleteOutDir": true
   },
-  "generateOptions": {
-    "spec": false
-  }
+  "generateOptions": { "spec": false }
 }

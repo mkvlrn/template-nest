@@ -1,7 +1,3 @@
 {
-  "recommendations": [
-    "biomejs.biome",
-    "ms-vscode.test-adapter-converter",
-    "vitest.explorer"
-  ]
+  "recommendations": ["biomejs.biome", "ms-vscode.test-adapter-converter", "vitest.explorer"]
 }

@@ -1,23 +1,14 @@
 {
   "$schema": "https://biomejs.dev/schemas/1.9.4/schema.json",
-  "vcs": {
-    "enabled": true,
-    "clientKind": "git",
-    "useIgnoreFile": true
-  },
-  "files": {
-    "ignoreUnknown": true,
-    "include": ["**/*"],
-    "ignore": []
-  },
+  "vcs": { "enabled": true, "clientKind": "git", "useIgnoreFile": true },
+  "files": { "ignoreUnknown": true, "include": ["**/*"], "ignore": [] },
   "formatter": {
     "enabled": true,
+    "formatWithErrors": true,
     "indentStyle": "space",
-    "formatWithErrors": true
+    "lineWidth": 100
   },
-  "organizeImports": {
-    "enabled": false
-  },
+  "organizeImports": { "enabled": false },
   "linter": {
     "enabled": true,
     "rules": {
@@ -37,5 +28,17 @@
       // for nest usage of function parameter decorators
       "unsafeParameterDecoratorsEnabled": true
     }
-  }
+  },
+  "overrides": [
+    {
+      // some/most config files on root export defaults from them
+      "include": ["*.config.ts", "*.config.js"],
+      "linter": { "rules": { "style": { "noDefaultExport": "off" } } }
+    },
+    {
+      // react
+      "include": ["**/*.tsx"],
+      "linter": { "rules": { "suspicious": { "noReactSpecificProps": "off" } } }
+    }
+  ]
 }

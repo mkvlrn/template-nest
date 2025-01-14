@@ -2,14 +2,15 @@
   "[css][jsonc][json][javascript][javascriptreact][typescript][typescriptreact]": {
     "editor.defaultFormatter": "biomejs.biome"
   },
-  "[markdown][html]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
+  "[markdown][html]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
   "biome.enabled": true,
   "editor.codeActionsOnSave": {
     "quickfix.biome": "explicit",
     "source.fixAll": "never",
     "source.organizeImports.biome": "never"
   },
+  "editor.formatOnPaste": true,
+  "editor.formatOnSave": true,
+  "editor.formatOnType": true,
   "eslint.enable": false
 }
