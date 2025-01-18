@@ -1,1 +1,1 @@
-biome check --fix --staged --no-errors-on-unmatched
+yarn tidy --staged
