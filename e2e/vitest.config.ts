@@ -1,17 +1,10 @@
-import swc from "vite-plugin-swc-transform";
-import tsConfigPaths from "vite-tsconfig-paths";
 import { defineConfig } from "vitest/config";
+import baseConfig from "../vitest.config";
 
 export default defineConfig({
-  plugins: [swc({ swcOptions: { swcrc: true, configFile: true } }), tsConfigPaths()],
+  ...baseConfig,
   test: {
-    include: ["./e2e/*.test.{ts,tsx}"],
-    reporters: ["verbose"],
-    coverage: {},
-    // biome-ignore lint/style/useNamingConvention: needed for vitest
-    env: { NODE_ENV: "test" },
-    environment: "node",
-    passWithNoTests: true,
-    setupFiles: [],
+    ...baseConfig.test,
+    include: ["./e2e/**/*.test.{ts,tsx}"],
   },
 });

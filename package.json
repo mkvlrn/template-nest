@@ -10,16 +10,20 @@
     "type": "git",
     "url": "git@github.com:mkvlrn/template-nest"
   },
-  "keywords": ["nestjs", "esm", "template"],
+  "keywords": [
+    "nestjs",
+    "esm",
+    "template"
+  ],
   "scripts": {
     "build": "nest build",
-    "postbuild": "tsc-alias -f",
-    "dev": "node --import @swc-node/register/esm-register --watch src/main.ts",
+    "postbuild": "tsc-alias -p tsconfig.build.json -f",
+    "dev": "yarn build && yarn start --watch",
     "start": "node build/main.js",
     "test": "vitest",
     "test:e2e": "vitest --config e2e/vitest.config.ts",
     "tidy:ci": "biome check --no-errors-on-unmatched",
-    "tidy": "yarn tidy:ci --fix --verbose",
+    "tidy": "yarn tidy:ci --fix",
     "typecheck": "tsc --noEmit",
     "prepare": "husky"
   },
@@ -30,9 +34,7 @@
     "@nestjs/cli": "^10.4.9",
     "@nestjs/schematics": "^11.0.0",
     "@nestjs/testing": "^11.0.1",
-    "@swc-node/register": "^1.10.9",
-    "@swc/cli": "^0.6.0",
-    "@swc/core": "^1.10.7",
+    "@swc/core": "^1.10.8",
     "@types/express": "^5.0.0",
     "@types/node": "^22.10.7",
     "@types/supertest": "^6.0.2",
@@ -41,7 +43,7 @@
     "supertest": "^7.0.0",
     "tsc-alias": "^1.8.10",
     "typescript": "^5.7.3",
-    "vite-plugin-swc-transform": "^1.1.0",
+    "unplugin-swc": "^1.5.1",
     "vite-tsconfig-paths": "^5.1.4",
     "vitest": "^3.0.2"
   },

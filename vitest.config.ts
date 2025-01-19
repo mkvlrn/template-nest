@@ -1,9 +1,9 @@
-import swc from "vite-plugin-swc-transform";
+import swc from "unplugin-swc";
 import tsConfigPaths from "vite-tsconfig-paths";
 import { defineConfig } from "vitest/config";
 
 export default defineConfig({
-  plugins: [swc({ swcOptions: { swcrc: true, configFile: true } }), tsConfigPaths()],
+  plugins: [swc.vite({ module: { type: "es6", strict: true } }), tsConfigPaths()],
   test: {
     include: ["./src/**/*.test.{ts,tsx}"],
     reporters: ["verbose"],
