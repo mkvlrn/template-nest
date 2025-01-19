@@ -44,7 +44,7 @@ Runs biome in fix mode (only [safe fixes](https://biomejs.dev/linter/#safe-fixes
 
 ### `yarn typecheck`
 
-Runs typechecking using tsc and the `tsconfig.json` file.
+Runs type checking using tsc and the `tsconfig.json` file, which is not the one used to build the project.
 
 ## that tsconfig.json seems very strict and opinionated
 

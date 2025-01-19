@@ -10,16 +10,13 @@
     "type": "git",
     "url": "git@github.com:mkvlrn/template-nest"
   },
-  "keywords": [
-    "nestjs",
-    "esm",
-    "template"
-  ],
+  "keywords": ["nestjs", "esm", "template"],
   "scripts": {
     "build": "nest build",
-    "postbuild": "tsc-alias -p tsconfig.build.json -f",
+    "postbuild": "tsc-alias -f -p tsconfig.build.json",
     "dev": "yarn build && yarn start --watch",
     "start": "node build/main.js",
+    "test:ci": "yarn test --run --bail=1 --reporter=default && yarn test:e2e --run --bail=1 --reporter=default",
     "test": "vitest",
     "test:e2e": "vitest --config e2e/vitest.config.ts",
     "tidy:ci": "biome check --no-errors-on-unmatched",
