@@ -1,9 +1,9 @@
 import { Test } from "@nestjs/testing";
 import { beforeEach, describe, expect, test } from "vitest";
+import { mockHelloService } from "~/features/hello/__mocks__/mock-hello-service";
 import { HelloController } from "~/features/hello/hello.controller";
 import { HelloModule } from "~/features/hello/hello.module";
 import { HelloService } from "~/features/hello/services/hello.service";
-import { mockHelloService } from "🧪/integration/mock-hello-service";
 
 describe("HelloController", () => {
   let helloController: HelloController;

@@ -35,9 +35,9 @@ Builds/transpiles the code to `./build`. Again uses swc, but this time it will t
 
 Runs the built project.
 
-### `yarn test`, `yarn test:integration`, `yarn test:e2e`
+### `yarn test`, `yarn test:e2e`
 
-Runs unit/integration/e2e tests with vitest.
+Runs tests with vitest.
 
 ### `yarn tidy`
 

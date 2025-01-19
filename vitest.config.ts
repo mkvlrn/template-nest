@@ -14,9 +14,8 @@ export default defineConfig({
       reportsDirectory: "coverage",
       reporter: ["lcov", "html", "text"],
       include: ["src"],
-      // nestjs modules aren't really testable
-      // controllers are more integration tests
-      exclude: ["src/**/*.test.{ts,tsx}", "src/main.ts", "src/**/*.{module,controller}.ts"],
+      // nestjs main file and modules aren't really testable
+      exclude: ["src/**/*.test.{ts,tsx}", "src/main.ts", "src/**/*.module.ts", "src/**/__mocks__"],
     },
     // biome-ignore lint/style/useNamingConvention: needed for vitest
     env: { NODE_ENV: "test" },

@@ -1,7 +1,7 @@
 {
   "$schema": "https://json.schemastore.org/tsconfig",
   "compilerOptions": {
-    // no emit by default, build config enables it
+    // no emit by default, using swc
     "noEmit": true,
 
     // remove comments from output
@@ -30,9 +30,8 @@
     "outDir": "./build",
 
     // paths for imports
-    // 🧪 is neat, don't be a hater
     "baseUrl": ".",
-    "paths": { "~/*": ["./src/*"], "🧪/*": ["./test/*"] },
+    "paths": { "~/*": ["./src/*"] },
     "rootDir": ".",
 
     // pnpm compatibility
@@ -47,8 +46,7 @@
     // nest uses these weird ass experimental decorators
     // and incremental builds
     "experimentalDecorators": true,
-    "emitDecoratorMetadata": true,
-    "incremental": true
+    "emitDecoratorMetadata": true
   },
 
   "exclude": ["node_modules", "build", "coverage", "dist"]

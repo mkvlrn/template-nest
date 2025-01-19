@@ -5,7 +5,7 @@ import { defineConfig } from "vitest/config";
 export default defineConfig({
   plugins: [swc({ swcOptions: { swcrc: true, configFile: true } }), tsConfigPaths()],
   test: {
-    include: ["./test/e2e/*.test.{ts,tsx}"],
+    include: ["./e2e/*.test.{ts,tsx}"],
     reporters: ["verbose"],
     coverage: {},
     // biome-ignore lint/style/useNamingConvention: needed for vitest
