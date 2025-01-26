@@ -7,6 +7,7 @@ export default defineConfig({
   test: {
     include: ["./src/**/*.test.{ts,tsx}"],
     reporters: ["verbose"],
+    watch: false,
     coverage: {
       all: true,
       clean: true,

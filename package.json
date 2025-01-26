@@ -16,7 +16,7 @@
     "postbuild": "tsc-alias -f -p tsconfig.build.json",
     "dev": "yarn build && yarn start --watch",
     "start": "node build/main.js",
-    "test:ci": "yarn test --run --bail=1 --reporter=default && yarn test:e2e --run --bail=1 --reporter=default",
+    "test:ci": "yarn test --bail=1 --reporter=default && yarn test:e2e --bail=1 --reporter=default",
     "test": "vitest",
     "test:e2e": "vitest --config e2e/vitest.config.ts",
     "tidy:ci": "biome check --no-errors-on-unmatched",

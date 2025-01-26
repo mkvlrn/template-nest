@@ -33,12 +33,13 @@
     {
       // some/most config files on root export defaults from them
       "include": ["*.config.ts", "*.config.js"],
-      "linter": { "rules": { "style": { "noDefaultExport": "off" } } }
-    },
-    {
-      // react
-      "include": ["**/*.tsx"],
-      "linter": { "rules": { "suspicious": { "noReactSpecificProps": "off" } } }
+      "linter": {
+        "rules": {
+          "style": {
+            "noDefaultExport": "off"
+          }
+        }
+      }
     }
   ]
 }
