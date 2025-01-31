@@ -1,13 +1,13 @@
 {
   "$schema": "https://json.schemastore.org/tsconfig",
   "compilerOptions": {
-    // no emit by default, enabled in build
+    // type checking only
     "noEmit": true,
 
-    // remove comments from output
-    "removeComments": true,
+    // importing ts files
+    "allowImportingTsExtensions": true,
 
-    // the stricter, the better
+    // hella strict
     // https://whatislove.dev/articles/the-strictest-typescript-config/
     "allowJs": false,
     "exactOptionalPropertyTypes": true,
@@ -16,23 +16,15 @@
     "strict": true,
     "strictNullChecks": true,
 
-    // esm
+    // esm, the node way
     "esModuleInterop": true,
     "isolatedModules": true,
     "lib": ["ESNext"],
-    "module": "ESNext",
-    "target": "esnext",
-
-    // follow esm conventions
-    // tsc-alias needs outDir to be set
+    "module": "NodeNext",
     "moduleDetection": "force",
-    "moduleResolution": "bundler",
-    "outDir": "./build",
-
-    // paths for imports
-    "baseUrl": ".",
-    "paths": { "~/*": ["./src/*"] },
-    "rootDir": ".",
+    "moduleResolution": "nodenext",
+    "target": "esnext",
+    "verbatimModuleSyntax": true,
 
     // pnpm compatibility
     "preserveSymlinks": true,

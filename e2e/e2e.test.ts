@@ -1,9 +1,9 @@
-import { INestApplication } from "@nestjs/common";
+import { AppModule } from "#app.module.ts";
+import { type INestApplication } from "@nestjs/common";
 import { Test } from "@nestjs/testing";
 import supertest from "supertest";
-import type TestAgent from "supertest/lib/agent";
+import type TestAgent from "supertest/lib/agent.d.ts";
 import { afterEach, beforeEach, describe, expect, test } from "vitest";
-import { AppModule } from "~/app.module";
 
 describe("e2e", () => {
   let app: INestApplication;

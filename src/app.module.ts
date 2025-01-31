@@ -1,6 +1,6 @@
+import { AppController } from "#app.controller.ts";
+import { HelloModule } from "#features/hello/hello.module.ts";
 import { Module } from "@nestjs/common";
-import { AppController } from "~/app.controller";
-import { HelloModule } from "~/features/hello/hello.module";
 
 @Module({
   imports: [HelloModule],

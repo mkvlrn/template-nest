@@ -1,5 +1,5 @@
+import { HelloService } from "#features/hello/services/hello.service.ts";
 import { beforeEach, describe, expect, test } from "vitest";
-import { HelloService } from "~/features/hello/services/hello.service";
 
 describe("HelloService", () => {
   let service: HelloService;

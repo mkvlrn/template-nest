@@ -1,5 +1,5 @@
+import { AppModule } from "#app.module.ts";
 import { NestFactory } from "@nestjs/core";
-import { AppModule } from "~/app.module";
 
 const { PORT = "3000" } = process.env;
 const app = await NestFactory.create(AppModule);
