@@ -9,7 +9,7 @@ export default defineConfig({
   plugins: [swc.vite({ module: { type: "es6", strict: true } })],
 
   test: {
-    include: ["./src/**/*.test.{ts,tsx}"],
+    include: ["src/**/*.test.{ts,tsx}"],
     reporters: ["verbose"],
     watch: false,
     coverage: {
