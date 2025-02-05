@@ -12,7 +12,7 @@
   },
   "keywords": ["nestjs", "esm", "template"],
   "engines": {
-    "node": ">=23.6.0"
+    "node": ">=22.6"
   },
   "imports": {
     "#*": "./src/*"
@@ -32,27 +32,27 @@
   },
   "devDependencies": {
     "@biomejs/biome": "^1.9.4",
-    "@commitlint/cli": "^19.6.1",
-    "@commitlint/config-conventional": "^19.6.0",
+    "@commitlint/cli": "^19.7.1",
+    "@commitlint/config-conventional": "^19.7.1",
     "@nestjs/cli": "^11.0.2",
     "@nestjs/schematics": "^11.0.0",
-    "@nestjs/testing": "^11.0.6",
-    "@swc/core": "^1.10.12",
+    "@nestjs/testing": "^11.0.7",
+    "@swc/core": "^1.10.14",
     "@types/express": "^5.0.0",
-    "@types/node": "^22.12.0",
+    "@types/node": "^22.13.1",
     "@types/supertest": "^6.0.2",
-    "@vitest/coverage-v8": "^3.0.4",
+    "@vitest/coverage-v8": "^3.0.5",
     "husky": "^9.1.7",
     "supertest": "^7.0.0",
     "tsup": "^8.3.6",
     "typescript": "^5.7.3",
     "unplugin-swc": "^1.5.1",
-    "vitest": "^3.0.4"
+    "vitest": "^3.0.5"
   },
   "dependencies": {
-    "@nestjs/common": "^11.0.6",
-    "@nestjs/core": "^11.0.6",
-    "@nestjs/platform-express": "^11.0.6",
+    "@nestjs/common": "^11.0.7",
+    "@nestjs/core": "^11.0.7",
+    "@nestjs/platform-express": "^11.0.7",
     "reflect-metadata": "^0.2.2",
     "rxjs": "^7.8.1"
   }
