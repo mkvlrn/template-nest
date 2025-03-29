@@ -5,6 +5,6 @@ export class AppController {
   @Get("/")
   @Redirect("hello", 302)
   redirectToHello(): void {
-    // just a dummy method to redirect to the hello endpoint
+    return;
   }
 }

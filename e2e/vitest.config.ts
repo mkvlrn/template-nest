@@ -6,5 +6,6 @@ export default defineConfig({
   test: {
     ...baseConfig.test,
     include: ["./e2e/**/*.test.{ts,tsx}"],
+    coverage: {},
   },
 });

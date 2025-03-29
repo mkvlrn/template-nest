@@ -6,7 +6,7 @@
   "target": "esnext",
   "platform": "node",
   "bundle": true,
-  "sourcemap": true,
+  "sourcemap": false,
   "dts": false,
   "splitting": false,
   "cjsInterop": false,
