@@ -1,6 +1,7 @@
-import { AppController } from "#app.controller.ts";
+import assert from "node:assert/strict";
+import { beforeEach, describe, it } from "node:test";
 import { Test } from "@nestjs/testing";
-import { beforeEach, describe, expect, test } from "vitest";
+import { AppController } from "#app/app.controller";
 
 describe("redirectToHello", () => {
   let appController: AppController;
@@ -13,9 +14,9 @@ describe("redirectToHello", () => {
     appController = module.get<AppController>(AppController);
   });
 
-  test("should redirect to hello", () => {
-    const act = () => appController.redirectToHello();
+  it("should redirect to hello", () => {
+    const act = (): void => appController.redirectToHello();
 
-    expect(act).not.toThrow();
+    assert.doesNotThrow(act, "should not throw");
   });
 });

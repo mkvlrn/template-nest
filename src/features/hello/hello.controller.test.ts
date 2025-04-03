@@ -1,7 +1,8 @@
-import { HelloController } from "#features/hello/hello.controller.ts";
-import { HelloService } from "#features/hello/services/hello.service.ts";
+import assert from "node:assert/strict";
+import { beforeEach, describe, it, mock } from "node:test";
 import { Test } from "@nestjs/testing";
-import { beforeEach, describe, expect, test, vi } from "vitest";
+import { HelloController } from "#features/hello/hello.controller";
+import { HelloService } from "#features/hello/services/hello.service";
 
 describe("getHello", () => {
   let helloController: HelloController;
@@ -9,7 +10,7 @@ describe("getHello", () => {
 
   beforeEach(async () => {
     mockHelloService = {
-      sayHello: vi.fn().mockReturnValue("hello from mock hello service"),
+      sayHello: mock.fn(() => "hello from mock hello service"),
     };
 
     const module = await Test.createTestingModule({
@@ -20,9 +21,9 @@ describe("getHello", () => {
     helloController = module.get<HelloController>(HelloController);
   });
 
-  test("should use the service's sayHello method", () => {
+  it("should use the service's sayHello method", () => {
     const result = helloController.getHello();
 
-    expect(result).toBe("hello from mock hello service");
+    assert.strictEqual("hello from mock hello service", result);
   });
 });

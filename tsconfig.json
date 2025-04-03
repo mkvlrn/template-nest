@@ -1,42 +1,13 @@
 {
-  "$schema": "https://json.schemastore.org/tsconfig",
+  "extends": "@mkvlrn/config/tsconfig-node",
   "compilerOptions": {
+    // imports from src as defined in package.json subpath
+    "customConditions": ["dev"],
+
     // type checking only
     "noEmit": true,
 
-    // importing ts files
-    "allowImportingTsExtensions": true,
-
-    // hella strict
-    // https://whatislove.dev/articles/the-strictest-typescript-config/
-    "allowJs": false,
-    "exactOptionalPropertyTypes": true,
-    "noPropertyAccessFromIndexSignature": true,
-    "noUncheckedIndexedAccess": true,
-    "strict": true,
-    "strictNullChecks": true,
-
-    // esm, the node way
-    "esModuleInterop": true,
-    "isolatedModules": true,
-    "lib": ["ESNext"],
-    "module": "NodeNext",
-    "moduleDetection": "force",
-    "moduleResolution": "nodenext",
-    "target": "esnext",
-    "verbatimModuleSyntax": true,
-
-    // pnpm compatibility
-    "preserveSymlinks": true,
-
-    // importing json happens more often than you think
-    "resolveJsonModule": true,
-
-    // don't try to check for errors on imported libs
-    "skipLibCheck": true,
-
     // nest uses these weird ass experimental decorators
-    // and incremental builds
     "experimentalDecorators": true,
     "emitDecoratorMetadata": true
   },

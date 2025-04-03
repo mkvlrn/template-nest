@@ -5,7 +5,7 @@ A sane, opinionated template for esm nestjs projects written in typescript.
 Uses:
 
 - [biome](https://github.com/biomejs/biome) for linting and formatting
-- [vitest](https://github.com/vitest-dev/vitest) for tests
+- [node test runner](https://nodejs.org/api/test.html) for tests
 - [commitlint](https://github.com/conventional-changelog/commitlint) for linting commit messages
 - [husky](https://github.com/typicode/husky) for git hooks
 - [tsup](https://github.com/egoist/tsup) for building
@@ -14,7 +14,8 @@ Uses:
 
 - esm
 - biome is a linter/formatter running on git hooks (pre-commit, pre-push)
-- vitest as a test runner
+- no weird build-then-run-dev flow, tsx runs the dev code
+- node test runner is ready-ish for prime time
 - tsup for building
 - overall it's just as opinionated, but a tad cleaner, stricter, and modernized
 
@@ -26,7 +27,7 @@ Just check what is in it, it't not that different from what you'd get with nestj
 
 ### `yarn dev`
 
-Runs the project in watch mode.
+Runs the project in watch mode with tsx.
 
 ### `yarn build`
 
@@ -36,11 +37,11 @@ Builds/transpiles the code to `./build`.
 
 Runs the built project.
 
-### `yarn test`, `yarn test:e2e`
+### `yarn test`, `yarn test-e2e`
 
 Runs tests with vitest.
 
-### `yarn tidy`
+### `yarn biome-fix`
 
 Runs biome in fix mode (only [safe fixes](https://biomejs.dev/linter/#safe-fixes)) to lint and format the project.
 

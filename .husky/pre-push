@@ -1,3 +1,4 @@
 yarn typecheck
-yarn tidy:ci
-yarn test:ci
+yarn biome-check
+yarn test
+yarn test-e2e

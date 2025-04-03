@@ -1,28 +1,6 @@
 {
-  "$schema": "https://biomejs.dev/schemas/1.9.4/schema.json",
-  "vcs": { "enabled": true, "clientKind": "git", "useIgnoreFile": true },
-  "files": { "ignoreUnknown": true, "include": ["**/*"], "ignore": [] },
-  "formatter": {
-    "enabled": true,
-    "formatWithErrors": true,
-    "indentStyle": "space",
-    "lineWidth": 100
-  },
-  "organizeImports": { "enabled": false },
-  "linter": {
-    "enabled": true,
-    "rules": {
-      "all": true,
-      "complexity": {
-        // this goes against typescript's noPropertyAccessFromIndexSignature
-        "useLiteralKeys": "off"
-      },
-      "style": {
-        // https://biomejs.dev/linter/rules/use-import-type/#caveat-with-typescript-experimental-decorators
-        "useImportType": "off"
-      }
-    }
-  },
+  "$schema": "node_modules/@biomejs/biome/configuration_schema.json",
+  "extends": ["@mkvlrn/config/biome"],
   "javascript": {
     "parser": {
       // for nest usage of function parameter decorators
@@ -31,12 +9,47 @@
   },
   "overrides": [
     {
+      // dont sort keys in these because they're usually in a specific order for readability
+      "includes": ["**/biome.json", "**/biome.jsonc", "**/package.json", "**/tsconfig.json"],
+      "assist": {
+        "actions": {
+          "source": {
+            "useSortedKeys": "off"
+          }
+        }
+      }
+    },
+    {
+      // main.ts can console stuff out
+      "includes": ["src/main.ts"],
+      "linter": {
+        "rules": {
+          "suspicious": {
+            "noConsole": {
+              "level": "off"
+            }
+          }
+        }
+      }
+    },
+    {
       // some/most config files on root export defaults from them
-      "include": ["*.config.ts", "*.config.js"],
+      "includes": ["**/*.config.ts"],
       "linter": {
         "rules": {
           "style": {
             "noDefaultExport": "off"
+          }
+        }
+      }
+    },
+    {
+      // test files and scripts can use node:modules
+      "includes": ["src/**/*.test.ts", "src/**/*.spec.ts", "scripts/*.ts"],
+      "linter": {
+        "rules": {
+          "correctness": {
+            "noNodejsModules": "off"
           }
         }
       }

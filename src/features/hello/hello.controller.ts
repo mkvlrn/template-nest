@@ -1,11 +1,11 @@
-import { HelloService } from "#features/hello/services/hello.service.ts";
-import { Controller, Get, Query } from "@nestjs/common";
+import { Controller, Get, Inject, Query } from "@nestjs/common";
+import { HelloService } from "#features/hello/services/hello.service";
 
 @Controller("hello")
 export class HelloController {
   private readonly helloService: HelloService;
 
-  constructor(helloService: HelloService) {
+  constructor(@Inject(HelloService) helloService: HelloService) {
     this.helloService = helloService;
   }
 

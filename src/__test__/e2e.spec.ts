@@ -1,9 +1,10 @@
-import { AppModule } from "#app.module.ts";
-import { type INestApplication } from "@nestjs/common";
+import assert from "node:assert/strict";
+import { afterEach, beforeEach, describe, it } from "node:test";
+import type { INestApplication } from "@nestjs/common";
 import { Test } from "@nestjs/testing";
 import supertest from "supertest";
 import type TestAgent from "supertest/lib/agent.d.ts";
-import { afterEach, beforeEach, describe, expect, test } from "vitest";
+import { AppModule } from "#app/app.module";
 
 describe("e2e", () => {
   let app: INestApplication;
@@ -23,24 +24,24 @@ describe("e2e", () => {
     await app.close();
   });
 
-  test("GET / redirects to /hello", async () => {
+  it("GET / redirects to /hello", async () => {
     const response = await server.get("/");
 
-    expect(response.status).toStrictEqual(302);
-    expect(response.headers["location"]).toStrictEqual("hello");
+    assert.strictEqual(response.status, 302);
+    assert.strictEqual(response.headers.location, "hello");
   });
 
-  test("GET /hello", async () => {
+  it("GET /hello", async () => {
     const response = await server.get("/hello");
 
-    expect(response.status).toStrictEqual(200);
-    expect(response.text).toStrictEqual("Hello World!");
+    assert.strictEqual(response.status, 200);
+    assert.strictEqual(response.text, "Hello World!");
   });
 
-  test("GET /hello?to=John", async () => {
+  it("GET /hello?to=John", async () => {
     const response = await server.get("/hello?to=John");
 
-    expect(response.status).toStrictEqual(200);
-    expect(response.text).toStrictEqual("Hello John!");
+    assert.strictEqual(response.status, 200);
+    assert.strictEqual(response.text, "Hello John!");
   });
 });

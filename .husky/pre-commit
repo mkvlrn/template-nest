@@ -1,1 +1,1 @@
-yarn tidy:ci --staged
+yarn biome-check --staged
