@@ -24,6 +24,6 @@ describe("getHello", () => {
   it("should use the service's sayHello method", () => {
     const result = helloController.getHello();
 
-    assert.strictEqual("hello from mock hello service", result);
+    assert.strictEqual(result, "hello from mock hello service");
   });
 });
