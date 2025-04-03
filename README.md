@@ -17,6 +17,7 @@ Uses:
 - no weird build-then-run-dev flow, tsx runs the dev code
 - node test runner is ready-ish for prime time
 - tsup for building
+- all code generation is ass, but nestjs's cli is particularly terrible, so dependencies for that and the nest-cli.json file are gone - just add files yourself, promise you'll be fine
 - overall it's just as opinionated, but a tad cleaner, stricter, and modernized
 
 The cli is "fine", but it seems that project will take a long time before they decide to modernize it by supporting esm, switch to vitest (or the native test runner), use biome (which is better than eslint/prettier overall, and they probably won't even upgrade eslint to the flat config which is at least beareble) and removing some bloat.
