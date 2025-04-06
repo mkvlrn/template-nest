@@ -26,7 +26,7 @@
   },
   "scripts": {
     "build": "node scripts/build.ts",
-    "dev": "node -C dev --import tsx src/main.ts",
+    "dev": "node -C dev --import tsx --watch src/main.ts",
     "start": "node build/main.js",
     "test": "node -C dev --import tsx --test 'src/**/*.test.ts'",
     "test-e2e": "node -C dev --import tsx --test 'src/**/*.spec.ts'",
@@ -38,7 +38,7 @@
   "devDependencies": {
     "@commitlint/cli": "^19.8.0",
     "@mkvlrn/config": "^2.0.3",
-    "@nestjs/testing": "^11.0.12",
+    "@nestjs/testing": "^11.0.13",
     "@types/express": "^5.0.1",
     "@types/node": "^22.14.0",
     "@types/supertest": "^6.0.3",
@@ -46,15 +46,17 @@
     "supertest": "^7.1.0",
     "tsup": "^8.4.0",
     "tsx": "^4.19.3",
-    "typescript": "^5.8.2"
+    "typescript": "^5.8.3"
   },
   "dependencies": {
-    "@biomejs/biome": "https://pkg.pr.new/biomejs/biome/@biomejs/biome@241a440",
-    "@nestjs/common": "^11.0.12",
+    "@biomejs/biome": "https://pkg.pr.new/biomejs/biome/@biomejs/biome@19ecf30",
+    "@mkvlrn/result": "^1.1.0",
+    "@nestjs/common": "^11.0.13",
     "@nestjs/config": "^4.0.2",
-    "@nestjs/core": "^11.0.12",
-    "@nestjs/platform-express": "^11.0.12",
+    "@nestjs/core": "^11.0.13",
+    "@nestjs/platform-express": "^11.0.13",
     "reflect-metadata": "^0.2.2",
-    "rxjs": "^7.8.2"
+    "rxjs": "^7.8.2",
+    "zod": "^3.24.2"
   }
 }

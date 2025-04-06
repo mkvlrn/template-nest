@@ -6,5 +6,6 @@ import { HelloService } from "#features/hello/services/hello.service";
   imports: [],
   controllers: [HelloController],
   providers: [HelloService],
+  exports: [],
 })
 export class HelloModule {}

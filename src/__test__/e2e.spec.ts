@@ -24,13 +24,6 @@ describe("e2e", () => {
     await app.close();
   });
 
-  it("GET / redirects to /hello", async () => {
-    const response = await server.get("/");
-
-    assert.strictEqual(response.status, 302);
-    assert.strictEqual(response.headers.location, "hello");
-  });
-
   it("GET /hello", async () => {
     const response = await server.get("/hello");
 

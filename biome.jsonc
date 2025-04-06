@@ -7,6 +7,14 @@
       "unsafeParameterDecoratorsEnabled": true
     }
   },
+  "linter": {
+    "rules": {
+      "nursery": {
+        // probably not working with subpath imports for now
+        "noUnresolvedImports": "off"
+      }
+    }
+  },
   "overrides": [
     {
       // dont sort keys in these because they're usually in a specific order for readability
