@@ -3,12 +3,12 @@ import { afterEach, beforeEach, describe, it } from "node:test";
 import type { INestApplication } from "@nestjs/common";
 import { Test } from "@nestjs/testing";
 import supertest from "supertest";
-import type TestAgent from "supertest/lib/agent.d.ts";
-import { AppModule } from "#app/app.module";
+import type { Agent } from "supertest";
+import { AppModule } from "#app.module";
 
 describe("e2e", () => {
   let app: INestApplication;
-  let server: TestAgent;
+  let server: Agent;
 
   beforeEach(async () => {
     const module = await Test.createTestingModule({
