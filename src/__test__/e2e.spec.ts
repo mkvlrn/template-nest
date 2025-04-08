@@ -2,8 +2,7 @@ import assert from "node:assert/strict";
 import { afterEach, beforeEach, describe, it } from "node:test";
 import type { INestApplication } from "@nestjs/common";
 import { Test } from "@nestjs/testing";
-import supertest from "supertest";
-import type { Agent } from "supertest";
+import supertest, { type Agent } from "supertest";
 import { AppModule } from "#app.module";
 
 describe("e2e", () => {
