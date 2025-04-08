@@ -10,7 +10,8 @@
   "linter": {
     "rules": {
       "nursery": {
-        // probably not working with subpath imports for now
+        // temporary because of subpath imports
+        // might be fixed, discussed: https://github.com/biomejs/biome/discussions/5603
         "noUnresolvedImports": "off"
       }
     }

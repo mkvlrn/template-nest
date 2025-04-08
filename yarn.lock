@@ -29,37 +29,82 @@
     "@biomejs/cli-win32-arm64" "https://pkg.pr.new/biomejs/biome/@biomejs/cli-win32-arm64@19ecf30"
     "@biomejs/cli-win32-x64" "https://pkg.pr.new/biomejs/biome/@biomejs/cli-win32-x64@19ecf30"
 
+"@biomejs/biome@https://pkg.pr.new/biomejs/biome/@biomejs/biome@2d699e3":
+  version "1.9.4"
+  resolved "https://pkg.pr.new/biomejs/biome/@biomejs/biome@2d699e3#ea1649adfccd7233116b436c8b8270eee71461e1"
+  optionalDependencies:
+    "@biomejs/cli-darwin-arm64" "https://pkg.pr.new/biomejs/biome/@biomejs/cli-darwin-arm64@2d699e3"
+    "@biomejs/cli-darwin-x64" "https://pkg.pr.new/biomejs/biome/@biomejs/cli-darwin-x64@2d699e3"
+    "@biomejs/cli-linux-arm64" "https://pkg.pr.new/biomejs/biome/@biomejs/cli-linux-arm64@2d699e3"
+    "@biomejs/cli-linux-arm64-musl" "https://pkg.pr.new/biomejs/biome/@biomejs/cli-linux-arm64-musl@2d699e3"
+    "@biomejs/cli-linux-x64" "https://pkg.pr.new/biomejs/biome/@biomejs/cli-linux-x64@2d699e3"
+    "@biomejs/cli-linux-x64-musl" "https://pkg.pr.new/biomejs/biome/@biomejs/cli-linux-x64-musl@2d699e3"
+    "@biomejs/cli-win32-arm64" "https://pkg.pr.new/biomejs/biome/@biomejs/cli-win32-arm64@2d699e3"
+    "@biomejs/cli-win32-x64" "https://pkg.pr.new/biomejs/biome/@biomejs/cli-win32-x64@2d699e3"
+
 "@biomejs/cli-darwin-arm64@https://pkg.pr.new/biomejs/biome/@biomejs/cli-darwin-arm64@19ecf30":
   version "1.9.4"
   resolved "https://pkg.pr.new/biomejs/biome/@biomejs/cli-darwin-arm64@19ecf30#7eed8f30ef57d02c5cd35c6fbae39ebd7afac9e4"
+
+"@biomejs/cli-darwin-arm64@https://pkg.pr.new/biomejs/biome/@biomejs/cli-darwin-arm64@2d699e3":
+  version "1.9.4"
+  resolved "https://pkg.pr.new/biomejs/biome/@biomejs/cli-darwin-arm64@2d699e3#09f513f7a67c4b363f647da1fbe4184a9df30c88"
 
 "@biomejs/cli-darwin-x64@https://pkg.pr.new/biomejs/biome/@biomejs/cli-darwin-x64@19ecf30":
   version "1.9.4"
   resolved "https://pkg.pr.new/biomejs/biome/@biomejs/cli-darwin-x64@19ecf30#821bb5919fa1b304f50de93ffa0fa41023716650"
 
+"@biomejs/cli-darwin-x64@https://pkg.pr.new/biomejs/biome/@biomejs/cli-darwin-x64@2d699e3":
+  version "1.9.4"
+  resolved "https://pkg.pr.new/biomejs/biome/@biomejs/cli-darwin-x64@2d699e3#733e2625a1ba9910a25075aa0e2ec24539179140"
+
 "@biomejs/cli-linux-arm64-musl@https://pkg.pr.new/biomejs/biome/@biomejs/cli-linux-arm64-musl@19ecf30":
   version "1.9.4"
   resolved "https://pkg.pr.new/biomejs/biome/@biomejs/cli-linux-arm64-musl@19ecf30#c698e66ddbc4e37c11845c980906e3eb9a23117d"
+
+"@biomejs/cli-linux-arm64-musl@https://pkg.pr.new/biomejs/biome/@biomejs/cli-linux-arm64-musl@2d699e3":
+  version "1.9.4"
+  resolved "https://pkg.pr.new/biomejs/biome/@biomejs/cli-linux-arm64-musl@2d699e3#cc85c0a3de9209d9ceb3164b690f5ff8c5ca49db"
 
 "@biomejs/cli-linux-arm64@https://pkg.pr.new/biomejs/biome/@biomejs/cli-linux-arm64@19ecf30":
   version "1.9.4"
   resolved "https://pkg.pr.new/biomejs/biome/@biomejs/cli-linux-arm64@19ecf30#a1832c6902453ac765c095aa25303a80c5ae051d"
 
+"@biomejs/cli-linux-arm64@https://pkg.pr.new/biomejs/biome/@biomejs/cli-linux-arm64@2d699e3":
+  version "1.9.4"
+  resolved "https://pkg.pr.new/biomejs/biome/@biomejs/cli-linux-arm64@2d699e3#eef280c2178d82310d4c9dce3ddcd9293d3b12d1"
+
 "@biomejs/cli-linux-x64-musl@https://pkg.pr.new/biomejs/biome/@biomejs/cli-linux-x64-musl@19ecf30":
   version "1.9.4"
   resolved "https://pkg.pr.new/biomejs/biome/@biomejs/cli-linux-x64-musl@19ecf30#177dc74737b0c213f10f3a60ca7d0e643bf02c53"
+
+"@biomejs/cli-linux-x64-musl@https://pkg.pr.new/biomejs/biome/@biomejs/cli-linux-x64-musl@2d699e3":
+  version "1.9.4"
+  resolved "https://pkg.pr.new/biomejs/biome/@biomejs/cli-linux-x64-musl@2d699e3#451a8e4d21d4519bab62fc17914bdc6f19c7e468"
 
 "@biomejs/cli-linux-x64@https://pkg.pr.new/biomejs/biome/@biomejs/cli-linux-x64@19ecf30":
   version "1.9.4"
   resolved "https://pkg.pr.new/biomejs/biome/@biomejs/cli-linux-x64@19ecf30#8e34a4d199dfa3125bfdf254aff499c0f7d564bb"
 
+"@biomejs/cli-linux-x64@https://pkg.pr.new/biomejs/biome/@biomejs/cli-linux-x64@2d699e3":
+  version "1.9.4"
+  resolved "https://pkg.pr.new/biomejs/biome/@biomejs/cli-linux-x64@2d699e3#1d7c16215305592e2f0692d3a8d32bd07f8b9fb7"
+
 "@biomejs/cli-win32-arm64@https://pkg.pr.new/biomejs/biome/@biomejs/cli-win32-arm64@19ecf30":
   version "1.9.4"
   resolved "https://pkg.pr.new/biomejs/biome/@biomejs/cli-win32-arm64@19ecf30#e176229f2c9e2cfa83890aa52c0ef62f0cc4d9d6"
 
+"@biomejs/cli-win32-arm64@https://pkg.pr.new/biomejs/biome/@biomejs/cli-win32-arm64@2d699e3":
+  version "1.9.4"
+  resolved "https://pkg.pr.new/biomejs/biome/@biomejs/cli-win32-arm64@2d699e3#53893505043d8830ae3b14640449c77fa72ec2cc"
+
 "@biomejs/cli-win32-x64@https://pkg.pr.new/biomejs/biome/@biomejs/cli-win32-x64@19ecf30":
   version "1.9.4"
   resolved "https://pkg.pr.new/biomejs/biome/@biomejs/cli-win32-x64@19ecf30#744483d7b06204d039648869e7a378016d9d5a7f"
+
+"@biomejs/cli-win32-x64@https://pkg.pr.new/biomejs/biome/@biomejs/cli-win32-x64@2d699e3":
+  version "1.9.4"
+  resolved "https://pkg.pr.new/biomejs/biome/@biomejs/cli-win32-x64@2d699e3#a2aca0048249f8fdd05344e0749ca5ecf6b383d8"
 
 "@commitlint/cli@^19.8.0":
   version "19.8.0"
