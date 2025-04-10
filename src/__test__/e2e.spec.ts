@@ -3,7 +3,7 @@ import { afterEach, beforeEach, describe, it } from "node:test";
 import type { INestApplication } from "@nestjs/common";
 import { Test } from "@nestjs/testing";
 import supertest, { type Agent } from "supertest";
-import { AppModule } from "#app.module";
+import { AppModule } from "~/app.module.js";
 
 describe("e2e", () => {
   let app: INestApplication;

@@ -1,9 +1,12 @@
 import { rm } from "node:fs/promises";
+import { replaceTscAliasPaths } from "tsc-alias";
 import { build, type Options } from "tsup";
 
-const options: Options = {
+const OUT_DIR = "build";
+
+const tsupOptions: Options = {
   entry: ["src/**/*.ts", "!src/**/*.test.ts", "!src/**/*.spec.ts"],
-  outDir: "build",
+  outDir: OUT_DIR,
   format: ["esm"],
   target: "esnext",
   platform: "node",
@@ -13,12 +16,10 @@ const options: Options = {
   splitting: false,
   cjsInterop: false,
   dts: false,
-  esbuildOptions: (options) => {
-    options.conditions = ["dev"];
-  },
   external: [],
   noExternal: [],
 };
 
-await rm("build", { force: true, recursive: true });
-await build(options);
+await rm(OUT_DIR, { force: true, recursive: true });
+await build(tsupOptions);
+await replaceTscAliasPaths({ outDir: OUT_DIR });

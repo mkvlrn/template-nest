@@ -1,7 +1,7 @@
 import assert from "node:assert/strict";
 import { describe, it, mock } from "node:test";
-import { AppError } from "#core/error";
-import { FetchService } from "#features/__shared/http/services/fetch.service";
+import { AppError } from "~/core/error.js";
+import { FetchService } from "~/features/__shared/http/services/fetch.service.js";
 
 describe("FetchService", () => {
   let service: FetchService;

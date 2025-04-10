@@ -1,5 +1,5 @@
 import { Module } from "@nestjs/common";
-import { FetchService } from "#features/__shared/http/services/fetch.service";
+import { FetchService } from "~/features/__shared/http/services/fetch.service.js";
 
 @Module({
   imports: [],

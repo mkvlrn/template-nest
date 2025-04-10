@@ -1,15 +1,16 @@
 {
   "extends": "@mkvlrn/config/tsconfig-node",
   "compilerOptions": {
-    // imports from src as defined in package.json subpath
-    "customConditions": ["dev"],
-
     // type checking only
     "noEmit": true,
 
     // nest uses these weird ass experimental decorators
     "experimentalDecorators": true,
-    "emitDecoratorMetadata": true
+    "emitDecoratorMetadata": true,
+
+    "paths": {
+      "~/*": ["./src/*"]
+    }
   },
 
   "exclude": ["node_modules", "build", "coverage", "dist"]

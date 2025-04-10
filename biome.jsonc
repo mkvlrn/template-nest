@@ -7,15 +7,6 @@
       "unsafeParameterDecoratorsEnabled": true
     }
   },
-  "linter": {
-    "rules": {
-      "nursery": {
-        // temporary because of subpath imports
-        // might be fixed, discussed: https://github.com/biomejs/biome/discussions/5603
-        "noUnresolvedImports": "off"
-      }
-    }
-  },
   "overrides": [
     {
       // dont sort keys in these because they're usually in a specific order for readability

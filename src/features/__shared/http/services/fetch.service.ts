@@ -1,6 +1,6 @@
 import { Result } from "@mkvlrn/result";
 import { Injectable } from "@nestjs/common";
-import { AppError } from "#core/error";
+import { AppError } from "~/core/error.js";
 
 @Injectable()
 export class FetchService {

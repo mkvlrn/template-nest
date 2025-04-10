@@ -9,6 +9,7 @@ Uses:
 - [commitlint](https://github.com/conventional-changelog/commitlint) for linting commit messages
 - [husky](https://github.com/typicode/husky) for git hooks
 - [tsup](https://github.com/egoist/tsup) for building
+- [tsx](https://github.com/privatenumber/tsx) for dev time typescript
 
 ## why use this template instead of nestjs-cli?
 
