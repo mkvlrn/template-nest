@@ -23,6 +23,7 @@
     "dev": "tsx --watch src/main.ts",
     "start": "node build/main.js",
     "test": "tsx --test",
+    "test-e2e": "tsx --test 'src/**/*.spec.ts'",
     "biome-check": "biome check --no-errors-on-unmatched",
     "biome-fix": "yarn biome-check --write",
     "typecheck": "tsc --noEmit",
