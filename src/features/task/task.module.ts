@@ -1,5 +1,5 @@
 import { Module } from "@nestjs/common";
-import { HttpModule } from "~/features/__shared/http/http.module.js";
+import { HttpModule } from "~/common/http/http.module.js";
 import { GetTaskService } from "~/features/task/services/get-task.service.js";
 import { TaskController } from "~/features/task/task.controller.js";
 

@@ -1,8 +1,8 @@
 import assert from "node:assert/strict";
 import { beforeEach, describe, it, mock } from "node:test";
 import { Result } from "@mkvlrn/result";
+import type { FetchService } from "~/common/http/services/fetch.service.js";
 import { AppError } from "~/core/error.js";
-import type { FetchService } from "~/features/__shared/http/services/fetch.service.js";
 import { GetTaskService } from "~/features/task/services/get-task.service.js";
 
 describe("GetTaskService", () => {

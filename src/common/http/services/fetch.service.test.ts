@@ -1,16 +1,19 @@
 import assert from "node:assert/strict";
-import { describe, it, mock } from "node:test";
+import { beforeEach, describe, it, mock } from "node:test";
+import { FetchService } from "~/common/http/services/fetch.service.js";
 import { AppError } from "~/core/error.js";
-import { FetchService } from "~/features/__shared/http/services/fetch.service.js";
+
+const MOCK_BODY = { userId: 1, id: 1, title: "delectus aut autem", completed: false };
 
 describe("FetchService", () => {
   let service: FetchService;
 
-  it("should return a successful result when fetch is successful", async () => {
-    const mockResponse = new Response(
-      JSON.stringify({ userId: 1, id: 1, title: "delectus aut autem", completed: false }),
-    );
+  beforeEach(() => {
     service = new FetchService();
+  });
+
+  it("should return a successful result when fetch is successful", async () => {
+    const mockResponse = new Response(JSON.stringify(MOCK_BODY));
     mock.method(global, "fetch", () => {
       return Promise.resolve(mockResponse);
     });
@@ -18,18 +21,12 @@ describe("FetchService", () => {
     const result = await service.fetch("https://jsonplaceholder.typicode.com/todos/1");
 
     assert.strictEqual(result.ok, true);
-    assert.deepStrictEqual(result.value, {
-      userId: 1,
-      id: 1,
-      title: "delectus aut autem",
-      completed: false,
-    });
+    assert.deepStrictEqual(result.value, MOCK_BODY);
   });
 
   describe("when fetch returns a non ok status code", () => {
     it("should return an error when fetch returns a 404", async () => {
       const mockResponse = new Response(null, { status: 404 });
-      service = new FetchService();
       mock.method(global, "fetch", () => {
         return Promise.resolve(mockResponse);
       });
@@ -44,7 +41,6 @@ describe("FetchService", () => {
 
     it("should return an error when fetch returns a 500", async () => {
       const mockResponse = new Response(null, { status: 500 });
-      service = new FetchService();
       mock.method(global, "fetch", () => {
         return Promise.resolve(mockResponse);
       });
@@ -58,7 +54,6 @@ describe("FetchService", () => {
     });
 
     it("should return an error when fetch itself throws an error", async () => {
-      service = new FetchService();
       mock.method(global, "fetch", () => {
         throw new Error("Network error");
       });

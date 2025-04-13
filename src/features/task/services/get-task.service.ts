@@ -1,6 +1,6 @@
 import { Result } from "@mkvlrn/result";
 import { Inject, Injectable } from "@nestjs/common";
-import { FetchService } from "~/features/__shared/http/services/fetch.service.js";
+import { FetchService } from "~/common/http/services/fetch.service.js";
 
 export interface Task {
   userId: number;
