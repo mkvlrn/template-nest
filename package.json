@@ -16,7 +16,7 @@
     "template"
   ],
   "engines": {
-    "node": ">=23.6"
+    "node": "24.x"
   },
   "scripts": {
     "build": "tsx scripts/build.ts",
@@ -30,28 +30,28 @@
     "prepare": "husky"
   },
   "devDependencies": {
-    "@commitlint/cli": "^19.8.0",
-    "@mkvlrn/config": "^2.0.5",
-    "@nestjs/testing": "^11.0.20",
+    "@biomejs/biome": "^2.0.0-beta.3",
+    "@commitlint/cli": "^19.8.1",
+    "@commitlint/config-conventional": "^19.8.1",
+    "@nestjs/testing": "^11.1.0",
     "@types/express": "^5.0.1",
-    "@types/node": "^22.14.1",
+    "@types/node": "^22.15.17",
     "@types/supertest": "^6.0.3",
     "husky": "^9.1.7",
-    "supertest": "^7.1.0",
-    "tsc-alias": "^1.8.15",
+    "supertest": "^7.1.1",
+    "tsc-alias": "^1.8.16",
     "tsup": "^8.4.0",
-    "tsx": "^4.19.3",
+    "tsx": "^4.19.4",
     "typescript": "^5.8.3"
   },
   "dependencies": {
-    "@biomejs/biome": "https://pkg.pr.new/biomejs/biome/@biomejs/biome@5f890fb",
-    "@mkvlrn/result": "^1.1.0",
-    "@nestjs/common": "^11.0.20",
+    "@mkvlrn/result": "^1.1.4",
+    "@nestjs/common": "^11.1.0",
     "@nestjs/config": "^4.0.2",
-    "@nestjs/core": "^11.0.20",
-    "@nestjs/platform-express": "^11.0.20",
+    "@nestjs/core": "^11.1.0",
+    "@nestjs/platform-express": "^11.1.0",
     "reflect-metadata": "^0.2.2",
     "rxjs": "^7.8.2",
-    "zod": "^3.24.3"
+    "zod": "^3.24.4"
   }
 }

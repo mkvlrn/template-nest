@@ -13,6 +13,7 @@ class ZodPipe implements PipeTransform {
     const result = this.schema.safeParse(value);
 
     if (!result.success) {
+      // biome-ignore lint/nursery/useExplicitType: https://github.com/biomejs/biome/issues/5932
       const errors = result.error.issues.map((issue) => issue.message);
       throw new BadRequestException(`Validation failed: ${errors.join(", ")}`);
     }

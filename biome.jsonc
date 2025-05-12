@@ -1,6 +1,48 @@
 {
   "$schema": "node_modules/@biomejs/biome/configuration_schema.json",
-  "extends": ["@mkvlrn/config/biome"],
+  "vcs": {
+    "clientKind": "git",
+    "enabled": true,
+    "useIgnoreFile": true
+  },
+  "files": {
+    "ignoreUnknown": true,
+    "includes": ["**/*", "!build/**", "!node_modules/**", "!dist/**", "!coverage/**"]
+  },
+  "assist": {
+    "actions": {
+      "source": {
+        "organizeImports": "on",
+        "useSortedAttributes": "on",
+        "useSortedKeys": "off",
+        "useSortedProperties": "on"
+      }
+    }
+  },
+  "formatter": {
+    "enabled": true,
+    "formatWithErrors": true,
+    "lineEnding": "lf",
+    "lineWidth": 100,
+    "indentStyle": "space",
+    "indentWidth": 2
+  },
+  "linter": {
+    "domains": {
+      "test": "all"
+    },
+    "enabled": true,
+    "rules": {
+      "a11y": "on",
+      "complexity": "on",
+      "correctness": "on",
+      "nursery": "on",
+      "performance": "on",
+      "security": "on",
+      "style": "on",
+      "suspicious": "on"
+    }
+  },
   "javascript": {
     "parser": {
       // for nest usage of function parameter decorators
@@ -9,47 +51,41 @@
   },
   "overrides": [
     {
-      // dont sort keys in these because they're usually in a specific order for readability
-      "includes": ["**/biome.json", "**/biome.jsonc", "**/package.json", "**/tsconfig.json"],
-      "assist": {
-        "actions": {
-          "source": {
-            "useSortedKeys": "off"
+      // TODO: check later
+      // not working properly, flags stuff from node_modules as unresolved
+      "includes": ["**/*"],
+      "linter": {
+        "rules": {
+          "nursery": {
+            "noUnresolvedImports": "off"
           }
         }
       }
     },
+
     {
-      // main.ts can console stuff out
-      "includes": ["src/main.ts"],
+      // test files, config files, and some scripts
+      // export defaults from them, and also import from node
+      "includes": ["**/*.config.ts", "**/*.test.ts", "**/*.spec.ts", "**/scripts/**"],
       "linter": {
         "rules": {
-          "suspicious": {
-            "noConsole": {
-              "level": "off"
-            }
-          }
-        }
-      }
-    },
-    {
-      // some/most config files on root export defaults from them
-      "includes": ["**/*.config.ts"],
-      "linter": {
-        "rules": {
+          "correctness": {
+            "noNodejsModules": "off"
+          },
           "style": {
             "noDefaultExport": "off"
           }
         }
       }
     },
+
     {
-      // test files and scripts can use node:modules
-      "includes": ["src/**/*.test.ts", "src/**/*.spec.ts", "scripts/*.ts"],
+      // main.ts
+      "includes": ["src/main.ts"],
       "linter": {
         "rules": {
-          "correctness": {
-            "noNodejsModules": "off"
+          "suspicious": {
+            "noConsole": "off"
           }
         }
       }
