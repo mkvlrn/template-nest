@@ -52,12 +52,14 @@
   "overrides": [
     {
       // TODO: check later
-      // not working properly, flags stuff from node_modules as unresolved
+      // noUnresolvedImports not working properly, flags stuff from node_modules as unresolved
+      // useExplicitType breaking type inference
       "includes": ["**/*"],
       "linter": {
         "rules": {
           "nursery": {
-            "noUnresolvedImports": "off"
+            "noUnresolvedImports": "off",
+            "useExplicitType": "off"
           }
         }
       }

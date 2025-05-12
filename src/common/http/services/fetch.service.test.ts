@@ -3,7 +3,6 @@ import { beforeEach, describe, it, mock } from "node:test";
 import { FetchService } from "~/common/http/services/fetch.service.js";
 import { AppError } from "~/core/error.js";
 
-// biome-ignore lint/nursery/useExplicitType: https://github.com/biomejs/biome/issues/5932
 const MOCK_BODY = { userId: 1, id: 1, title: "delectus aut autem", completed: false };
 
 describe("FetchService", () => {

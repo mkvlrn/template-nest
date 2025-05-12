@@ -5,7 +5,6 @@ import { Test } from "@nestjs/testing";
 import { GetTaskService } from "~/features/task/services/get-task.service.js";
 import { TaskController } from "~/features/task/task.controller.js";
 
-// biome-ignore lint/nursery/useExplicitType: https://github.com/biomejs/biome/issues/5932
 const MOCK_TASK = { userId: 1, id: 1, title: "task title", completed: false };
 
 describe("TaskController", () => {
