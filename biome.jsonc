@@ -79,18 +79,6 @@
           }
         }
       }
-    },
-
-    {
-      // main.ts
-      "includes": ["src/main.ts"],
-      "linter": {
-        "rules": {
-          "suspicious": {
-            "noConsole": "off"
-          }
-        }
-      }
     }
   ]
 }
