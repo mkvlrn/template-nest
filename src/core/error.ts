@@ -1,6 +1,6 @@
 import type { HttpStatus } from "@nestjs/common";
 
-type AppErrorName = "NotFoundError" | "InternalError";
+type AppErrorName = "NotFoundError" | "InternalError" | "BadGateway";
 
 export class AppError extends Error {
   readonly statusCode: HttpStatus;

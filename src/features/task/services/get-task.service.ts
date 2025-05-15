@@ -1,13 +1,11 @@
 import { Result } from "@mkvlrn/result";
 import { Inject, Injectable } from "@nestjs/common";
 import { FetchService } from "~/common/http/services/fetch.service.js";
-
-export interface Task {
-  userId: number;
-  id: number;
-  title: string;
-  completed: boolean;
-}
+import type { AppError } from "~/core/error.js";
+import {
+  type GetTaskResponse,
+  getTaskResponseSchema,
+} from "~/features/task/dto/get-task-response.js";
 
 @Injectable()
 export class GetTaskService {
@@ -17,10 +15,14 @@ export class GetTaskService {
     this.fetchService = fetchService;
   }
 
-  async getTask(taskId: number): Promise<Result<Task, Error>> {
+  async getTask(taskId: number): Promise<Result<GetTaskResponse, AppError>> {
     const url = `https://jsonplaceholder.typicode.com/todos/${taskId}`;
-    const result = await this.fetchService.fetch<Task>(url);
+    const result = await this.fetchService.fetch<GetTaskResponse>(url, getTaskResponseSchema);
 
-    return result.ok ? Result.success(result.value as Task) : Result.error(result.error);
+    if (!result.ok) {
+      return Result.error(result.error);
+    }
+
+    return Result.success(result.value);
   }
 }
