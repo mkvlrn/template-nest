@@ -9,7 +9,7 @@ describe("GetTaskService", () => {
   let service: GetTaskService;
   const mockFetchService: FetchService = {
     fetch: mock.fn(),
-  };
+  } as unknown as FetchService;
 
   beforeEach(() => {
     service = new GetTaskService(mockFetchService);
