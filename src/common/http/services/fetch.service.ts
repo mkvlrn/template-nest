@@ -1,11 +1,11 @@
 import { Result } from "@mkvlrn/result";
 import { Injectable } from "@nestjs/common";
-import type { ZodSchema } from "zod";
-import { AppError } from "~/core/error.js";
+import type { ZodType } from "zod/v4";
+import { AppError } from "~/core/error.ts";
 
 @Injectable()
 export class FetchService {
-  async fetch<T>(url: string, schema: ZodSchema<T>): Promise<Result<T, AppError>> {
+  async fetch<T>(url: string, schema: ZodType<T>): Promise<Result<T, AppError>> {
     try {
       const response = await fetch(url);
 
@@ -38,7 +38,7 @@ export class FetchService {
   }
 
   private async validateResponse<T>(
-    schema: ZodSchema<T>,
+    schema: ZodType<T>,
     response: Response,
   ): Promise<Result<T, AppError>> {
     const value = await response.json();

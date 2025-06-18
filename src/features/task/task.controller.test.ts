@@ -2,8 +2,8 @@ import assert from "node:assert/strict";
 import { afterEach, beforeEach, describe, it, mock } from "node:test";
 import { Result } from "@mkvlrn/result";
 import { Test } from "@nestjs/testing";
-import { GetTaskService } from "~/features/task/services/get-task.service.js";
-import { TaskController } from "~/features/task/task.controller.js";
+import { GetTaskService } from "~/features/task/services/get-task.service.ts";
+import { TaskController } from "~/features/task/task.controller.ts";
 
 const MOCK_TASK = { userId: 1, id: 1, title: "task title", completed: false };
 

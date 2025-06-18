@@ -1,1 +1,1 @@
-yarn biome-check --staged
+npm run biome-check --staged

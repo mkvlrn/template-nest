@@ -1,9 +1,13 @@
 import { ConfigService } from "@nestjs/config";
 import { NestFactory } from "@nestjs/core";
-import { AppModule } from "~/app.module.js";
+import { AppModule } from "~/app.module.ts";
 
-const app = await NestFactory.create(AppModule);
-const configService = app.get(ConfigService);
-const port = configService.get("PORT") ?? 3000;
+async function main(): Promise<void> {
+  const app = await NestFactory.create(AppModule);
+  const configService = app.get(ConfigService);
+  const port = configService.get("PORT") ?? 3000;
 
-await app.listen(port);
+  await app.listen(port);
+}
+
+await main();

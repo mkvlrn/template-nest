@@ -1,4 +1,4 @@
-yarn typecheck
-yarn biome-check
-yarn test
-yarn test-e2e
+npm run typecheck
+npm run biome-check
+npm test
+npm run test-e2e

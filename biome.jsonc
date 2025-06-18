@@ -29,7 +29,11 @@
   },
   "linter": {
     "domains": {
-      "test": "all"
+      "project": "all",
+      "test": "all",
+      "react": "none",
+      "next": "none",
+      "solid": "none"
     },
     "enabled": true,
     "rules": {
@@ -45,26 +49,10 @@
   },
   "javascript": {
     "parser": {
-      // for nest usage of function parameter decorators
       "unsafeParameterDecoratorsEnabled": true
     }
   },
   "overrides": [
-    {
-      // TODO: check later
-      // noUnresolvedImports not working properly, flags stuff from node_modules as unresolved
-      // useExplicitType breaking type inference
-      "includes": ["**/*"],
-      "linter": {
-        "rules": {
-          "nursery": {
-            "noUnresolvedImports": "off",
-            "useExplicitType": "off"
-          }
-        }
-      }
-    },
-
     {
       // test files, config files, and some scripts
       // export defaults from them, and also import from node

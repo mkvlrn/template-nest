@@ -1,8 +1,8 @@
 import assert from "node:assert/strict";
 import { beforeEach, describe, it, mock } from "node:test";
-import { FetchService } from "~/common/http/services/fetch.service.js";
-import { AppError } from "~/core/error.js";
-import { getTaskResponseSchema } from "~/features/task/dto/get-task-response.js";
+import { FetchService } from "~/common/http/services/fetch.service.ts";
+import { AppError } from "~/core/error.ts";
+import { getTaskResponseSchema } from "~/features/task/dto/get-task-response.ts";
 
 const MOCK_URL = "https://jsonplaceholder.typicode.com/todos/1";
 const MOCK_BODY = { userId: 1, id: 1, title: "delectus aut autem", completed: false };

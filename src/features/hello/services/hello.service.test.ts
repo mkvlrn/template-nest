@@ -1,6 +1,6 @@
 import assert from "node:assert/strict";
 import { beforeEach, describe, it } from "node:test";
-import { HelloService } from "~/features/hello/services/hello.service.js";
+import { HelloService } from "~/features/hello/services/hello.service.ts";
 
 describe("HelloService", () => {
   let service: HelloService;

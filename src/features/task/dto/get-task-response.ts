@@ -1,5 +1,6 @@
-import { z } from "zod";
+import { z } from "zod/v4";
 
+// biome-ignore lint/nursery/useExplicitType: rule is still not great
 export const getTaskResponseSchema = z.object({
   userId: z.number(),
   id: z.number(),

@@ -2,6 +2,7 @@
   "compilerOptions": {
     // no transpiling
     "noEmit": true,
+    "allowImportingTsExtensions": true,
 
     // no funny business
     "erasableSyntaxOnly": true,
@@ -9,7 +10,7 @@
 
     // hella strict
     // https://whatislove.dev/articles/the-strictest-typescript-config/
-    "allowJs": true,
+    "allowJs": false,
     "exactOptionalPropertyTypes": true,
     // "noPropertyAccessFromIndexSignature": true,
     "noUncheckedIndexedAccess": true,
@@ -39,7 +40,7 @@
       "~/*": ["./src/*"]
     },
 
-    // nest uses these weird ass experimental decorators
+    // nest still uses these old experimental decorators
     "experimentalDecorators": true,
     "emitDecoratorMetadata": true
   }

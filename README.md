@@ -8,7 +8,7 @@ Uses:
 - [node test runner](https://nodejs.org/api/test.html) for tests
 - [commitlint](https://github.com/conventional-changelog/commitlint) for linting commit messages
 - [husky](https://github.com/typicode/husky) for git hooks
-- [tsup](https://github.com/egoist/tsup) for building
+- [vite](https://github.com/vitejs/vite) for building
 - [tsx](https://github.com/privatenumber/tsx) for dev time typescript
 
 ## why use this template instead of nestjs-cli?
@@ -27,23 +27,23 @@ Just check what is in it, it't not that different from what you'd get with nestj
 
 ## running
 
-### `yarn dev`
+### `npm run dev`
 
 Runs the project in watch mode with tsx.
 
-### `yarn build`
+### `npm run build`
 
 Builds/transpiles the code to `./build`.
 
-### `yarn start`
+### `npm run start`
 
 Runs the built project.
 
-### `yarn test`, `yarn test-e2e`
+### `npm test`, `npm run test-e2e`
 
 Runs tests.
 
-### `yarn biome-fix`
+### `npm run biome-fix`
 
 Runs biome in fix mode (only [safe fixes](https://biomejs.dev/linter/#safe-fixes)) to lint and format the project.
 

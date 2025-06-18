@@ -1,8 +1,8 @@
 import assert from "node:assert/strict";
 import { afterEach, beforeEach, describe, it, mock } from "node:test";
 import { Test } from "@nestjs/testing";
-import { HelloController } from "~/features/hello/hello.controller.js";
-import { HelloService } from "~/features/hello/services/hello.service.js";
+import { HelloController } from "~/features/hello/hello.controller.ts";
+import { HelloService } from "~/features/hello/services/hello.service.ts";
 
 describe("HelloController", () => {
   describe("getHello", () => {

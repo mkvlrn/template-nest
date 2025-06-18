@@ -1,11 +1,11 @@
 import { Result } from "@mkvlrn/result";
 import { Inject, Injectable } from "@nestjs/common";
-import { FetchService } from "~/common/http/services/fetch.service.js";
-import type { AppError } from "~/core/error.js";
+import { FetchService } from "~/common/http/services/fetch.service.ts";
+import type { AppError } from "~/core/error.ts";
 import {
   type GetTaskResponse,
   getTaskResponseSchema,
-} from "~/features/task/dto/get-task-response.js";
+} from "~/features/task/dto/get-task-response.ts";
 
 @Injectable()
 export class GetTaskService {

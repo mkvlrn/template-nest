@@ -1,8 +1,8 @@
 import { Controller, Get, HttpException, Inject, Param } from "@nestjs/common";
-import { type GetTaskRequest, getTaskRequestSchema } from "~/features/task/dto/get-task.request.js";
-import type { GetTaskResponse } from "~/features/task/dto/get-task-response.js";
-import { GetTaskService } from "~/features/task/services/get-task.service.js";
-import { Validate } from "~/validation/zod-pipe.js";
+import { type GetTaskRequest, getTaskRequestSchema } from "~/features/task/dto/get-task.request.ts";
+import type { GetTaskResponse } from "~/features/task/dto/get-task-response.ts";
+import { GetTaskService } from "~/features/task/services/get-task.service.ts";
+import { Validate } from "~/validation/zod-pipe.ts";
 
 @Controller("task")
 export class TaskController {
