@@ -1,15 +1,14 @@
 import { glob } from "node:fs/promises";
 import { fileURLToPath } from "node:url";
+import { nodeExternals } from "rollup-plugin-node-externals";
 import { defineConfig } from "vite";
-import pkg from "./package.json" with { type: "json" };
 
 const entryFiles: string[] = [];
 for await (const file of glob("src/**/*.ts")) {
   // no need to bundle test files
-  if (file.endsWith(".spec.ts") || file.endsWith(".test.ts")) {
-    continue;
+  if (!(file.endsWith(".test.ts") || file.endsWith(".spec.ts"))) {
+    entryFiles.push(file);
   }
-  entryFiles.push(file);
 }
 
 export default defineConfig({
@@ -19,45 +18,37 @@ export default defineConfig({
     },
   },
 
-  plugins: [],
+  plugins: [
+    nodeExternals({
+      // packages to be set as internal
+      exclude: ["@mkvlrn/result"],
+    }),
+  ],
 
   build: {
     target: "esnext",
     lib: {
       entry: entryFiles,
       formats: ["es"],
-      // biome-ignore lint/nursery/useExplicitType: not sure
-      fileName: (_format, entryName) => `${entryName}.js`,
+      fileName: (_, entryName) => `${entryName}.js`,
     },
     outDir: "./build",
     emptyOutDir: true,
     rollupOptions: {
-      // biome-ignore lint/nursery/useExplicitType: not sure
-      external: (id) => {
-        // node builtins
-        if (id.startsWith("node:")) {
-          return false;
-        }
-
-        // packages that should be bundled
-        const internals = ["@mkvlrn/result"];
-        if (internals.includes(id)) {
-          return false;
-        }
-
-        // external dependencies
-        if (Object.keys(pkg.dependencies ?? {}).some((dep) => id.startsWith(dep))) {
-          return true;
-        }
-      },
       output: {
         preserveModules: true,
         preserveModulesRoot: "src",
-        // biome-ignore lint/nursery/useExplicitType: not sure
-        entryFileNames: ({ name }) => `${name.replace("node_modules/", "_internals/")}.js`,
+        // this outputs bundled/internal packages to a directory named _internal
+        entryFileNames: ({ name }) => `${name.replace("node_modules/", "_internal/")}.js`,
       },
     },
-    minify: false,
+    minify: "terser",
+    terserOptions: {
+      compress: false,
+      format: {
+        comments: false,
+      },
+    },
   },
 
   optimizeDeps: {

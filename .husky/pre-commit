@@ -1,1 +1,1 @@
-npm run biome-check --staged
+npm run biome-check -- --staged

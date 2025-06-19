@@ -54,6 +54,21 @@
   },
   "overrides": [
     {
+      // TODO: check later
+      // noUnresolvedImports not working properly, flags node builtins
+      // useExplicitType breaking type inference
+      "includes": ["**/*"],
+      "linter": {
+        "rules": {
+          "nursery": {
+            "noUnresolvedImports": "off",
+            "useExplicitType": "off"
+          }
+        }
+      }
+    },
+
+    {
       // test files, config files, and some scripts
       // export defaults from them, and also import from node
       "includes": ["**/*.config.ts", "**/*.test.ts", "**/*.spec.ts", "**/scripts/**"],
