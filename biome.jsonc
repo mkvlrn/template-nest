@@ -19,6 +19,12 @@
       }
     }
   },
+  "javascript": {
+    "parser": {
+      // for nest decorators
+      "unsafeParameterDecoratorsEnabled": true
+    }
+  },
   "formatter": {
     "enabled": true,
     "formatWithErrors": true,
