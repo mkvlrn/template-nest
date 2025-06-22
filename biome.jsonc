@@ -47,11 +47,6 @@
       "suspicious": "on"
     }
   },
-  "javascript": {
-    "parser": {
-      "unsafeParameterDecoratorsEnabled": true
-    }
-  },
   "overrides": [
     {
       // TODO: check later
@@ -71,7 +66,7 @@
     {
       // test files, config files, and some scripts
       // export defaults from them, and also import from node
-      "includes": ["**/*.config.ts", "**/*.test.ts", "**/*.spec.ts", "**/scripts/**"],
+      "includes": ["**/*.config.ts", "**/*.test.ts", "**/*.spec.ts", "**/.vite/**"],
       "linter": {
         "rules": {
           "correctness": {
