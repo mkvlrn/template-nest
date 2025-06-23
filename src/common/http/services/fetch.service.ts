@@ -1,7 +1,7 @@
 import { Result } from "@mkvlrn/result";
 import { Injectable } from "@nestjs/common";
 import type { ZodType } from "zod/v4";
-import { AppError } from "~/core/error.ts";
+import { AppError } from "#/core/error.ts";
 
 @Injectable()
 export class FetchService {

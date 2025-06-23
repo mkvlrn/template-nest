@@ -1,5 +1,5 @@
 import { Controller, Get, Inject, Query } from "@nestjs/common";
-import { HelloService } from "~/features/hello/services/hello.service.ts";
+import { HelloService } from "#/features/hello/services/hello.service.ts";
 
 @Controller("hello")
 export class HelloController {
