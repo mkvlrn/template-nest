@@ -22,20 +22,20 @@
     "build": "vite build",
     "dev": "tsx --watch src/main.ts",
     "start": "node build/main.js",
-    "test": "tsx --test",
-    "test-e2e": "tsx --test 'src/**/*.spec.ts'",
+    "test": "vitest",
+    "test-e2e": "vitest --config src/__test__/vite.config.ts",
     "biome-check": "biome check --no-errors-on-unmatched",
     "biome-fix": "npm run biome-check --write",
     "typecheck": "tsc --noEmit",
     "prepare": "husky"
   },
   "devDependencies": {
-    "@biomejs/biome": "^2.0.4",
+    "@biomejs/biome": "^2.0.5",
     "@commitlint/cli": "^19.8.1",
     "@commitlint/config-conventional": "^19.8.1",
     "@nestjs/testing": "^11.1.3",
     "@types/express": "^5.0.3",
-    "@types/node": "^24.0.3",
+    "@types/node": "^24.0.4",
     "@types/supertest": "^6.0.3",
     "husky": "^9.1.7",
     "rollup-plugin-node-externals": "^8.0.1",
@@ -43,8 +43,9 @@
     "tsc-alias": "^1.8.16",
     "tsx": "^4.20.3",
     "typescript": "^5.8.3",
-    "vite": "^6.3.5",
-    "vite-tsconfig-paths": "^5.1.4"
+    "vite": "^7.0.0",
+    "vite-tsconfig-paths": "^5.1.4",
+    "vitest": "^3.2.4"
   },
   "dependencies": {
     "@mkvlrn/result": "^1.1.4",

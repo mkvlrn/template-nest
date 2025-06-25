@@ -1,7 +1,6 @@
-import assert from "node:assert/strict";
-import { afterEach, beforeEach, describe, it, mock } from "node:test";
 import { Result } from "@mkvlrn/result";
 import { Test } from "@nestjs/testing";
+import { afterEach, assert, beforeEach, describe, it, vi } from "vitest";
 import { GetTaskService } from "#/features/task/services/get-task.service.ts";
 import { TaskController } from "#/features/task/task.controller.ts";
 
@@ -14,7 +13,7 @@ describe("TaskController", () => {
 
     beforeEach(async () => {
       mockGetTaskService = {
-        getTask: mock.fn(() => Promise.resolve(Result.success(MOCK_TASK))),
+        getTask: vi.fn().mockReturnValue(Result.success(MOCK_TASK)),
       };
 
       const module = await Test.createTestingModule({
@@ -26,7 +25,7 @@ describe("TaskController", () => {
     });
 
     afterEach(() => {
-      mock.reset();
+      vi.clearAllMocks();
     });
 
     it("should use the service's getTask method", async () => {

@@ -1,6 +1,5 @@
-import assert from "node:assert/strict";
-import { afterEach, beforeEach, describe, it, mock } from "node:test";
 import { Test } from "@nestjs/testing";
+import { afterEach, assert, beforeEach, describe, it, vi } from "vitest";
 import { HelloController } from "#/features/hello/hello.controller.ts";
 import { HelloService } from "#/features/hello/services/hello.service.ts";
 
@@ -11,7 +10,7 @@ describe("HelloController", () => {
 
     beforeEach(async () => {
       mockHelloService = {
-        sayHello: mock.fn(() => "hello from mock hello service"),
+        sayHello: vi.fn().mockReturnValue("hello from mock hello service"),
       };
 
       const module = await Test.createTestingModule({
@@ -23,7 +22,7 @@ describe("HelloController", () => {
     });
 
     afterEach(() => {
-      mock.reset();
+      vi.clearAllMocks();
     });
 
     it("should use the service's sayHello method", () => {

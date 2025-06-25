@@ -1,0 +1,29 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "node",
+      "name": "source debug",
+      "request": "launch",
+      "runtimeExecutable": "npx",
+      "runtimeArgs": ["tsx"],
+      "args": ["src/main.ts"],
+      "console": "internalConsole",
+      "internalConsoleOptions": "openOnSessionStart",
+      "skipFiles": ["<node_internals>/**", "${workspaceFolder}/node_modules/**"]
+    },
+    {
+      "type": "node",
+      "name": "bundle debug",
+      "request": "launch",
+      "program": "${workspaceFolder}/build/main.js",
+      "runtimeArgs": ["--enable-source-maps"],
+      "console": "internalConsole",
+      "internalConsoleOptions": "openOnSessionStart",
+      "sourceMaps": true,
+      "outFiles": ["${workspaceFolder}/build/**/*.js"],
+      "skipFiles": ["<node_internals>/**", "${workspaceFolder}/node_modules/**"],
+      "preLaunchTask": "build"
+    }
+  ]
+}

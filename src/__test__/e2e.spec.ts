@@ -1,8 +1,7 @@
-import assert from "node:assert/strict";
-import { afterEach, beforeEach, describe, it } from "node:test";
 import type { INestApplication } from "@nestjs/common";
 import { Test } from "@nestjs/testing";
 import supertest, { type Agent } from "supertest";
+import { afterEach, assert, beforeEach, describe, it } from "vitest";
 import { AppModule } from "#/app.module.ts";
 
 describe("e2e", () => {
