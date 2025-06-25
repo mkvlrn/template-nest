@@ -18,8 +18,8 @@ Uses:
 - esm
 - biome is a linter/formatter running on git hooks (pre-commit, pre-push)
 - no weird build-then-run-dev flow, tsx runs the dev code
-- node test runner is ready-ish for prime time
-- tsup for building
+- people still using jest should... reconsider
+- building the right way with vite
 - all code generation is ass, but nestjs's cli is particularly terrible, so dependencies for that and the nest-cli.json file are gone - just add files yourself, I promise you'll be fine
 - overall it's just as opinionated, but a tad cleaner, stricter, and modernized
 
