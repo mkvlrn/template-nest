@@ -35,7 +35,7 @@ Runs the project in watch mode with tsx.
 
 Builds/transpiles the code to `./build`.
 
-### `npm run start`
+### `npm start`
 
 Runs the built project.
 

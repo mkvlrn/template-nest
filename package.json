@@ -23,7 +23,7 @@
     "dev": "tsx --watch src/main.ts",
     "start": "node build/template-nest.js",
     "test": "vitest",
-    "test-e2e": "vitest --config src/__test__/vite.config.ts",
+    "test-e2e": "vitest --config src/__e2e__/vite.config.ts",
     "biome-check": "biome check --no-errors-on-unmatched",
     "biome-fix": "npm run biome-check --write",
     "typecheck": "tsc --noEmit",

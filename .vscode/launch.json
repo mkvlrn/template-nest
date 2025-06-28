@@ -16,7 +16,7 @@
       "type": "node",
       "name": "bundle debug",
       "request": "launch",
-      "program": "${workspaceFolder}/build/main.js",
+      "program": "${workspaceFolder}/build/template-nest.js",
       "runtimeArgs": ["--enable-source-maps"],
       "console": "internalConsole",
       "internalConsoleOptions": "openOnSessionStart",
