@@ -6,6 +6,7 @@ import { getTaskResponseSchema } from "#/features/task/dto/get-task-response.ts"
 const MOCK_URL = "https://jsonplaceholder.typicode.com/todos/1";
 const MOCK_BODY = { userId: 1, id: 1, title: "delectus aut autem", completed: false };
 
+// biome-ignore lint/nursery/noExcessiveLinesPerFunction: it's a test suite, calm down biome
 describe("FetchService", () => {
   let service: FetchService;
 
