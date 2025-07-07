@@ -48,6 +48,6 @@ export class FetchService {
       return Result.error(new AppError("BadGateway", "Bad data received from source", 502));
     }
 
-    return Result.success(result.data);
+    return Result.ok(result.data);
   }
 }

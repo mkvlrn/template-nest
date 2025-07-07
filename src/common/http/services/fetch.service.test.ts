@@ -20,7 +20,7 @@ describe("FetchService", () => {
 
     const result = await service.fetch(MOCK_URL, getTaskResponseSchema);
 
-    assert.isTrue(result.ok);
+    assert.isUndefined(result.error);
     assert.deepStrictEqual(result.value, MOCK_BODY);
   });
 
@@ -31,7 +31,7 @@ describe("FetchService", () => {
 
       const result = await service.fetch(MOCK_URL, getTaskResponseSchema);
 
-      assert.isFalse(result.ok);
+      assert.isDefined(result.error);
       assert.instanceOf(result.error, AppError);
       assert.strictEqual(result.error.name, "NotFoundError");
       assert.strictEqual(result.error.message, "Resource not found: not found");
@@ -43,7 +43,7 @@ describe("FetchService", () => {
 
       const result = await service.fetch(MOCK_URL, getTaskResponseSchema);
 
-      assert.isFalse(result.ok);
+      assert.isDefined(result.error);
       assert.instanceOf(result.error, AppError);
       assert.strictEqual(result.error.name, "InternalError");
       assert.strictEqual(result.error.message, "An error occurred while fetching data: some error");
@@ -57,7 +57,7 @@ describe("FetchService", () => {
 
       const result = await service.fetch(MOCK_URL, getTaskResponseSchema);
 
-      assert.isFalse(result.ok);
+      assert.isDefined(result.error);
       assert.instanceOf(result.error, AppError);
       assert.strictEqual(result.error.name, "BadGateway");
       assert.strictEqual(result.error.message, "Bad data received from source");
@@ -68,7 +68,7 @@ describe("FetchService", () => {
 
       const result = await service.fetch(MOCK_URL, getTaskResponseSchema);
 
-      assert.isFalse(result.ok);
+      assert.isDefined(result.error);
       assert.instanceOf(result.error, AppError);
       assert.strictEqual(result.error.name, "InternalError");
       assert.strictEqual(

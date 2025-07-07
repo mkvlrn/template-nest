@@ -13,7 +13,7 @@ describe("TaskController", () => {
 
     beforeEach(async () => {
       mockGetTaskService = {
-        getTask: vi.fn().mockReturnValue(Result.success(MOCK_TASK)),
+        getTask: vi.fn().mockReturnValue(Result.ok(MOCK_TASK)),
       };
 
       const module = await Test.createTestingModule({

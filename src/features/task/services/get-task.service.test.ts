@@ -21,13 +21,11 @@ describe("GetTaskService", () => {
       title: "Test task",
       completed: true,
     };
-    const fetchSpy = vi
-      .spyOn(mockFetchService, "fetch")
-      .mockResolvedValue(Result.success(mockTask));
+    const fetchSpy = vi.spyOn(mockFetchService, "fetch").mockResolvedValue(Result.ok(mockTask));
 
     const result = await service.getTask(5);
 
-    assert.isTrue(result.ok);
+    assert.isUndefined(result.error);
     assert.deepStrictEqual(result.value, mockTask);
     assert.strictEqual(fetchSpy.mock.calls.length, 1);
     assert.strictEqual(fetchSpy.mock.calls[0]?.[0], "https://jsonplaceholder.typicode.com/todos/5");
@@ -40,7 +38,7 @@ describe("GetTaskService", () => {
 
     const result = await service.getTask(5);
 
-    assert.isFalse(result.ok);
+    assert.isDefined(result.error);
     assert.instanceOf(result.error, AppError);
     assert.strictEqual(result.error.message, "Network error");
     assert.strictEqual(result.error.statusCode, 418);

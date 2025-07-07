@@ -18,7 +18,7 @@ export class TaskController {
     const { id } = params;
     const result = await this.getTaskService.getTask(id);
 
-    if (!result.ok) {
+    if (result.error !== undefined) {
       throw new HttpException(result.error.message, result.error.statusCode);
     }
 

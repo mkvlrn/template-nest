@@ -19,10 +19,10 @@ export class GetTaskService {
     const url = `https://jsonplaceholder.typicode.com/todos/${taskId}`;
     const result = await this.fetchService.fetch<GetTaskResponse>(url, getTaskResponseSchema);
 
-    if (!result.ok) {
+    if (result.error !== undefined) {
       return Result.error(result.error);
     }
 
-    return Result.success(result.value);
+    return Result.ok(result.value);
   }
 }
