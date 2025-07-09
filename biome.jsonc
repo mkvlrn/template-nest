@@ -46,7 +46,7 @@
       "a11y": "on",
       "complexity": "on",
       "correctness": "on",
-      "nursery": "on",
+      "nursery": "off",
       "performance": "on",
       "security": "on",
       "style": "on",
