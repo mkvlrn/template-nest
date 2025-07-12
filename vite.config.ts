@@ -7,8 +7,8 @@ const entry = "./src/main.ts";
 
 export default defineConfig({
   plugins: [
-    // externalize node built-ins only, deps are bundled
-    nodeExternals({ deps: false }),
+    // externalize node built-ins only
+    nodeExternals(),
     // resolve tsconfig path aliases
     tsconfigPaths(),
   ],
