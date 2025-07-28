@@ -48,7 +48,7 @@
     "vitest": "^3.2.4"
   },
   "dependencies": {
-    "@mkvlrn/result": "^3.0.0",
+    "@mkvlrn/result": "^4.0.0",
     "@nestjs/common": "^11.1.5",
     "@nestjs/config": "^4.0.2",
     "@nestjs/core": "^11.1.5",

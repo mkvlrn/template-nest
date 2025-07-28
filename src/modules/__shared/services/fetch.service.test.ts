@@ -1,7 +1,7 @@
 import { assert, beforeEach, describe, it, vi } from "vitest";
-import { FetchService } from "#/common/http/services/fetch.service.ts";
-import { AppError } from "#/core/error.ts";
-import { getTaskResponseSchema } from "#/features/task/dto/get-task-response.ts";
+import { AppError } from "#/core/app-error.ts";
+import { FetchService } from "#/modules/__shared/services/fetch.service.ts";
+import { TaskResponseDto } from "#/modules/task/task.dto.ts";
 
 const MOCK_URL = "https://jsonplaceholder.typicode.com/todos/1";
 const MOCK_BODY = { userId: 1, id: 1, title: "delectus aut autem", completed: false };
@@ -17,7 +17,7 @@ describe("FetchService", () => {
     const mockResponse = new Response(JSON.stringify(MOCK_BODY), { status: 200 });
     vi.spyOn(global, "fetch").mockResolvedValue(mockResponse);
 
-    const result = await service.fetch(MOCK_URL, getTaskResponseSchema);
+    const result = await service.fetch(MOCK_URL, TaskResponseDto);
 
     assert.isUndefined(result.error);
     assert.deepStrictEqual(result.value, MOCK_BODY);
@@ -28,7 +28,7 @@ describe("FetchService", () => {
       const mockResponse = new Response("not found", { status: 404 });
       vi.spyOn(global, "fetch").mockResolvedValue(mockResponse);
 
-      const result = await service.fetch(MOCK_URL, getTaskResponseSchema);
+      const result = await service.fetch(MOCK_URL, TaskResponseDto);
 
       assert.isDefined(result.error);
       assert.instanceOf(result.error, AppError);
@@ -40,7 +40,7 @@ describe("FetchService", () => {
       const mockResponse = new Response("some error", { status: 500 });
       vi.spyOn(global, "fetch").mockResolvedValue(mockResponse);
 
-      const result = await service.fetch(MOCK_URL, getTaskResponseSchema);
+      const result = await service.fetch(MOCK_URL, TaskResponseDto);
 
       assert.isDefined(result.error);
       assert.instanceOf(result.error, AppError);
@@ -54,7 +54,7 @@ describe("FetchService", () => {
       });
       vi.spyOn(global, "fetch").mockResolvedValue(mockResponse);
 
-      const result = await service.fetch(MOCK_URL, getTaskResponseSchema);
+      const result = await service.fetch(MOCK_URL, TaskResponseDto);
 
       assert.isDefined(result.error);
       assert.instanceOf(result.error, AppError);
@@ -65,7 +65,7 @@ describe("FetchService", () => {
     it("should return an error when fetch itself throws an error", async () => {
       vi.spyOn(global, "fetch").mockRejectedValue(new Error("Network error"));
 
-      const result = await service.fetch(MOCK_URL, getTaskResponseSchema);
+      const result = await service.fetch(MOCK_URL, TaskResponseDto);
 
       assert.isDefined(result.error);
       assert.instanceOf(result.error, AppError);

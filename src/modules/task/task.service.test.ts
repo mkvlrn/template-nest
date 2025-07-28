@@ -1,17 +1,17 @@
-import { Result } from "@mkvlrn/result";
+import { R } from "@mkvlrn/result";
 import { assert, beforeEach, describe, it, vi } from "vitest";
-import type { FetchService } from "#/common/http/services/fetch.service.ts";
-import { AppError } from "#/core/error.ts";
-import { GetTaskService } from "#/features/task/services/get-task.service.ts";
+import { AppError } from "#/core/app-error.ts";
+import type { FetchService } from "#/modules/__shared/services/fetch.service.ts";
+import { TaskService } from "#/modules/task/task.service.ts";
 
 describe("GetTaskService", () => {
-  let service: GetTaskService;
+  let service: TaskService;
   const mockFetchService: FetchService = {
     fetch: vi.fn(),
   } as unknown as FetchService;
 
   beforeEach(() => {
-    service = new GetTaskService(mockFetchService);
+    service = new TaskService(mockFetchService);
   });
 
   it("should return a task when fetch is successful", async () => {
@@ -21,7 +21,7 @@ describe("GetTaskService", () => {
       title: "Test task",
       completed: true,
     };
-    const fetchSpy = vi.spyOn(mockFetchService, "fetch").mockResolvedValue(Result.ok(mockTask));
+    const fetchSpy = vi.spyOn(mockFetchService, "fetch").mockResolvedValue(R.ok(mockTask));
 
     const result = await service.getTask(5);
 
@@ -34,7 +34,7 @@ describe("GetTaskService", () => {
   it("should return an error when fetch fails", async () => {
     const fetchSpy = vi
       .spyOn(mockFetchService, "fetch")
-      .mockResolvedValue(Result.error(new AppError("BadGateway", "Network error", 418)));
+      .mockResolvedValue(R.error(new AppError("BadGateway", "Network error", 418)));
 
     const result = await service.getTask(5);
 
