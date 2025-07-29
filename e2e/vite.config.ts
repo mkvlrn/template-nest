@@ -1,10 +1,10 @@
 import { defineConfig } from "vite";
-import baseConfig from "../../vite.config.ts";
+import baseConfig from "../vite.config";
 
 export default defineConfig({
   ...baseConfig,
   test: {
     ...baseConfig.test,
-    include: ["./src/**/*.spec.ts"],
+    include: ["./e2e/**/*.test.ts"],
   },
 });

@@ -1,8 +1,8 @@
 import { R } from "@mkvlrn/result";
 import { assert, beforeEach, describe, it, vi } from "vitest";
-import { AppError } from "#/core/app-error.ts";
-import type { FetchService } from "#/modules/__shared/services/fetch.service.ts";
-import { TaskService } from "#/modules/task/task.service.ts";
+import { AppError } from "#/core/app-error";
+import type { FetchService } from "#/modules/__shared/services/fetch.service";
+import { TaskService } from "#/modules/task/task.service";
 
 describe("GetTaskService", () => {
   let service: TaskService;

@@ -1,7 +1,7 @@
 import { Test } from "@nestjs/testing";
 import { afterEach, assert, beforeEach, describe, it, vi } from "vitest";
-import { HelloController } from "#/modules/hello/hello.controller.ts";
-import { HelloService } from "#/modules/hello/services/hello.service.ts";
+import { HelloController } from "#/modules/hello/hello.controller";
+import { HelloService } from "#/modules/hello/hello.service";
 
 describe("HelloController", () => {
   describe("getHello", () => {

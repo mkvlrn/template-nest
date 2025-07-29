@@ -1,8 +1,8 @@
 import { type AsyncResult, R } from "@mkvlrn/result";
 import { Inject, Injectable } from "@nestjs/common";
-import type { AppError } from "#/core/app-error.ts";
-import { FetchService } from "#/modules/__shared/services/fetch.service.ts";
-import { TaskResponseDto } from "#/modules/task/task.dto.ts";
+import type { AppError } from "#/core/app-error";
+import { FetchService } from "#/modules/__shared/services/fetch.service";
+import { TaskResponseDto } from "#/modules/task/task.dto";
 
 @Injectable()
 export class TaskService {

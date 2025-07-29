@@ -1,11 +1,11 @@
 import { Controller, Get, Inject, Query } from "@nestjs/common";
-import { HelloService } from "#/modules/hello/services/hello.service.ts";
+import { HelloService } from "#/modules/hello/hello.service";
 
 @Controller("hello")
 export class HelloController {
-  private readonly helloService: HelloService;
+  @Inject(HelloService) private readonly helloService: HelloService;
 
-  constructor(@Inject(HelloService) helloService: HelloService) {
+  constructor(helloService: HelloService) {
     this.helloService = helloService;
   }
 

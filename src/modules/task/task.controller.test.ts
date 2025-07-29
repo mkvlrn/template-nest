@@ -1,37 +1,35 @@
 import { R } from "@mkvlrn/result";
 import { Test } from "@nestjs/testing";
 import { afterEach, assert, beforeEach, describe, it, vi } from "vitest";
-import { TaskController } from "#/modules/task/task.controller.ts";
-import { TaskService } from "#/modules/task/task.service.ts";
+import { TaskController } from "#/modules/task/task.controller";
+import { TaskService } from "#/modules/task/task.service";
 
 const MOCK_TASK = { userId: 1, id: 1, title: "task title", completed: false };
 
-describe("TaskController", () => {
-  describe("getTaskById", () => {
-    let controller: TaskController;
-    let mockTaskService: Partial<TaskService>;
+describe("getTaskById", () => {
+  let controller: TaskController;
+  let mockTaskService: Partial<TaskService>;
 
-    beforeEach(async () => {
-      mockTaskService = {
-        getTask: vi.fn().mockReturnValue(R.ok(MOCK_TASK)),
-      };
+  beforeEach(async () => {
+    mockTaskService = {
+      getTask: vi.fn().mockReturnValue(R.ok(MOCK_TASK)),
+    };
 
-      const module = await Test.createTestingModule({
-        controllers: [TaskController],
-        providers: [{ provide: TaskService, useValue: mockTaskService }],
-      }).compile();
+    const module = await Test.createTestingModule({
+      controllers: [TaskController],
+      providers: [{ provide: TaskService, useValue: mockTaskService }],
+    }).compile();
 
-      controller = module.get<TaskController>(TaskController);
-    });
+    controller = module.get<TaskController>(TaskController);
+  });
 
-    afterEach(() => {
-      vi.clearAllMocks();
-    });
+  afterEach(() => {
+    vi.clearAllMocks();
+  });
 
-    it("should use the service's getTask method", async () => {
-      const result = await controller.getTaskById({ id: 1 });
+  it("should use the service's getTask method", async () => {
+    const result = await controller.getTaskById({ id: 1 });
 
-      assert.deepStrictEqual(result, MOCK_TASK);
-    });
+    assert.deepStrictEqual(result, MOCK_TASK);
   });
 });

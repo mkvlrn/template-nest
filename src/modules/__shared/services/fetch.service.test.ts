@@ -1,7 +1,7 @@
 import { assert, beforeEach, describe, it, vi } from "vitest";
-import { AppError } from "#/core/app-error.ts";
-import { FetchService } from "#/modules/__shared/services/fetch.service.ts";
-import { TaskResponseDto } from "#/modules/task/task.dto.ts";
+import { AppError } from "#/core/app-error";
+import { FetchService } from "#/modules/__shared/services/fetch.service";
+import { TaskResponseDto } from "#/modules/task/task.dto";
 
 const MOCK_URL = "https://jsonplaceholder.typicode.com/todos/1";
 const MOCK_BODY = { userId: 1, id: 1, title: "delectus aut autem", completed: false };

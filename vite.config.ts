@@ -1,9 +1,10 @@
+import { globSync } from "node:fs";
 import nodeExternals from "rollup-plugin-node-externals";
 import tsconfigPaths from "vite-tsconfig-paths";
 import { defineConfig } from "vitest/config";
 
 // application entry point
-const entry = "./src/main.ts";
+const entry = globSync("./src/**/*.ts").filter((f) => !f.endsWith("test.ts"));
 
 export default defineConfig({
   plugins: [
@@ -18,11 +19,11 @@ export default defineConfig({
     lib: {
       entry,
       formats: ["es"],
-      fileName: "bundle",
     },
     sourcemap: true,
     outDir: "./build",
     emptyOutDir: true,
+    rollupOptions: { output: { preserveModules: true } },
   },
 
   test: {
@@ -33,8 +34,8 @@ export default defineConfig({
       all: true,
       clean: true,
       cleanOnRerun: true,
-      include: ["./src"],
-      exclude: ["./src/**/*.test.{ts,tsx}", "./src/main.{ts,tsx}"],
+      include: ["src"],
+      exclude: ["src/**/*.test.{ts,tsx}", "src/main.{ts,tsx}", "src/**/*.module.ts"],
     },
     // biome-ignore lint/style/useNamingConvention: needed for vitest
     env: { NODE_ENV: "test" },

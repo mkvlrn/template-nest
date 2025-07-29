@@ -1,5 +1,5 @@
 import { Global, Module } from "@nestjs/common";
-import { FetchService } from "#/modules/__shared/services/fetch.service.ts";
+import { FetchService } from "#/modules/__shared/services/fetch.service";
 
 @Global()
 @Module({

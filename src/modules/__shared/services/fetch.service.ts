@@ -1,7 +1,7 @@
 import { type AsyncResult, R } from "@mkvlrn/result";
 import { Injectable } from "@nestjs/common";
 import type { ZodType } from "zod";
-import { AppError } from "#/core/app-error.ts";
+import { AppError } from "#/core/app-error";
 
 @Injectable()
 export class FetchService {

@@ -1,5 +1,5 @@
 import { assert, beforeEach, describe, it } from "vitest";
-import { HelloService } from "#/modules/hello/services/hello.service.ts";
+import { HelloService } from "#/modules/hello/hello.service";
 
 describe("HelloService", () => {
   let service: HelloService;

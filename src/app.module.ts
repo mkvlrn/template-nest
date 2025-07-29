@@ -1,8 +1,8 @@
 import { Module } from "@nestjs/common";
 import { ConfigModule } from "@nestjs/config";
-import { SharedModule } from "#/modules/__shared/shared.module.ts";
-import { HelloModule } from "#/modules/hello/hello.module.ts";
-import { TaskModule } from "#/modules/task/task.module.ts";
+import { SharedModule } from "#/modules/__shared/shared.module";
+import { HelloModule } from "#/modules/hello/hello.module";
+import { TaskModule } from "#/modules/task/task.module";
 
 @Module({
   imports: [ConfigModule.forRoot({ isGlobal: true }), SharedModule, HelloModule, TaskModule],
