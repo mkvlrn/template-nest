@@ -2,27 +2,25 @@
   "compilerOptions": {
     // no transpiling
     "noEmit": true,
-    "allowImportingTsExtensions": true,
 
-    // no funny business
+    // very strict
+    "allowJs": false,
     "erasableSyntaxOnly": true,
     "verbatimModuleSyntax": true,
-
-    // hella strict
-    // https://whatislove.dev/articles/the-strictest-typescript-config/
-    "allowJs": false,
     "exactOptionalPropertyTypes": true,
-    // "noPropertyAccessFromIndexSignature": true,
+    "noPropertyAccessFromIndexSignature": true,
     "noUncheckedIndexedAccess": true,
     "strict": true,
     "strictNullChecks": true,
+    "noUncheckedSideEffectImports": true,
 
-    // esm, the node way
+    // esm
     "esModuleInterop": true,
     "isolatedModules": true,
     "lib": ["ESNext"],
     "module": "esnext",
     "moduleResolution": "bundler",
+    "moduleDetection": "force",
     "target": "esnext",
 
     // pnpm compatibility
