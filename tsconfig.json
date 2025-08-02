@@ -1,45 +1,11 @@
 {
+  "extends": ["@mkvlrn/config/tsconfig-nest"],
   "compilerOptions": {
     // no transpiling
     "noEmit": true,
 
-    // very strict
-    "allowJs": false,
-    "erasableSyntaxOnly": true,
-    "verbatimModuleSyntax": true,
-    "exactOptionalPropertyTypes": true,
-    "noPropertyAccessFromIndexSignature": true,
-    "noUncheckedIndexedAccess": true,
-    "strict": true,
-    "strictNullChecks": true,
-    "noUncheckedSideEffectImports": true,
-
-    // esm
-    "esModuleInterop": true,
-    "isolatedModules": true,
-    "lib": ["ESNext"],
-    "module": "esnext",
-    "moduleResolution": "bundler",
-    "moduleDetection": "force",
-    "target": "esnext",
-
-    // pnpm compatibility
-    "preserveSymlinks": true,
-
-    // self explanatory
-    "resolveJsonModule": true,
-
-    // don't try to check for errors on imported libs
-    "skipLibCheck": true,
-
     // paths
     "baseUrl": ".",
-    "paths": {
-      "#/*": ["./src/*"]
-    },
-
-    // nest still uses these old experimental decorators
-    "experimentalDecorators": true,
-    "emitDecoratorMetadata": true
+    "paths": { "#/*": ["./src/*"] }
   }
 }
