@@ -1,16 +1,12 @@
 import { Logger } from "@nestjs/common";
-import { ConfigService } from "@nestjs/config";
 import { NestFactory } from "@nestjs/core";
-import { AppModule } from "#/app.module";
+import { AppModule } from "#/core/app.module";
+import { env } from "#/core/env";
 
-async function main(): Promise<void> {
-  const app = await NestFactory.create(AppModule);
-  const configService = app.get(ConfigService);
-  const port = configService.get("PORT") ?? 3000;
+env();
 
-  await app.listen(port, () => {
-    Logger.log(`Listening on port ${port}`, "DEBUG");
-  });
-}
+const app = await NestFactory.create(AppModule);
 
-await main();
+await app.listen(env("port"), () => {
+  Logger.log(`Listening on port ${env("port")}`, "DEBUG");
+});

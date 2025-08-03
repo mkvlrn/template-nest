@@ -5,6 +5,9 @@ export default defineConfig({
   ...baseConfig,
   test: {
     ...baseConfig.test,
+    coverage: {
+      enabled: false,
+    },
     include: ["./e2e/**/*.test.ts"],
   },
 });

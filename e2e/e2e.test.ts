@@ -1,38 +1,36 @@
 import type { INestApplication } from "@nestjs/common";
 import { Test } from "@nestjs/testing";
 import supertest, { type Agent } from "supertest";
-import { afterEach, assert, beforeEach, describe, it } from "vitest";
-import { AppModule } from "#/app.module";
+import { afterEach, assert, beforeEach, it } from "vitest";
+import { AppModule } from "#/core/app.module";
 
-describe("e2e", () => {
-  let app: INestApplication;
-  let server: Agent;
+let app: INestApplication;
+let server: Agent;
 
-  beforeEach(async () => {
-    const module = await Test.createTestingModule({
-      imports: [AppModule],
-    }).compile();
+beforeEach(async () => {
+  const module = await Test.createTestingModule({
+    imports: [AppModule],
+  }).compile();
 
-    app = module.createNestApplication();
-    await app.init();
-    server = supertest(app.getHttpServer());
-  });
+  app = module.createNestApplication();
+  await app.init();
+  server = supertest(app.getHttpServer());
+});
 
-  afterEach(async () => {
-    await app.close();
-  });
+afterEach(async () => {
+  await app.close();
+});
 
-  it("GET /hello", async () => {
-    const response = await server.get("/hello");
+it("GET /tasks/1", async () => {
+  const expectedResponse = {
+    userId: 1,
+    id: 1,
+    title: "delectus aut autem",
+    completed: false,
+  };
 
-    assert.strictEqual(response.status, 200);
-    assert.strictEqual(response.text, "Hello World!");
-  });
+  const response = await server.get("/tasks/1");
 
-  it("GET /hello?to=John", async () => {
-    const response = await server.get("/hello?to=John");
-
-    assert.strictEqual(response.status, 200);
-    assert.strictEqual(response.text, "Hello John!");
-  });
+  assert.strictEqual(response.status, 200);
+  assert.deepStrictEqual(response.body, expectedResponse);
 });

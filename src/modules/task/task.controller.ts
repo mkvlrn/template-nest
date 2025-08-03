@@ -1,9 +1,9 @@
 import { Controller, Get, HttpException, Inject, Param } from "@nestjs/common";
 import { TaskRequestDto, type TaskResponseDto } from "#/modules/task/task.dto";
 import { TaskService } from "#/modules/task/task.service";
-import { ZodValidationPipe } from "#/pipes/zod-validation-pipe";
+import { ZodValidator } from "#/pipes/zod-validator.pipe";
 
-@Controller("task")
+@Controller("tasks")
 export class TaskController {
   @Inject(TaskService) private readonly getTaskService: TaskService;
 
@@ -13,13 +13,15 @@ export class TaskController {
 
   @Get(":id")
   async getTaskById(
-    @Param(new ZodValidationPipe(TaskRequestDto)) params: TaskRequestDto,
+    @Param(new ZodValidator(TaskRequestDto)) params: TaskRequestDto,
   ): Promise<TaskResponseDto> {
     const { id } = params;
     const result = await this.getTaskService.getTask(id);
 
-    if (result.error !== undefined) {
-      throw new HttpException(result.error.message, result.error.statusCode);
+    if (result.error) {
+      throw new HttpException(result.error.name, result.error.statusCode, {
+        cause: result.error,
+      });
     }
 
     return result.value;
