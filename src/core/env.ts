@@ -1,7 +1,7 @@
 import { setupEnv } from "@mkvlrn/env";
 import { z } from "zod";
 
-const schema = z.strictObject({
+const schema = z.object({
   port: z.coerce.number(),
 });
 

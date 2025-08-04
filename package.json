@@ -20,7 +20,7 @@
   },
   "scripts": {
     "build": "vite build",
-    "dev": "tsx --watch src/main.ts",
+    "dev": "tsx --env-file-if-exists=.env --watch src/main.ts",
     "start": "node build/main.js",
     "test": "vitest",
     "test-e2e": "vitest --config ./e2e/vite.config.ts",
