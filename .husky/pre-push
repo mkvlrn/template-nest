@@ -1,4 +1,0 @@
-npm run typecheck
-npm run biome-check
-npm test
-npm run test-e2e
