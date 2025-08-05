@@ -9,6 +9,7 @@ Uses:
 - [biome](https://github.com/biomejs/biome) for linting and formatting
 - [commitlint](https://github.com/conventional-changelog/commitlint) for linting commit messages
 - [husky](https://github.com/typicode/husky) for git hooks
+- [lint-staged](https://github.com/lint-staged/lint-staged) for checks on commit
 - [vite](https://github.com/vitejs/vite) for building
 - [vitest](https://github.com/vitest-dev/vitest) for testing
 - [tsx](https://github.com/privatenumber/tsx) for dev time typescript
