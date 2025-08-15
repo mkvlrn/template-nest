@@ -1,3 +1,4 @@
+/** biome-ignore-all lint/style/noMagicNumbers: fine for tests */
 import { type AsyncResult, R } from "@mkvlrn/result";
 import { HttpStatus, Injectable } from "@nestjs/common";
 import { AppError } from "#/core/app-error";

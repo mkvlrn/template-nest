@@ -30,35 +30,35 @@
     "prepare": "husky"
   },
   "devDependencies": {
-    "@biomejs/biome": "^2.1.4",
+    "@biomejs/biome": "^2.2.0",
     "@commitlint/cli": "^19.8.1",
     "@commitlint/config-conventional": "^19.8.1",
-    "@mkvlrn/config": "^2.0.12",
+    "@mkvlrn/config": "^2.0.13",
     "@nestjs/testing": "^11.1.6",
     "@types/express": "^5.0.3",
-    "@types/node": "^24.2.0",
+    "@types/node": "^24.3.0",
     "@types/supertest": "^6.0.3",
     "@vitest/coverage-v8": "^3.2.4",
     "husky": "^9.1.7",
-    "lint-staged": "^16.1.4",
+    "lint-staged": "^16.1.5",
     "rollup-plugin-node-externals": "^8.0.1",
     "supertest": "^7.1.4",
     "tsc-alias": "^1.8.16",
     "tsc-files": "^1.1.4",
-    "tsx": "^4.20.3",
+    "tsx": "^4.20.4",
     "typescript": "^5.9.2",
-    "vite": "^7.1.0",
+    "vite": "^7.1.2",
     "vite-tsconfig-paths": "^5.1.4",
     "vitest": "^3.2.4"
   },
   "dependencies": {
-    "@mkvlrn/env": "^1.0.13",
-    "@mkvlrn/result": "^4.0.12",
+    "@mkvlrn/env": "^1.0.14",
+    "@mkvlrn/result": "^4.0.13",
     "@nestjs/common": "^11.1.6",
     "@nestjs/core": "^11.1.6",
     "@nestjs/platform-express": "^11.1.6",
     "reflect-metadata": "^0.2.2",
     "rxjs": "^7.8.2",
-    "zod": "^4.0.15"
+    "zod": "^4.0.17"
   }
 }

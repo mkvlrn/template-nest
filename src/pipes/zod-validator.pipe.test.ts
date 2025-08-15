@@ -1,3 +1,4 @@
+/** biome-ignore-all lint/style/noMagicNumbers: fine for tests */
 import { HttpException, HttpStatus } from "@nestjs/common";
 import { assert, it } from "vitest";
 import { z } from "zod";

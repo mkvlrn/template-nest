@@ -1,3 +1,4 @@
+/** biome-ignore-all lint/style/noMagicNumbers: fine for tests */
 import type { INestApplication } from "@nestjs/common";
 import { Test } from "@nestjs/testing";
 import supertest, { type Agent } from "supertest";

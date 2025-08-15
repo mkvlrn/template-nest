@@ -1,3 +1,4 @@
+/** biome-ignore-all lint/style/noMagicNumbers: fine for tests */
 import { afterEach, assert, describe, it, vi } from "vitest";
 import { AppError } from "#/core/app-error";
 import type { TaskResponseDto } from "#/modules/task/task.dto";
@@ -18,9 +19,7 @@ it("should return a task when fetch is successful", async () => {
     completed: true,
   };
   const expectedFetchCalls = [[url]];
-  const fetchSpy = vi
-    .spyOn(global, "fetch")
-    .mockResolvedValue(new Response(JSON.stringify(expectedResponse)));
+  const fetchSpy = vi.spyOn(global, "fetch").mockResolvedValue(Response.json(expectedResponse));
 
   const result = await service.getTask(5);
 
