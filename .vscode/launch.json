@@ -18,6 +18,9 @@
       "request": "launch",
       "program": "${workspaceFolder}/build/main.js",
       "runtimeArgs": ["--enable-source-maps"],
+      "env": {
+        "port": "4000"
+      },
       "console": "internalConsole",
       "internalConsoleOptions": "openOnSessionStart",
       "sourceMaps": true,

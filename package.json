@@ -21,7 +21,7 @@
   "scripts": {
     "build": "vite build",
     "dev": "tsx --env-file-if-exists=.env --watch src/main.ts",
-    "start": "node --env-file-if-exists=.env build/main.js",
+    "start": "node build/main.js",
     "test": "vitest",
     "test-e2e": "vitest --config ./e2e/vite.config.ts",
     "biome-check": "biome check --no-errors-on-unmatched",
