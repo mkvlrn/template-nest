@@ -33,7 +33,7 @@
     "@biomejs/biome": "^2.2.0",
     "@commitlint/cli": "^19.8.1",
     "@commitlint/config-conventional": "^19.8.1",
-    "@mkvlrn/config": "^2.0.13",
+    "@mkvlrn/config": "^2.0.14",
     "@nestjs/testing": "^11.1.6",
     "@types/express": "^5.0.3",
     "@types/node": "^24.3.0",
@@ -48,6 +48,7 @@
     "tsx": "^4.20.4",
     "typescript": "^5.9.2",
     "vite": "^7.1.2",
+    "vite-plugin-dts": "^4.5.4",
     "vite-tsconfig-paths": "^5.1.4",
     "vitest": "^3.2.4"
   },

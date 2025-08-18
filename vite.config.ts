@@ -1,17 +1,22 @@
 import { globSync } from "node:fs";
 import nodeExternals from "rollup-plugin-node-externals";
+import dts from "vite-plugin-dts";
 import tsconfigPaths from "vite-tsconfig-paths";
 import { defineConfig } from "vitest/config";
 
 // application entry point
-const entry = globSync("./src/**/*.ts").filter((f) => !f.endsWith("test.ts"));
+const excludeFromBuildRegex = /\.(test|spec)\.ts$/;
+const entry = globSync("./src/**/*.ts").filter((f) => !excludeFromBuildRegex.test(f));
+const entryRoot = "src";
 
 export default defineConfig({
   plugins: [
-    // externalize node built-ins only
+    // externalize node built-ins
     nodeExternals(),
     // resolve tsconfig path aliases
     tsconfigPaths(),
+    // declarations
+    dts({ include: entry, logLevel: "error", entryRoot }),
   ],
 
   build: {
@@ -23,7 +28,7 @@ export default defineConfig({
     sourcemap: true,
     outDir: "./build",
     emptyOutDir: true,
-    rollupOptions: { output: { preserveModules: true } },
+    rollupOptions: { output: { preserveModules: true, preserveModulesRoot: entryRoot } },
   },
 
   test: {
@@ -35,7 +40,7 @@ export default defineConfig({
       clean: true,
       cleanOnRerun: true,
       include: ["src"],
-      exclude: ["src/**/*.test.{ts,tsx}", "src/main.{ts,tsx}", "src/**/*.module.ts", "**/env.ts"],
+      exclude: ["**/*.test.{ts,tsx}", "**/*main.ts"],
     },
     // biome-ignore lint/style/useNamingConvention: needed for vitest
     env: { NODE_ENV: "test" },
