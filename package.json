@@ -43,7 +43,6 @@
     "lint-staged": "^16.1.5",
     "rollup-plugin-node-externals": "^8.0.1",
     "supertest": "^7.1.4",
-    "tsc-alias": "^1.8.16",
     "tsc-files": "^1.1.4",
     "tsx": "^4.20.4",
     "typescript": "^5.9.2",
