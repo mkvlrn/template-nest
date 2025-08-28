@@ -16,9 +16,9 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: ">= 24"
-          cache: "npm"
-      - run: npm ci
+          cache: "yarn"
+      - run: yarn install --frozen-lockfile
       - run: |
-          npm run typecheck
-          npm run biome-check
-          npm run test -- --bail=1
+          yarn typecheck
+          yarn biome-check
+          yarn test -- --bail=1

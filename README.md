@@ -49,7 +49,7 @@ Runs tests.
 
 Runs biome in fix mode (only [safe fixes](https://biomejs.dev/linter/#safe-fixes)) to lint and format the project.
 
-### `npm run typecheck`
+### `yarn typecheck`
 
 Runs type checking using tsc.
 
