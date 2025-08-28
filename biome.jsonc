@@ -4,6 +4,12 @@
   "extends": ["@mkvlrn/config/biome-nest"],
   "files": {
     "ignoreUnknown": true,
-    "includes": ["**/*", "!**/node_modules/**/*", "!**/build/**/*", "!**/coverage/**/*"]
+    "includes": [
+      "**/*",
+      "!**/node_modules/**/*",
+      "!**/build/**/*",
+      "!**/coverage/**/*",
+      "!**/env.d.ts"
+    ]
   }
 }

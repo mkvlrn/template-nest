@@ -13,6 +13,7 @@ Uses:
 - [vite](https://github.com/vitejs/vite) for building
 - [vitest](https://github.com/vitest-dev/vitest) for testing
 - [tsx](https://github.com/privatenumber/tsx) for dev time typescript
+- [varlock](https://github.com/dmno-dev/varlock) for env validation and parsing
 
 ## why use this template instead of nestjs-cli?
 
@@ -28,33 +29,29 @@ Just check what is in it, it't not that different from what you'd get with nestj
 
 ## running
 
-### `npm run dev`
+### `yarn dev`
 
 Runs the project in watch mode with tsx.
 
-### `npm run build`
+### `yarn build`
 
 Builds/transpiles the code to `./build`.
 
-### `npm start`
+### `yarn start`
 
 Runs the built project.
 
-### `npm test`, `npm run test-e2e`
+### `yarn test`, `yarn test-e2e`
 
 Runs tests.
 
-### `npm run biome-fix`
+### `yarn biome-fix`
 
 Runs biome in fix mode (only [safe fixes](https://biomejs.dev/linter/#safe-fixes)) to lint and format the project.
 
 ### `npm run typecheck`
 
 Runs type checking using tsc.
-
-## that tsconfig.json seems very strict and opinionated
-
-Yup.
 
 ## vscode
 

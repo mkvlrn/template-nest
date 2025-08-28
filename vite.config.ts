@@ -1,18 +1,19 @@
 import { globSync } from "node:fs";
 import nodeExternals from "rollup-plugin-node-externals";
+import type { PluginOption } from "vite";
 import dts from "vite-plugin-dts";
 import tsconfigPaths from "vite-tsconfig-paths";
 import { defineConfig } from "vitest/config";
 
 // application entry point
-const excludeFromBuildRegex = /\.(test|spec)\.ts$/;
-const entry = globSync("./src/**/*.ts").filter((f) => !excludeFromBuildRegex.test(f));
+const excludeFromBuild = /\.(test|spec)\.ts$/;
+const entry = globSync(["./*.d.ts", "./src/**/*.ts"]).filter((f) => !excludeFromBuild.test(f));
 const entryRoot = "src";
 
 export default defineConfig({
   plugins: [
     // externalize node built-ins
-    nodeExternals(),
+    nodeExternals() as PluginOption,
     // resolve tsconfig path aliases
     tsconfigPaths(),
     // declarations
@@ -28,7 +29,9 @@ export default defineConfig({
     sourcemap: true,
     outDir: "./build",
     emptyOutDir: true,
-    rollupOptions: { output: { preserveModules: true, preserveModulesRoot: entryRoot } },
+    rollupOptions: {
+      output: { preserveModules: true, preserveModulesRoot: entryRoot },
+    },
   },
 
   test: {

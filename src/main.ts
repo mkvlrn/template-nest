@@ -1,12 +1,10 @@
 import { Logger } from "@nestjs/common";
 import { NestFactory } from "@nestjs/core";
+import { ENV } from "varlock/env";
 import { AppModule } from "#/core/app.module";
-import { env } from "#/core/env";
-
-env();
 
 const app = await NestFactory.create(AppModule);
 
-await app.listen(env("port"), () => {
-  Logger.log(`Listening on port ${env("port")}`, "DEBUG");
+await app.listen(ENV.PORT, () => {
+  Logger.log(`Listening on port ${ENV.PORT}`, "DEBUG");
 });

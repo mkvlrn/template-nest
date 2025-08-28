@@ -20,11 +20,8 @@ node_modules
 coverage
 
 # environment variables
-.env
-.env.development.local
-.env.test.local
-.env.production.local
-.env.local
+.env*
+!.env.schema
 
 # logs
 logs
