@@ -10,7 +10,6 @@ Uses:
 - [commitlint](https://github.com/conventional-changelog/commitlint) for linting commit messages
 - [husky](https://github.com/typicode/husky) for git hooks
 - [lint-staged](https://github.com/lint-staged/lint-staged) for checks on commit
-- [vite](https://github.com/vitejs/vite) for building
 - [vitest](https://github.com/vitest-dev/vitest) for testing
 - [tsx](https://github.com/privatenumber/tsx) for dev time typescript
 - [varlock](https://github.com/dmno-dev/varlock) for env validation and parsing
@@ -21,8 +20,7 @@ Uses:
 - biome is objectively faster and overall a better choice over eslint+prettier
 - no weird build-then-run-dev flow, tsx runs the dev code
 - people still using jest should... reconsider
-- building the right way with vite
-- any kind of code generation is ass, but nestjs's cli is particularly terrible, so dependencies for that and the nest-cli.json file are gone - just add files yourself, I promise you'll be fine
+- any kind of code generation is ass, but nestjs's cli is _particularly_ terrible, so dependencies for that and the nest-cli.json file are gone - just add files yourself, I promise you'll be fine
 - overall it's just as opinionated, but a tad cleaner, stricter, and modernized
 
 Just check what is in it, it't not that different from what you'd get with nestjs-cli.
