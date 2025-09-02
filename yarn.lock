@@ -458,10 +458,10 @@
   resolved "https://registry.yarnpkg.com/@mkvlrn/config/-/config-2.0.15.tgz#a52153464d4fd056713e0c71e9c14736e87b69cc"
   integrity sha512-lY2d71hiP+bynTevvfaMub7qdRtpaaXei6BJLYIwFysOoNU6BITmJwJIY8paaW48QNsg6pH5WsQ/n8h1qQNeMw==
 
-"@mkvlrn/result@^4.0.14":
-  version "4.0.14"
-  resolved "https://registry.yarnpkg.com/@mkvlrn/result/-/result-4.0.14.tgz#f849118e51c7ac2899f8317da90a3aa8a349e312"
-  integrity sha512-ep1p7WmwlJH4ifiqTzYz3zRwoMHL/QkBvnzeov5ZzzAUPameVqhTldgjPHdS1YBakmVtdVJKet9YW7ff066qmg==
+"@mkvlrn/result@^4.0.15":
+  version "4.0.15"
+  resolved "https://registry.yarnpkg.com/@mkvlrn/result/-/result-4.0.15.tgz#c0f56ee9f68c6097bf2bb5865d61010ff1383cc9"
+  integrity sha512-fAQWyuMRoDQU5NnFM+roLszNTv9cz0CLfbDp7Ffb0jVYJ7LrN/d7yuyms6r1pj8NzHwpNb/aJQX2f9o4lv6VbA==
 
 "@nestjs/common@^11.1.6":
   version "11.1.6"
