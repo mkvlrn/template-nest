@@ -23,7 +23,7 @@
     "dev": "APP_ENV=development varlock run -- tsx --watch src/main.ts",
     "start": "APP_ENV=production varlock run -- node build/main.js",
     "test": "vitest",
-    "test-e2e": "vitest --config ./e2e/viteest.config.ts",
+    "test-e2e": "vitest --config ./e2e/vitest.config.ts",
     "biome-check": "biome check --no-errors-on-unmatched",
     "biome-fix": "yarn biome-check --write",
     "typecheck": "tsc --noEmit",
