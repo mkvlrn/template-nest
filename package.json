@@ -20,8 +20,8 @@
   },
   "scripts": {
     "build": "rimraf build && tsc -p tsconfig.build.json && tsc-alias -p tsconfig.build.json -f",
-    "dev": "APP_ENV=development varlock run -- tsx --watch src/main.ts",
-    "start": "APP_ENV=production varlock run -- node build/main.js",
+    "dev": "tsx --watch src/main.ts",
+    "start": "node build/main.js",
     "test": "vitest",
     "test-e2e": "vitest --config ./e2e/vitest.config.ts",
     "biome-check": "biome check --no-errors-on-unmatched",
@@ -57,7 +57,6 @@
     "@nestjs/platform-express": "^11.1.6",
     "reflect-metadata": "^0.2.2",
     "rxjs": "^7.8.2",
-    "varlock": "^0.0.11",
     "zod": "^4.1.5"
   }
 }
