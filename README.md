@@ -12,7 +12,6 @@ Uses:
 - [lint-staged](https://github.com/lint-staged/lint-staged) for checks on commit
 - [vitest](https://github.com/vitest-dev/vitest) for testing
 - [tsx](https://github.com/privatenumber/tsx) for dev time typescript
-- [varlock](https://github.com/dmno-dev/varlock) for env validation and parsing
 
 ## why use this template instead of nestjs-cli?
 
