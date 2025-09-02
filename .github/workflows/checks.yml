@@ -21,4 +21,5 @@ jobs:
       - run: |
           yarn typecheck
           yarn biome-check
+          yarn test-e2e -- --bail=1
           yarn test -- --bail=1
