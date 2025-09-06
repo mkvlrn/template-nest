@@ -1,8 +1,8 @@
 /** biome-ignore-all lint/style/noMagicNumbers: fine for tests */
 import { type AsyncResult, R } from "@mkvlrn/result";
 import { HttpStatus, Injectable } from "@nestjs/common";
-import { AppError } from "#/core/app-error";
-import { TaskResponseDto } from "#/modules/task/task.dto";
+import { AppError } from "../../core/app-error.ts";
+import { TaskResponseDto } from "./task.dto.ts";
 
 @Injectable()
 export class TaskService {

@@ -1,7 +1,7 @@
 import { Controller, Get, HttpException, Inject, Param } from "@nestjs/common";
-import { TaskRequestDto, type TaskResponseDto } from "#/modules/task/task.dto";
-import { TaskService } from "#/modules/task/task.service";
-import { ZodValidator } from "#/pipes/zod-validator.pipe";
+import { ZodValidator } from "../../pipes/zod-validator.pipe.ts";
+import { TaskRequestDto, type TaskResponseDto } from "./task.dto.ts";
+import { TaskService } from "./task.service.ts";
 
 @Controller("tasks")
 export class TaskController {

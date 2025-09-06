@@ -1,8 +1,8 @@
 /** biome-ignore-all lint/style/noMagicNumbers: fine for tests */
 import { afterEach, assert, describe, it, vi } from "vitest";
-import { AppError } from "#/core/app-error";
-import type { TaskResponseDto } from "#/modules/task/task.dto";
-import { TaskService } from "#/modules/task/task.service";
+import { AppError } from "../../core/app-error.ts";
+import type { TaskResponseDto } from "./task.dto.ts";
+import { TaskService } from "./task.service.ts";
 
 const service = new TaskService();
 const url = "https://jsonplaceholder.typicode.com/todos/5";

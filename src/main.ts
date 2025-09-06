@@ -1,6 +1,6 @@
 import { Logger } from "@nestjs/common";
 import { NestFactory } from "@nestjs/core";
-import { AppModule } from "#/core/app.module";
+import { AppModule } from "./core/app.module.ts";
 
 const port = 4000;
 const app = await NestFactory.create(AppModule);

@@ -2,8 +2,8 @@
 import { HttpException, HttpStatus } from "@nestjs/common";
 import { assert, it } from "vitest";
 import { z } from "zod";
-import { AppError } from "#/core/app-error";
-import { ZodValidator } from "#/pipes/zod-validator.pipe";
+import { AppError } from "../core/app-error.ts";
+import { ZodValidator } from "./zod-validator.pipe.ts";
 
 const schema = z.strictObject({
   age: z.number().min(18),

@@ -19,21 +19,21 @@
     "node": "24.x"
   },
   "scripts": {
-    "build": "rimraf build && tsc -p tsconfig.build.json && tsc-alias -p tsconfig.build.json -f",
+    "build": "rimraf build && tsc -p tsconfig.build.json",
     "dev": "tsx --watch src/main.ts",
     "start": "node build/main.js",
     "test": "vitest",
     "test-e2e": "vitest --config ./e2e/vitest.config.ts",
     "biome-check": "biome check --no-errors-on-unmatched",
     "biome-fix": "yarn biome-check --write",
-    "typecheck": "tsc --noEmit",
+    "typecheck": "tsc",
     "prepare": "husky"
   },
   "devDependencies": {
     "@biomejs/biome": "^2.2.2",
     "@commitlint/cli": "^19.8.1",
     "@commitlint/config-conventional": "^19.8.1",
-    "@mkvlrn/config": "^2.0.15",
+    "@mkvlrn/config": "^2.0.17",
     "@nestjs/testing": "^11.1.6",
     "@types/express": "^5.0.3",
     "@types/node": "^24.3.1",
@@ -43,11 +43,9 @@
     "lint-staged": "^16.1.6",
     "rimraf": "^6.0.1",
     "supertest": "^7.1.4",
-    "tsc-alias": "^1.8.16",
     "tsc-files": "^1.1.4",
     "tsx": "^4.20.5",
     "typescript": "^5.9.2",
-    "vite-tsconfig-paths": "^5.1.4",
     "vitest": "^3.2.4"
   },
   "dependencies": {

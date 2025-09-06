@@ -1,6 +1,6 @@
 import { HttpException, HttpStatus, Injectable, type PipeTransform } from "@nestjs/common";
 import type { ZodType } from "zod";
-import { AppError } from "#/core/app-error";
+import { AppError } from "../core/app-error.ts";
 
 @Injectable()
 export class ZodValidator implements PipeTransform {

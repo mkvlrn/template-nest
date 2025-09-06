@@ -2,10 +2,10 @@ import { R } from "@mkvlrn/result";
 import { HttpException, HttpStatus } from "@nestjs/common";
 import { Test } from "@nestjs/testing";
 import { afterEach, assert, beforeEach, describe, it, vi } from "vitest";
-import { AppError } from "#/core/app-error";
-import { TaskController } from "#/modules/task/task.controller";
-import type { TaskResponseDto } from "#/modules/task/task.dto";
-import { TaskService } from "#/modules/task/task.service";
+import { AppError } from "../../core/app-error.ts";
+import { TaskController } from "./task.controller.ts";
+import type { TaskResponseDto } from "./task.dto.ts";
+import { TaskService } from "./task.service.ts";
 
 const MOCK_TASK: TaskResponseDto = { userId: 1, id: 1, title: "task title", completed: false };
 
