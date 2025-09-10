@@ -1,3 +1,6 @@
 {
-  "extends": ["@mkvlrn/config/tsconfig-nest"]
+  "extends": ["@mkvlrn/config/tsconfig-nest"],
+  "compilerOptions": {
+    "noEmit": true
+  }
 }

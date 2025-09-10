@@ -30,10 +30,10 @@
     "prepare": "husky"
   },
   "devDependencies": {
-    "@biomejs/biome": "^2.2.2",
+    "@biomejs/biome": "^2.2.4",
     "@commitlint/cli": "^19.8.1",
     "@commitlint/config-conventional": "^19.8.1",
-    "@mkvlrn/config": "^2.0.17",
+    "@mkvlrn/config": "^2.0.19",
     "@nestjs/testing": "^11.1.6",
     "@types/express": "^5.0.3",
     "@types/node": "^24.3.1",
@@ -49,7 +49,7 @@
     "vitest": "^3.2.4"
   },
   "dependencies": {
-    "@mkvlrn/result": "^4.0.15",
+    "@mkvlrn/result": "^4.0.16",
     "@nestjs/common": "^11.1.6",
     "@nestjs/core": "^11.1.6",
     "@nestjs/platform-express": "^11.1.6",
