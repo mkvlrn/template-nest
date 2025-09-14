@@ -26,27 +26,27 @@ Just check what is in it, it't not that different from what you'd get with nestj
 
 ## running
 
-### `yarn dev`
+### `pnpm dev`
 
 Runs the project in watch mode with tsx.
 
-### `yarn build`
+### `pnpm build`
 
 Builds/transpiles the code to `./build`.
 
-### `yarn start`
+### `pnpm start`
 
 Runs the built project.
 
-### `yarn test`, `yarn test-e2e`
+### `pnpm test`, `pnpm test-e2e`
 
 Runs tests.
 
-### `yarn biome-fix`
+### `pnpm biome-fix`
 
 Runs biome in fix mode (only [safe fixes](https://biomejs.dev/linter/#safe-fixes)) to lint and format the project.
 
-### `yarn typecheck`
+### `pnpm typecheck`
 
 Runs type checking using tsc.
 

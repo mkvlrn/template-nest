@@ -13,13 +13,16 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 10
       - uses: actions/setup-node@v4
         with:
           node-version: ">= 24"
-          cache: "yarn"
-      - run: yarn install --frozen-lockfile
+          cache: "pnpm"
+      - run: pnpm install --frozen-lockfile
       - run: |
-          yarn typecheck
-          yarn biome-check
-          yarn test-e2e -- --bail=1
-          yarn test -- --bail=1
+          pnpm typecheck
+          pnpm biome-check
+          pnpm test-e2e -- --bail=1
+          pnpm test -- --bail=1

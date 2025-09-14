@@ -33,10 +33,10 @@
     "@biomejs/biome": "^2.2.4",
     "@commitlint/cli": "^19.8.1",
     "@commitlint/config-conventional": "^19.8.1",
-    "@mkvlrn/config": "^2.0.19",
+    "@mkvlrn/config": "^2.0.20",
     "@nestjs/testing": "^11.1.6",
     "@types/express": "^5.0.3",
-    "@types/node": "^24.3.1",
+    "@types/node": "^24.4.0",
     "@types/supertest": "^6.0.3",
     "@vitest/coverage-v8": "^3.2.4",
     "husky": "^9.1.7",
@@ -49,12 +49,12 @@
     "vitest": "^3.2.4"
   },
   "dependencies": {
-    "@mkvlrn/result": "^4.0.16",
+    "@mkvlrn/result": "^4.0.17",
     "@nestjs/common": "^11.1.6",
     "@nestjs/core": "^11.1.6",
     "@nestjs/platform-express": "^11.1.6",
     "reflect-metadata": "^0.2.2",
     "rxjs": "^7.8.2",
-    "zod": "^4.1.5"
+    "zod": "^4.1.8"
   }
 }
