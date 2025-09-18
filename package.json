@@ -23,9 +23,9 @@
     "dev": "tsx --watch src/main.ts",
     "start": "node build/main.js",
     "test": "vitest",
-    "test-e2e": "vitest --config ./e2e/vitest.config.ts",
+    "test-integration": "cross-env INTEGRATION=true vitest",
     "biome-check": "biome check --no-errors-on-unmatched",
-    "biome-fix": "yarn biome-check --write",
+    "biome-fix": "pnpm biome-check --write",
     "typecheck": "tsc",
     "prepare": "husky"
   },
@@ -33,12 +33,13 @@
     "@biomejs/biome": "^2.2.4",
     "@commitlint/cli": "^19.8.1",
     "@commitlint/config-conventional": "^19.8.1",
-    "@mkvlrn/config": "^2.0.20",
+    "@mkvlrn/config": "^2.0.21",
     "@nestjs/testing": "^11.1.6",
     "@types/express": "^5.0.3",
-    "@types/node": "^24.4.0",
+    "@types/node": "^24.5.2",
     "@types/supertest": "^6.0.3",
     "@vitest/coverage-v8": "^3.2.4",
+    "cross-env": "^10.0.0",
     "husky": "^9.1.7",
     "lint-staged": "^16.1.6",
     "rimraf": "^6.0.1",
@@ -55,6 +56,6 @@
     "@nestjs/platform-express": "^11.1.6",
     "reflect-metadata": "^0.2.2",
     "rxjs": "^7.8.2",
-    "zod": "^4.1.8"
+    "zod": "^4.1.9"
   }
 }

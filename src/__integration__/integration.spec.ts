@@ -3,7 +3,7 @@ import type { INestApplication } from "@nestjs/common";
 import { Test } from "@nestjs/testing";
 import supertest, { type Agent } from "supertest";
 import { afterEach, assert, beforeEach, it } from "vitest";
-import { AppModule } from "../src/core/app.module.ts";
+import { AppModule } from "../core/app.module.ts";
 
 let app: INestApplication;
 let server: Agent;
