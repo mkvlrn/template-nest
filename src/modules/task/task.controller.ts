@@ -1,4 +1,4 @@
-import { Controller, Get, HttpException, Inject, Param } from "@nestjs/common";
+import { Controller, Get, HttpException, HttpStatus, Inject, Param } from "@nestjs/common";
 import { ZodValidator } from "../../pipes/zod-validator.pipe.ts";
 import { TaskRequestDto, type TaskResponseDto } from "./task.dto.ts";
 import { TaskService } from "./task.service.ts";
@@ -19,9 +19,13 @@ export class TaskController {
     const result = await this.getTaskService.getTask(id);
 
     if (result.error) {
-      throw new HttpException(result.error.name, result.error.statusCode, {
-        cause: result.error,
-      });
+      throw new HttpException(
+        result.error.message,
+        Number(result.error.cause) ?? HttpStatus.INTERNAL_SERVER_ERROR,
+        {
+          cause: result.error,
+        },
+      );
     }
 
     return result.value;

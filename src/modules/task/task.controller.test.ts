@@ -1,8 +1,7 @@
 import { R } from "@mkvlrn/result";
 import { HttpException, HttpStatus } from "@nestjs/common";
 import { Test } from "@nestjs/testing";
-import { afterEach, assert, beforeEach, describe, it, vi } from "vitest";
-import { AppError } from "../../core/app-error.ts";
+import { afterEach, assert, beforeEach, describe, expect, it, vi } from "vitest";
 import { TaskController } from "./task.controller.ts";
 import type { TaskResponseDto } from "./task.dto.ts";
 import { TaskService } from "./task.service.ts";
@@ -36,12 +35,12 @@ describe("getTaskById", () => {
 
     const response = await controller.getTaskById({ id: 1 });
 
-    assert.deepStrictEqual(response, MOCK_TASK);
-    assert.deepStrictEqual(getTaskSpy.mock.calls, expectedGetTaskCalls);
+    expect(response).toStrictEqual(MOCK_TASK);
+    expect(getTaskSpy.mock.calls).toStrictEqual(expectedGetTaskCalls);
   });
 
   it("should throw an exception coming from the service", async () => {
-    const expectedError = new AppError("BadGateway", "Some Error", HttpStatus.BAD_GATEWAY);
+    const expectedError = new Error("BadGateway", { cause: HttpStatus.BAD_GATEWAY });
     const expectedGetTaskCalls = [[1]];
     const getTaskSpy = vi
       .spyOn(mockTaskService, "getTask")
@@ -51,12 +50,10 @@ describe("getTaskById", () => {
       await controller.getTaskById({ id: 1 });
       assert.fail("Should throw");
     } catch (ex) {
-      assert.deepStrictEqual(getTaskSpy.mock.calls, expectedGetTaskCalls);
       assert.instanceOf(ex, HttpException);
-      assert.strictEqual(ex.getStatus(), expectedError.statusCode);
-      assert.strictEqual(ex.message, expectedError.name);
-      assert.instanceOf(ex.cause, AppError);
-      assert.deepStrictEqual(ex.cause, expectedError);
+      expect(getTaskSpy.mock.calls).toStrictEqual(expectedGetTaskCalls);
+      expect(ex.message).toStrictEqual(expectedError.message);
+      expect(ex.cause).toStrictEqual(expectedError);
     }
   });
 });

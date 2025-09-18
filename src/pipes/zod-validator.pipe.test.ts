@@ -1,8 +1,7 @@
 /** biome-ignore-all lint/style/noMagicNumbers: fine for tests */
 import { HttpException, HttpStatus } from "@nestjs/common";
-import { assert, it } from "vitest";
+import { assert, expect, it } from "vitest";
 import { z } from "zod";
-import { AppError } from "../core/app-error.ts";
 import { ZodValidator } from "./zod-validator.pipe.ts";
 
 const schema = z.strictObject({
@@ -16,15 +15,11 @@ it("should validate input", () => {
 
   const result = pipe.transform(input);
 
-  assert.deepStrictEqual(result, input);
+  expect(result).toStrictEqual(input);
 });
 
 it("should throw when input is invalid", () => {
-  const expectedError = new AppError(
-    "ValidationError",
-    "Input validation failed: Too small: expected number to be >=18",
-    HttpStatus.UNPROCESSABLE_ENTITY,
-  );
+  const expectedError = new Error("Input validation failed: Too small: expected number to be >=18");
   const input = { age: 17 };
 
   try {
@@ -32,9 +27,8 @@ it("should throw when input is invalid", () => {
     assert.fail("Should throw");
   } catch (ex) {
     assert.instanceOf(ex, HttpException);
-    assert.strictEqual(ex.getStatus(), expectedError.statusCode);
-    assert.strictEqual(ex.message, expectedError.name);
-    assert.instanceOf(ex.cause, AppError);
-    assert.deepStrictEqual(ex.cause, expectedError);
+    expect(ex.getStatus()).toBe(HttpStatus.UNPROCESSABLE_ENTITY);
+    expect(ex.message).toStrictEqual("ValidationError");
+    expect(ex.cause).toStrictEqual(expectedError);
   }
 });
