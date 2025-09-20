@@ -1,9 +1,8 @@
-/** biome-ignore-all lint/style/noMagicNumbers: fine for tests */
-import type { INestApplication } from "@nestjs/common";
+import { HttpStatus, type INestApplication } from "@nestjs/common";
 import { Test } from "@nestjs/testing";
 import supertest, { type Agent } from "supertest";
-import { afterEach, assert, beforeEach, it } from "vitest";
-import { AppModule } from "../core/app.module.ts";
+import { afterEach, beforeEach, expect, test } from "vitest";
+import { AppModule } from "../app.module.ts";
 
 let app: INestApplication;
 let server: Agent;
@@ -22,7 +21,7 @@ afterEach(async () => {
   await app.close();
 });
 
-it("GET /tasks/1", async () => {
+test("GET /tasks/1", async () => {
   const expectedResponse = {
     userId: 1,
     id: 1,
@@ -32,6 +31,6 @@ it("GET /tasks/1", async () => {
 
   const response = await server.get("/tasks/1");
 
-  assert.strictEqual(response.status, 200);
-  assert.deepStrictEqual(response.body, expectedResponse);
+  expect(response.status).toStrictEqual(HttpStatus.OK);
+  expect(response.body).toStrictEqual(expectedResponse);
 });

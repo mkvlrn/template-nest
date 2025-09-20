@@ -8,9 +8,6 @@ importers:
 
   .:
     dependencies:
-      '@mkvlrn/result':
-        specifier: ^4.0.17
-        version: 4.0.17
       '@nestjs/common':
         specifier: ^11.1.6
         version: 11.1.6(reflect-metadata@0.2.2)(rxjs@7.8.2)
@@ -26,9 +23,6 @@ importers:
       rxjs:
         specifier: ^7.8.2
         version: 7.8.2
-      zod:
-        specifier: ^4.1.9
-        version: 4.1.9
     devDependencies:
       '@biomejs/biome':
         specifier: ^2.2.4
@@ -435,10 +429,6 @@ packages:
 
   '@mkvlrn/config@2.0.21':
     resolution: {integrity: sha512-ex59LYyx9hrwogAb8qeO6y5WmLkQUoUGagMQHT5a/zDhJB8e1LzL+Ks7u87BzTfCZjM7+aRj8vRLBWHDZyMWTQ==}
-    engines: {node: 24.x}
-
-  '@mkvlrn/result@4.0.17':
-    resolution: {integrity: sha512-4n0XsLMZVa7/t2HruR58rTnnQvpdYkzhiVM72//m9hHdclvE/oSyrQ/+jjeioIZZY7mSDglcH9Z8OdwNbUKeFA==}
     engines: {node: 24.x}
 
   '@nestjs/common@11.1.6':
@@ -1970,9 +1960,6 @@ packages:
     resolution: {integrity: sha512-AyeEbWOu/TAXdxlV9wmGcR0+yh2j3vYPGOECcIj2S7MkrLyC7ne+oye2BKTItt0ii2PHk4cDy+95+LshzbXnGg==}
     engines: {node: '>=12.20'}
 
-  zod@4.1.9:
-    resolution: {integrity: sha512-HI32jTq0AUAC125z30E8bQNz0RQ+9Uc+4J7V97gLYjZVKRjeydPgGt6dvQzFrav7MYOUGFqqOGiHpA/fdbd0cQ==}
-
 snapshots:
 
   '@ampproject/remapping@2.3.0':
@@ -2262,8 +2249,6 @@ snapshots:
   '@lukeed/csprng@1.1.0': {}
 
   '@mkvlrn/config@2.0.21': {}
-
-  '@mkvlrn/result@4.0.17': {}
 
   '@nestjs/common@11.1.6(reflect-metadata@0.2.2)(rxjs@7.8.2)':
     dependencies:
@@ -3802,5 +3787,3 @@ snapshots:
       yargs-parser: 21.1.1
 
   yocto-queue@1.2.1: {}
-
-  zod@4.1.9: {}
