@@ -1,5 +1,4 @@
-import { HttpStatus } from "@nestjs/common";
-import { afterEach, assert, describe, expect, test, vi } from "vitest";
+import { afterEach, describe, expect, test, vi } from "vitest";
 import { type ApiResponse, AppService } from "./app.service.ts";
 
 const service = new AppService();

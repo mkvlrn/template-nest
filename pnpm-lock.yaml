@@ -34,8 +34,8 @@ importers:
         specifier: ^19.8.1
         version: 19.8.1
       '@mkvlrn/config':
-        specifier: ^2.0.21
-        version: 2.0.21
+        specifier: ^2.0.23
+        version: 2.0.23
       '@nestjs/testing':
         specifier: ^11.1.6
         version: 11.1.6(@nestjs/common@11.1.6(reflect-metadata@0.2.2)(rxjs@7.8.2))(@nestjs/core@11.1.6)(@nestjs/platform-express@11.1.6)
@@ -427,8 +427,8 @@ packages:
     resolution: {integrity: sha512-Z7C/xXCiGWsg0KuKsHTKJxbWhpI3Vs5GwLfOean7MGyVFGqdRgBbAjOCh6u4bbjPc/8MJ2pZmK/0DLdCbivLDA==}
     engines: {node: '>=8'}
 
-  '@mkvlrn/config@2.0.21':
-    resolution: {integrity: sha512-ex59LYyx9hrwogAb8qeO6y5WmLkQUoUGagMQHT5a/zDhJB8e1LzL+Ks7u87BzTfCZjM7+aRj8vRLBWHDZyMWTQ==}
+  '@mkvlrn/config@2.0.23':
+    resolution: {integrity: sha512-m3kM8BW6rzWOZHPVdfsdaldvpIHU8UqbPgoYEINYNpEw2CTcxm5QMImMfBiFsEZWY60ofdFmCxMb5VNaYHth9w==}
     engines: {node: 24.x}
 
   '@nestjs/common@11.1.6':
@@ -2248,7 +2248,7 @@ snapshots:
 
   '@lukeed/csprng@1.1.0': {}
 
-  '@mkvlrn/config@2.0.21': {}
+  '@mkvlrn/config@2.0.23': {}
 
   '@nestjs/common@11.1.6(reflect-metadata@0.2.2)(rxjs@7.8.2)':
     dependencies:

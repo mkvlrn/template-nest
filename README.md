@@ -38,7 +38,7 @@ Builds/transpiles the code to `./build`.
 
 Runs the built project.
 
-### `pnpm test`, `pnpm test-e2e`
+### `pnpm test`
 
 Runs tests.
 
