@@ -24,4 +24,4 @@ jobs:
       - run: |
           pnpm typecheck
           pnpm biome-check
-          pnpm test-integration -- --bail=1
+          pnpm test --bail=1
