@@ -32,7 +32,7 @@
     "@biomejs/biome": "^2.2.5",
     "@commitlint/cli": "^20.1.0",
     "@commitlint/config-conventional": "^20.0.0",
-    "@mkvlrn/config": "^2.0.23",
+    "@mkvlrn/config": "^2.0.24",
     "@nestjs/testing": "^11.1.6",
     "@types/express": "^5.0.3",
     "@types/node": "^24.6.2",
