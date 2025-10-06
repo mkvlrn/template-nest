@@ -16,7 +16,7 @@
     "template"
   ],
   "engines": {
-    "node": "24.x"
+    "node": "22.x"
   },
   "scripts": {
     "build": "rimraf build && tsc -p tsconfig.build.json",
@@ -35,7 +35,7 @@
     "@mkvlrn/config": "^2.0.24",
     "@nestjs/testing": "^11.1.6",
     "@types/express": "^5.0.3",
-    "@types/node": "^24.6.2",
+    "@types/node": "^24.7.0",
     "@types/supertest": "^6.0.3",
     "@vitest/coverage-v8": "^3.2.4",
     "cross-env": "^10.1.0",
