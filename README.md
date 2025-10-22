@@ -2,7 +2,7 @@
 
 A sane, opinionated template for esm nestjs projects written in typescript.
 
-For new, node 22+ projects.
+For new, node lts (currently v22) projects.
 
 Uses:
 
@@ -12,6 +12,7 @@ Uses:
 - [lint-staged](https://github.com/lint-staged/lint-staged) for checks on commit
 - [vitest](https://github.com/vitest-dev/vitest) for testing
 - [tsx](https://github.com/privatenumber/tsx) for dev time typescript
+- [tsdown](https://github.com/rolldown/tsdown) for building
 
 ## why use this template instead of nestjs-cli?
 
@@ -20,6 +21,7 @@ Uses:
 - no weird build-then-run-dev flow, tsx runs the dev code
 - people still using jest should... reconsider
 - any kind of code generation is ass, but nestjs's cli is _particularly_ terrible, so dependencies for that and the nest-cli.json file are gone - just add files yourself, I promise you'll be fine
+- the result pattern is used with the [neverthrow](https://github.com/supermacro/neverthrow) package - together with the global filter, error handling becomes a breeze; it is of course optional, but I think it's a good idea to just use it _everywhere_
 - overall it's just as opinionated, but a tad cleaner, stricter, and modernized
 
 Just check what is in it, it't not that different from what you'd get with nestjs-cli.

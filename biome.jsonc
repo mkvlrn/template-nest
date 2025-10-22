@@ -1,7 +1,6 @@
 {
   "$schema": "node_modules/@biomejs/biome/configuration_schema.json",
   "root": true,
-  "extends": ["@mkvlrn/config/biome-nest"],
   "files": {
     "ignoreUnknown": true,
     "includes": [
@@ -11,5 +10,79 @@
       "!**/coverage/**/*",
       "!**/*.d.ts"
     ]
-  }
+  },
+  "assist": {
+    "actions": {
+      "source": {
+        "organizeImports": "on",
+        "useSortedAttributes": "on",
+        "useSortedKeys": "off",
+        "useSortedProperties": "on"
+      }
+    }
+  },
+  "formatter": {
+    "enabled": true,
+    "formatWithErrors": true,
+    "lineEnding": "lf",
+    "lineWidth": 100,
+    "indentStyle": "space",
+    "indentWidth": 2
+  },
+  "javascript": {
+    "parser": {
+      // for nest decorators
+      "unsafeParameterDecoratorsEnabled": true
+    }
+  },
+  "linter": {
+    "domains": {
+      "project": "all",
+      "test": "all",
+      "react": "none",
+      "next": "none",
+      "solid": "none",
+      "qwik": "none"
+    },
+    "enabled": true,
+    "rules": {
+      "a11y": "on",
+      "complexity": "on",
+      "correctness": "on",
+      "nursery": "off",
+      "performance": "on",
+      "security": "on",
+      "style": "on",
+      "suspicious": "on"
+    }
+  },
+  "overrides": [
+    {
+      "includes": ["**/*.ts"],
+      "linter": {
+        "rules": {
+          "complexity": {
+            // because of typescript's noPropertyAccessFromIndexSignature
+            "useLiteralKeys": "off"
+          },
+          "correctness": {
+            // importing from node is fine, this is backend only
+            "noNodejsModules": "off"
+          }
+        }
+      }
+    },
+
+    {
+      // config files should be able to export defaults as per tooling requirements
+      "includes": ["**/*.config.ts"],
+      "linter": {
+        "rules": {
+          "style": {
+            "noDefaultExport": "off"
+          }
+        }
+      }
+    }
+  ]
 }

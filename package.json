@@ -16,42 +16,43 @@
     "template"
   ],
   "engines": {
-    "node": "22.x"
+    "node": "22.21"
   },
   "scripts": {
-    "build": "rimraf build && tsc -p tsconfig.build.json",
+    "build": "tsdown",
     "dev": "tsx --watch src/main.ts",
     "start": "node build/main.js",
     "test": "vitest",
-    "biome-check": "biome check --no-errors-on-unmatched",
+    "biome-check": "biome check --diagnostic-level=warn --no-errors-on-unmatched",
     "biome-fix": "pnpm biome-check --write",
     "typecheck": "tsc",
     "prepare": "husky"
   },
   "devDependencies": {
-    "@biomejs/biome": "^2.2.5",
+    "@biomejs/biome": "^2.2.6",
     "@commitlint/cli": "^20.1.0",
     "@commitlint/config-conventional": "^20.0.0",
-    "@mkvlrn/config": "^2.0.24",
-    "@nestjs/testing": "^11.1.6",
+    "@nestjs/testing": "^11.1.7",
     "@types/express": "^5.0.3",
-    "@types/node": "^24.7.0",
+    "@types/node": "^24.9.1",
     "@types/supertest": "^6.0.3",
     "@vitest/coverage-v8": "^3.2.4",
-    "cross-env": "^10.1.0",
     "husky": "^9.1.7",
-    "lint-staged": "^16.2.3",
-    "rimraf": "^6.0.1",
+    "lint-staged": "^16.2.5",
     "supertest": "^7.1.4",
     "tsc-files": "^1.1.4",
+    "tsdown": "^0.15.9",
     "tsx": "^4.20.6",
     "typescript": "^5.9.3",
+    "vite-tsconfig-paths": "^5.1.4",
     "vitest": "^3.2.4"
   },
   "dependencies": {
-    "@nestjs/common": "^11.1.6",
-    "@nestjs/core": "^11.1.6",
-    "@nestjs/platform-express": "^11.1.6",
+    "@nestjs/common": "^11.1.7",
+    "@nestjs/core": "^11.1.7",
+    "@nestjs/platform-express": "^11.1.7",
+    "http-status-codes": "^2.3.0",
+    "neverthrow": "^8.2.0",
     "reflect-metadata": "^0.2.2",
     "rxjs": "^7.8.2"
   }

@@ -1,6 +1,49 @@
 {
-  "extends": ["@mkvlrn/config/tsconfig-nest"],
   "compilerOptions": {
-    "noEmit": true
-  }
+    // no emit by default, using bundler
+    "noEmit": true,
+
+    // some typescript QOL
+    "allowImportingTsExtensions": true,
+
+    // very strict
+    "allowJs": false,
+    "erasableSyntaxOnly": true,
+    "verbatimModuleSyntax": true,
+    "exactOptionalPropertyTypes": true,
+    "noPropertyAccessFromIndexSignature": true,
+    "noUncheckedIndexedAccess": true,
+    "strict": true,
+    "strictNullChecks": true,
+    "noUncheckedSideEffectImports": true,
+
+    // esm
+    "esModuleInterop": true,
+    "isolatedModules": true,
+    "lib": ["ESNext"],
+    "module": "nodenext",
+    "moduleResolution": "nodenext",
+    "moduleDetection": "force",
+    "target": "esnext",
+
+    // pnpm compatibility
+    "preserveSymlinks": false,
+
+    // self explanatory
+    "resolveJsonModule": true,
+
+    // don't try to check for errors on imported libs
+    "skipLibCheck": true,
+
+    // nest still uses these old experimental decorators
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+
+    // standardized paths
+    "baseUrl": ".",
+    "paths": { "#/*": ["./src/*"] }
+  },
+
+  "include": ["**/*.ts"],
+  "exclude": ["node_modules", "build", "coverage"]
 }
