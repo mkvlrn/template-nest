@@ -1,6 +1,6 @@
 import { Controller, Get, Inject, Param } from "@nestjs/common";
-import { AppService } from "#/app.service.ts";
-import type { JsonPlaceholderResponse } from "#/util/types.ts";
+import { AppService } from "#/app.service";
+import type { JsonPlaceholderResponse } from "#/util/types";
 
 @Controller("tasks")
 export class AppController {

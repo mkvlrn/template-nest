@@ -67,7 +67,9 @@
           },
           "correctness": {
             // importing from node is fine, this is backend only
-            "noNodejsModules": "off"
+            "noNodejsModules": "off",
+            // bundler mode for imports
+            "useImportExtensions": "off"
           }
         }
       }

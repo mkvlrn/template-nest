@@ -1,8 +1,8 @@
 import assert from "node:assert/strict";
 import { afterEach, describe, expect, test, vi } from "vitest";
-import { AppService } from "#/app.service.ts";
-import { AppError } from "#/util/app-error.ts";
-import type { JsonPlaceholderResponse } from "#/util/types.ts";
+import { AppService } from "#/app.service";
+import { AppError } from "#/util/app-error";
+import type { JsonPlaceholderResponse } from "#/util/types";
 
 const service = new AppService();
 const url = "https://jsonplaceholder.typicode.com/todos/5";

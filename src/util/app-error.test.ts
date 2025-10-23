@@ -1,6 +1,6 @@
 import { getReasonPhrase, StatusCodes } from "http-status-codes";
 import { expect, test } from "vitest";
-import { AppError } from "#/util/app-error.ts";
+import { AppError } from "#/util/app-error";
 
 test("should create AppError with correct fields", () => {
   const err = new AppError("externalApiError", "external api broke", [{ field: "name" }]);

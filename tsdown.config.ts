@@ -4,4 +4,6 @@ export default defineConfig({
   entry: "./src/main.ts",
   outDir: "./build",
   unbundle: true,
+  sourcemap: true,
+  minify: true,
 });

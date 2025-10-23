@@ -2,8 +2,8 @@ import type { ArgumentsHost } from "@nestjs/common";
 import type { HttpAdapterHost } from "@nestjs/core";
 import { StatusCodes } from "http-status-codes";
 import { expect, test, vi } from "vitest";
-import { GlobalFilter } from "#/filters/global.filter.ts";
-import { AppError } from "#/util/app-error.ts";
+import { GlobalFilter } from "#/filters/global.filter";
+import { AppError } from "#/util/app-error";
 
 const rawResponse = {};
 const replySpy = vi.fn();

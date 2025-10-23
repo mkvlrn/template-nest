@@ -1,10 +1,10 @@
 import { Test } from "@nestjs/testing";
 import { err, ok } from "neverthrow";
 import { afterEach, beforeEach, describe, expect, test, vi } from "vitest";
-import { AppController } from "#/app.controller.ts";
-import { AppService } from "#/app.service.ts";
-import { AppError } from "#/util/app-error.ts";
-import type { JsonPlaceholderResponse } from "#/util/types.ts";
+import { AppController } from "#/app.controller";
+import { AppService } from "#/app.service";
+import { AppError } from "#/util/app-error";
+import type { JsonPlaceholderResponse } from "#/util/types";
 
 const MOCK_TASK: JsonPlaceholderResponse = {
   userId: 1,
