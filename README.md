@@ -2,7 +2,7 @@
 
 A sane, opinionated template for esm nestjs projects written in typescript.
 
-For new, node lts (currently v22) projects.
+For new, node lts (currently v24) projects.
 
 Uses:
 
