@@ -13,7 +13,7 @@ export class AppController {
   @Get(":id")
   async getTaskById(@Param("id") id: string): Promise<JsonPlaceholderResponse> {
     const result = await this.service.getTask(Number(id));
-    if (result.isErr()) {
+    if (result.isError) {
       throw result.error;
     }
 

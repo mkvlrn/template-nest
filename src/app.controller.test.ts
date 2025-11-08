@@ -1,5 +1,5 @@
+import { err, ok } from "@mkvlrn/result";
 import { Test } from "@nestjs/testing";
-import { err, ok } from "neverthrow";
 import { afterEach, beforeEach, describe, expect, test, vi } from "vitest";
 import { AppController } from "#/app.controller";
 import { AppService } from "#/app.service";

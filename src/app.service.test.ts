@@ -24,7 +24,7 @@ test("should return a task", async () => {
 
   const result = await service.getTask(5);
 
-  assert(result.isOk());
+  assert(result.isOk);
   expect(result.value).toStrictEqual(expectedResponse);
   expect(fetchSpy.mock.calls).toStrictEqual(expectedFetchCalls);
 });
@@ -39,7 +39,7 @@ describe("should throw when", () => {
 
     const result = await service.getTask(5);
 
-    assert(result.isErr());
+    assert(result.isError);
     expect(result.error).toStrictEqual(expectedError);
     expect(fetchSpy.mock.calls).toStrictEqual(expectedFetchCalls);
   });
@@ -53,7 +53,7 @@ describe("should throw when", () => {
 
     const result = await service.getTask(5);
 
-    assert(result.isErr());
+    assert(result.isError);
     expect(result.error).toStrictEqual(expectedError);
     expect(fetchSpy.mock.calls).toStrictEqual(expectedFetchCalls);
   });
@@ -66,7 +66,7 @@ describe("should throw when", () => {
 
     const result = await service.getTask(5);
 
-    assert(result.isErr());
+    assert(result.isError);
     expect(result.error).toStrictEqual(expectedError);
     expect(fetchSpy.mock.calls).toStrictEqual(expectedFetchCalls);
   });
