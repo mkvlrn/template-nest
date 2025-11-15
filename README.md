@@ -21,7 +21,7 @@ Uses:
 - no weird build-then-run-dev flow, tsx runs the dev code
 - people still using jest should... reconsider
 - any kind of code generation is ass, but nestjs's cli is _particularly_ terrible, so dependencies for that and the nest-cli.json file are gone - just add files yourself, I promise you'll be fine
-- the result pattern is used with the [@mkvlrn/result](https://github.com/mkvlrn/result) package - together with the global filter, error handling becomes a breeze; it is of course optional, but I think it's a good idea to just use it _everywhere_
+- the result pattern is used with the [@mkvlrn/result](https://github.com/mkvlrn/tools) package - together with the global filter, error handling becomes a breeze; it is of course optional, but I think it's a good idea to just use it _everywhere_
 - overall it's just as opinionated, but a tad cleaner, stricter, and modernized
 
 Just check what is in it, it't not that different from what you'd get with nestjs-cli.
