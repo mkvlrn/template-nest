@@ -1,4 +1,4 @@
-import assert from "node:assert/strict";
+import { err, ok } from "@mkvlrn/result";
 import { afterEach, describe, expect, test, vi } from "vitest";
 import { AppService } from "#/app.service";
 import { AppError } from "#/util/app-error";
@@ -24,8 +24,7 @@ test("should return a task", async () => {
 
   const result = await service.getTask(5);
 
-  assert(result.isOk);
-  expect(result.value).toStrictEqual(expectedResponse);
+  expect(result).toStrictEqual(ok(expectedResponse));
   expect(fetchSpy.mock.calls).toStrictEqual(expectedFetchCalls);
 });
 
@@ -39,8 +38,7 @@ describe("should throw when", () => {
 
     const result = await service.getTask(5);
 
-    assert(result.isError);
-    expect(result.error).toStrictEqual(expectedError);
+    expect(result).toStrictEqual(err(expectedError));
     expect(fetchSpy.mock.calls).toStrictEqual(expectedFetchCalls);
   });
 
@@ -53,8 +51,7 @@ describe("should throw when", () => {
 
     const result = await service.getTask(5);
 
-    assert(result.isError);
-    expect(result.error).toStrictEqual(expectedError);
+    expect(result).toStrictEqual(err(expectedError));
     expect(fetchSpy.mock.calls).toStrictEqual(expectedFetchCalls);
   });
 
@@ -66,8 +63,7 @@ describe("should throw when", () => {
 
     const result = await service.getTask(5);
 
-    assert(result.isError);
-    expect(result.error).toStrictEqual(expectedError);
+    expect(result).toStrictEqual(err(expectedError));
     expect(fetchSpy.mock.calls).toStrictEqual(expectedFetchCalls);
   });
 });
