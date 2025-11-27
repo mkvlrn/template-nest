@@ -19,12 +19,10 @@ export class GlobalFilter implements ExceptionFilter {
       message: (exception as Error).message,
       details: (exception as Error).cause,
     };
-
     if (exception instanceof AppError) {
       httpStatus = Number(exception.statusCode);
       responseBody = exception.serialize();
     }
-
     httpAdapter.reply(ctx.getResponse(), responseBody, httpStatus);
   }
 }

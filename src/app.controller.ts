@@ -16,7 +16,6 @@ export class AppController {
     if (result.isError) {
       throw result.error;
     }
-
     return result.value;
   }
 }

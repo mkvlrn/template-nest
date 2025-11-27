@@ -15,22 +15,23 @@ const host: ArgumentsHost = {
     getResponse: () => rawResponse,
   }),
 } as ArgumentsHost;
-
 const filter = new GlobalFilter(adapterHost);
 
 test("should serialize AppError correctly", () => {
+  // arrange
   const err = new AppError("externalApiError", "fail");
-
+  // act
   filter.catch(err, host);
-
+  // assert
   expect(replySpy).toHaveBeenCalledWith(rawResponse, err.serialize(), err.statusCode);
 });
 
 test("should handle generic Error", () => {
+  // arrange
   const err = new Error("fail");
-
+  // act
   filter.catch(err, host);
-
+  // assert
   expect(replySpy).toHaveBeenCalledWith(
     rawResponse,
     {
