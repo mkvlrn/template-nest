@@ -35,7 +35,7 @@ test("should handle generic Error", () => {
   expect(replySpy).toHaveBeenCalledWith(
     rawResponse,
     {
-      code: "ERR",
+      code: "unspecifiedError",
       message: "fail",
       details: undefined,
     },

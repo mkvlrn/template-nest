@@ -25,7 +25,7 @@ afterEach(async () => {
   await app.close();
 });
 
-test("GET /tasks/1", async () => {
+test("GET /tasks/1 should return 200", async () => {
   const expectedResponse = {
     userId: 1,
     id: 1,
@@ -40,7 +40,7 @@ test("GET /tasks/1", async () => {
   expect(response.body).toStrictEqual(expectedResponse);
 });
 
-test("GET /tasks/-1", async () => {
+test("GET /tasks/-1 should return 404", async () => {
   const expectedResponse = {
     code: "resourceNotFound",
     message: "task with id -1 not found",

@@ -4,15 +4,15 @@ import type { JsonPlaceholderResponse } from "#/types/responses";
 
 @Controller("tasks")
 export class AppController {
-  private readonly service: AppService;
+  readonly #service: AppService;
 
   constructor(@Inject(AppService) service: AppService) {
-    this.service = service;
+    this.#service = service;
   }
 
   @Get(":id")
   async getTaskById(@Param("id") id: string): Promise<JsonPlaceholderResponse> {
-    const result = await this.service.getTask(Number(id));
+    const result = await this.#service.getTask(Number(id));
     if (result.isError) {
       throw result.error;
     }

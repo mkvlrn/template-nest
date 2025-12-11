@@ -1,6 +1,6 @@
 import { getReasonPhrase, StatusCodes } from "http-status-codes";
-import { expect, test } from "vitest";
-import { AppError } from "#/util/app-error";
+import { describe, expect, test } from "vitest";
+import { AppError, type AppErrorCode, ERROR_CODE_TO_STATUS } from "#/util/app-error";
 
 test("should create AppError with correct fields", () => {
   // act
@@ -28,13 +28,25 @@ test("should serialize correctly", () => {
   });
 });
 
-test("should map all codes to proper status codes", () => {
+describe("should map error codes", () => {
   // arrange
-  const codes = Object.keys(AppError.errorToStatus) as (keyof typeof AppError.errorToStatus)[];
-  // act & assert
+  const codes = Object.keys(ERROR_CODE_TO_STATUS) as AppErrorCode[];
+  const testCases: {
+    code: AppErrorCode;
+    statusCode: StatusCodes;
+    status: string;
+  }[] = [];
   for (const code of codes) {
-    const err = new AppError(code, "msg");
-    expect(err.statusCode).toBe(AppError.errorToStatus[code]);
-    expect(err.status).toBe(getReasonPhrase(AppError.errorToStatus[code]));
+    testCases.push({
+      code,
+      statusCode: ERROR_CODE_TO_STATUS[code],
+      status: getReasonPhrase(ERROR_CODE_TO_STATUS[code]),
+    });
   }
+  // act & assert
+  test.each(testCases)("$code: $statusCode -> $status", ({ code, statusCode, status }) => {
+    const err = new AppError(code, "msg");
+    expect(err.statusCode).toBe(statusCode);
+    expect(err.status).toBe(status);
+  });
 });

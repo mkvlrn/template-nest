@@ -1,25 +1,25 @@
 import { getReasonPhrase, StatusCodes } from "http-status-codes";
 
-type ErrorCode = "resourceNotFound" | "externalApiError" | "internalApiError";
+export type AppErrorCode = "resourceNotFound" | "externalApiError" | "internalApiError";
+
+export const ERROR_CODE_TO_STATUS: Record<AppErrorCode, StatusCodes> = {
+  resourceNotFound: StatusCodes.NOT_FOUND,
+  externalApiError: StatusCodes.BAD_GATEWAY,
+  internalApiError: StatusCodes.INTERNAL_SERVER_ERROR,
+};
 
 export class AppError extends Error {
-  static readonly errorToStatus: Record<ErrorCode, StatusCodes> = {
-    resourceNotFound: StatusCodes.NOT_FOUND,
-    externalApiError: StatusCodes.BAD_GATEWAY,
-    internalApiError: StatusCodes.INTERNAL_SERVER_ERROR,
-  };
-  readonly code: ErrorCode;
-  readonly status: string;
+  readonly name = "AppError";
+  readonly code: AppErrorCode;
   readonly statusCode: StatusCodes;
+  readonly status: string;
 
-  constructor(code: ErrorCode, message: string, cause?: unknown) {
+  constructor(code: AppErrorCode, message: string, cause?: unknown) {
     super(message);
-    this.name = "AppError";
     this.cause = cause;
     this.code = code;
-    const statusCode = AppError.errorToStatus[code];
-    this.status = getReasonPhrase(statusCode);
-    this.statusCode = statusCode;
+    this.statusCode = ERROR_CODE_TO_STATUS[code];
+    this.status = getReasonPhrase(this.statusCode);
   }
 
   serialize() {
