@@ -1,8 +1,8 @@
 import { type AsyncResult, err, ok } from "@mkvlrn/result";
 import { Injectable } from "@nestjs/common";
 import { StatusCodes } from "http-status-codes";
-import type { JsonPlaceholderResponse } from "#/types/responses";
-import { AppError } from "#/util/app-error";
+import type { JsonPlaceholderResponse } from "#types/responses";
+import { AppError } from "#util/app-error";
 
 @Injectable()
 export class AppService {

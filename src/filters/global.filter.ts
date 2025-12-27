@@ -1,6 +1,6 @@
 import { type ArgumentsHost, Catch, type ExceptionFilter, HttpStatus } from "@nestjs/common";
 import type { HttpAdapterHost } from "@nestjs/core";
-import { AppError } from "#/util/app-error";
+import { AppError } from "#util/app-error";
 
 @Catch()
 export class GlobalFilter implements ExceptionFilter {

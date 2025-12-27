@@ -1,9 +1,6 @@
 {
   "extends": ["@mkvlrn/config/tsconfig"],
   "compilerOptions": {
-    "baseUrl": ".",
-    "paths": { "#/*": ["./src/*"] }
-  },
-  "include": ["**/*.ts"],
-  "exclude": ["node_modules", "build", "coverage"]
+    "customConditions": ["dev"]
+  }
 }

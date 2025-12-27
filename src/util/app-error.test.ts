@@ -1,6 +1,6 @@
 import { getReasonPhrase, StatusCodes } from "http-status-codes";
 import { describe, expect, test } from "vitest";
-import { AppError, type AppErrorCode, ERROR_CODE_TO_STATUS } from "#/util/app-error";
+import { AppError, type AppErrorCode, ERROR_CODE_TO_STATUS } from "#util/app-error";
 
 test("should create AppError with correct fields", () => {
   // act

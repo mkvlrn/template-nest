@@ -3,8 +3,8 @@ import { HttpAdapterHost } from "@nestjs/core";
 import { Test } from "@nestjs/testing";
 import supertest, { type Agent } from "supertest";
 import { afterEach, beforeEach, expect, test, vi } from "vitest";
-import { AppModule } from "#/app.module";
-import { GlobalFilter } from "#/filters/global.filter";
+import { AppModule } from "#app.module";
+import { GlobalFilter } from "#filters/global.filter";
 
 let app: INestApplication;
 let server: Agent;

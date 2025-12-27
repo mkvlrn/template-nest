@@ -9,7 +9,7 @@ export const ERROR_CODE_TO_STATUS: Record<AppErrorCode, StatusCodes> = {
 };
 
 export class AppError extends Error {
-  readonly name = "AppError";
+  override readonly name = "AppError";
   readonly code: AppErrorCode;
   readonly statusCode: StatusCodes;
   readonly status: string;
