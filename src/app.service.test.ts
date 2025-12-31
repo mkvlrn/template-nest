@@ -1,8 +1,8 @@
 import { err, ok } from "@mkvlrn/result";
 import { afterEach, describe, expect, test, vi } from "vitest";
-import { AppService } from "#app.service";
-import type { JsonPlaceholderResponse } from "#types/responses";
-import { AppError } from "#util/app-error";
+import { AppService } from "#/app.service";
+import type { JsonPlaceholderResponse } from "#/types/responses";
+import { AppError } from "#/util/app-error";
 
 const service = new AppService();
 const url = "https://jsonplaceholder.typicode.com/todos/5";

@@ -1,6 +1,6 @@
 {
   "extends": ["@mkvlrn/config/tsconfig"],
   "compilerOptions": {
-    "customConditions": ["dev"]
+    "paths": { "#/*": ["./src/*.ts"] }
   }
 }
