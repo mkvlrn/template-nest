@@ -1,6 +1,6 @@
 # template-nest
 
-A sane, opinionated template for esm nestjs projects written in typescript.
+A sane, opinionated template for esm nestjs projects written in typescript that doesn't rely on transpilation - typescritp is ran directly by node (currently using tsx loader while decorators aren't part of v8).
 
 For new, node lts (currently v24) projects.
 
@@ -12,13 +12,12 @@ Uses:
 - [lint-staged](https://github.com/lint-staged/lint-staged) for checks on commit
 - [vitest](https://github.com/vitest-dev/vitest) for testing
 - [tsx](https://github.com/privatenumber/tsx) for dev time typescript
-- [tsdown](https://github.com/rolldown/tsdown) for building
 
 ## why use this template instead of nestjs-cli?
 
 - esm
 - biome is objectively faster and overall a better choice over eslint+prettier
-- no weird build-then-run-dev flow, tsx runs the dev code
+- no weird build-then-run-dev flow, node (with tsx loader) runs the code
 - people still using jest should... reconsider
 - any kind of code generation is ass, but nestjs's cli is _particularly_ terrible, so dependencies for that and the nest-cli.json file are gone - just add files yourself, I promise you'll be fine
 - the result pattern is used with the [@mkvlrn/result](https://github.com/mkvlrn/tools) package - together with the global filter, error handling becomes a breeze; it is of course optional, but I think it's a good idea to just use it _everywhere_
@@ -30,15 +29,11 @@ Just check what is in it, it't not that different from what you'd get with nestj
 
 ### `pnpm dev`
 
-Runs the project in watch mode with tsx.
-
-### `pnpm build`
-
-Builds/transpiles the code to `./build`.
+Runs the project in watch mode.
 
 ### `pnpm start`
 
-Runs the built project.
+Runs the project.
 
 ### `pnpm test`
 

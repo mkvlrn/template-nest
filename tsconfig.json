@@ -1,6 +1,3 @@
 {
-  "extends": ["@mkvlrn/config/tsconfig"],
-  "compilerOptions": {
-    "paths": { "#/*": ["./src/*.ts"] }
-  }
+  "extends": ["@mkvlrn/config/tsconfig"]
 }
