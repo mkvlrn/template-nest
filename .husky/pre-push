@@ -1,3 +1,3 @@
 pnpm typecheck
 pnpm biome-check
-pnpm test --bail=1
+pnpm test --bail=1 --reporter=github-actions
