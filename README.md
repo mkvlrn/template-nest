@@ -2,7 +2,7 @@
 
 A sane, opinionated template for esm nestjs projects written in typescript that doesn't rely on transpilation - typescritp is ran directly by node (currently using tsx loader while decorators aren't part of v8).
 
-For new, node lts (currently v24) projects.
+For new, current (v25) node projects.
 
 Uses:
 

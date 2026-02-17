@@ -1,8 +1,8 @@
 import { err, ok } from "@mkvlrn/result";
 import { afterEach, describe, expect, test, vi } from "vitest";
-import { AppService } from "#app.service";
-import type { JsonPlaceholderResponse } from "#types/responses";
-import { AppError } from "#util/app-error";
+import { AppService } from "#/app.service";
+import type { JsonPlaceholderResponse } from "#/types/responses";
+import { AppError } from "#/util/app-error";
 
 const service = new AppService();
 const url = "https://jsonplaceholder.typicode.com/todos/5";
@@ -29,10 +29,10 @@ test("should return a task", async () => {
   expect(fetchSpy.mock.calls).toStrictEqual(expectedFetchCalls);
 });
 
-describe("should throw when", () => {
+describe("should return error when", () => {
   test("response is 404", async () => {
     // arrange
-    const expectedError = new AppError("resourceNotFound", "task with id 5 not found");
+    const expectedError = err(new AppError("resourceNotFound", "task with id 5 not found"));
     const expectedFetchCalls = [[url]];
     const fetchSpy = vi
       .spyOn(global, "fetch")
@@ -40,13 +40,13 @@ describe("should throw when", () => {
     // act
     const result = await service.getTask(5);
     // assert
-    expect(result).toStrictEqual(err(expectedError));
+    expect(result).toStrictEqual(expectedError);
     expect(fetchSpy.mock.calls).toStrictEqual(expectedFetchCalls);
   });
 
   test("response is not ok and not 404", async () => {
     // arrange
-    const expectedError = new AppError("externalApiError", "fetch failed with status 502");
+    const expectedError = err(new AppError("externalApiError", "fetch failed with status 502"));
     const expectedFetchCalls = [[url]];
     const fetchSpy = vi
       .spyOn(global, "fetch")
@@ -54,20 +54,20 @@ describe("should throw when", () => {
     // act
     const result = await service.getTask(5);
     // assert
-    expect(result).toStrictEqual(err(expectedError));
+    expect(result).toStrictEqual(expectedError);
     expect(fetchSpy.mock.calls).toStrictEqual(expectedFetchCalls);
   });
 
   test("fetch itself throws", async () => {
     // arrange
     const innerError = new Error("something broke");
-    const expectedError = new AppError("internalApiError", "something broke", innerError);
+    const expectedError = err(new AppError("internalApiError", "something broke", innerError));
     const expectedFetchCalls = [[url]];
     const fetchSpy = vi.spyOn(global, "fetch").mockRejectedValue(innerError);
     // act
     const result = await service.getTask(5);
     // assert
-    expect(result).toStrictEqual(err(expectedError));
+    expect(result).toStrictEqual(expectedError);
     expect(fetchSpy.mock.calls).toStrictEqual(expectedFetchCalls);
   });
 });

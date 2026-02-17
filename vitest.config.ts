@@ -6,6 +6,7 @@ export default defineConfig(() => {
       include: ["**/**/*.{test,spec}.ts"],
       exclude: ["node_modules"],
       watch: false,
+      reporters: ["tree"],
       coverage: {
         all: true,
         clean: true,

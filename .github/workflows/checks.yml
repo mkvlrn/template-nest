@@ -18,10 +18,9 @@ jobs:
           version: 10
       - uses: actions/setup-node@v4
         with:
-          node-version: "24"
+          node-version: "25"
           cache: "pnpm"
       - run: pnpm install --frozen-lockfile
-      - run: |
-          pnpm typecheck
-          pnpm biome-check
-          pnpm test --bail=1
+      - run: pnpm typecheck
+      - run: pnpm biome-check
+      - run: pnpm test-ci
