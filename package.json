@@ -51,6 +51,7 @@
     "vitest": "^4.0.18"
   },
   "dependencies": {
+    "@mkvlrn/app-error": "^0.0.5",
     "@mkvlrn/result": "^5.0.8",
     "@nestjs/common": "^11.1.16",
     "@nestjs/core": "^11.1.16",

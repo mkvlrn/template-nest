@@ -1,6 +1,6 @@
 import { type ArgumentsHost, Catch, type ExceptionFilter, HttpStatus } from "@nestjs/common";
 import type { HttpAdapterHost } from "@nestjs/core";
-import { AppError } from "#/util/app-error";
+import { apiError } from "#/util/api-error";
 
 @Catch()
 export class GlobalFilter implements ExceptionFilter {
@@ -19,7 +19,7 @@ export class GlobalFilter implements ExceptionFilter {
       message: (exception as Error).message,
       details: (exception as Error).cause,
     };
-    if (exception instanceof AppError) {
+    if (apiError.is(exception)) {
       httpStatus = Number(exception.statusCode);
       responseBody = exception.serialize();
     }

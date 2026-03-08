@@ -8,6 +8,9 @@ importers:
 
   .:
     dependencies:
+      '@mkvlrn/app-error':
+        specifier: ^0.0.5
+        version: 0.0.5
       '@mkvlrn/result':
         specifier: ^5.0.8
         version: 5.0.8
@@ -563,6 +566,9 @@ packages:
   '@lukeed/csprng@1.1.0':
     resolution: {integrity: sha512-Z7C/xXCiGWsg0KuKsHTKJxbWhpI3Vs5GwLfOean7MGyVFGqdRgBbAjOCh6u4bbjPc/8MJ2pZmK/0DLdCbivLDA==}
     engines: {node: '>=8'}
+
+  '@mkvlrn/app-error@0.0.5':
+    resolution: {integrity: sha512-w20oj9lMCgO/Sc2CHFBhRuWDm76NXVN4qmBde9ZIWFOJpRj4yo5qeMcNgtlQbMofmKkP9sHndbuPvU/Uoo02iQ==}
 
   '@mkvlrn/config@3.1.5':
     resolution: {integrity: sha512-bEY9D6i1kjVKiifs1JQLsZvWe56MLrf3KUjdw9amRvy+ydyXWKWyGgzmZZo0slhb3XFYFokhhQpc0pMvMy68wQ==}
@@ -2229,6 +2235,10 @@ snapshots:
       '@jridgewell/sourcemap-codec': 1.5.5
 
   '@lukeed/csprng@1.1.0': {}
+
+  '@mkvlrn/app-error@0.0.5':
+    dependencies:
+      http-status-codes: 2.3.0
 
   '@mkvlrn/config@3.1.5': {}
 

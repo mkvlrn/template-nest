@@ -4,7 +4,7 @@ import { afterEach, beforeEach, describe, expect, test, vi } from "vitest";
 import { AppController } from "#/app.controller";
 import { AppService } from "#/app.service";
 import type { JsonPlaceholderResponse } from "#/types/responses";
-import { AppError } from "#/util/app-error";
+import { apiError } from "#/util/api-error";
 
 const MOCK_TASK: JsonPlaceholderResponse = {
   userId: 1,
@@ -44,7 +44,7 @@ describe("getTaskById", () => {
 
   test("should throw an exception coming from the service", async () => {
     // arrange
-    const expectedError = new AppError("externalApiError", "something broke");
+    const expectedError = apiError.create("externalApiError", "something broke");
     const expectedGetTaskCalls = [[1]];
     const getTaskSpy = vi.spyOn(service, "getTask").mockResolvedValue(err(expectedError));
     // act
