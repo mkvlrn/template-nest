@@ -1,8 +1,8 @@
 import { err, ok } from "@mkvlrn/result";
 import { Test } from "@nestjs/testing";
 import { afterEach, beforeEach, describe, expect, test, vi } from "vitest";
-import { AppController } from "#/app.controller";
-import { AppService } from "#/app.service";
+import { AppController } from "#/modules/app/app.controller";
+import { AppService } from "#/modules/app/app.service";
 import type { JsonPlaceholderResponse } from "#/types/responses";
 import { apiError } from "#/util/api-error";
 

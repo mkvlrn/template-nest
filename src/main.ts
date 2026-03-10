@@ -1,8 +1,8 @@
 import { Logger } from "@nestjs/common";
 import { HttpAdapterHost, NestFactory } from "@nestjs/core";
-import { AppModule } from "#/app.module";
 import { env } from "#/env";
 import { GlobalFilter } from "#/filters/global.filter";
+import { AppModule } from "#/modules/app/app.module";
 
 const app = await NestFactory.create(AppModule);
 

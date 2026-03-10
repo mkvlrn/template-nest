@@ -1,6 +1,6 @@
 import { err, ok } from "@mkvlrn/result";
 import { afterEach, describe, expect, test, vi } from "vitest";
-import { AppService } from "#/app.service";
+import { AppService } from "#/modules/app/app.service";
 import type { JsonPlaceholderResponse } from "#/types/responses";
 import { apiError } from "#/util/api-error";
 
