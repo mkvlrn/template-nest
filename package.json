@@ -30,7 +30,7 @@
     "test-ci": "vitest --bail=1 --reporter=github-actions",
     "biome-check": "biome check --diagnostic-level=warn --no-errors-on-unmatched",
     "biome-fix": "pnpm biome-check --write",
-    "typecheck": "tsc-files",
+    "typecheck": "tsc",
     "prepare": "husky"
   },
   "devDependencies": {
