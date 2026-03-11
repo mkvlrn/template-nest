@@ -1,6 +1,7 @@
 {
   "extends": ["@mkvlrn/config/tsconfig"],
   "compilerOptions": {
+    "noEmit": true,
     "paths": {
       "#/*": ["./src/*"]
     }

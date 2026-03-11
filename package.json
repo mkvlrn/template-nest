@@ -23,8 +23,8 @@
     "#/*": "./src/*.ts"
   },
   "scripts": {
-    "dev": "node --import tsx --import ./src/env.ts --watch src/main.ts",
-    "start": "node --import tsx --import ./src/env.ts src/main.ts",
+    "dev": "node --import=tsx --import=./src/env.ts --watch src/main.ts",
+    "start": "node --import=tsx --import=./src/env.ts src/main.ts",
     "test": "vitest",
     "test-staged": "vitest related --bail=1 --reporter=github-actions",
     "test-ci": "vitest --bail=1 --reporter=github-actions",

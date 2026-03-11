@@ -5,7 +5,8 @@
       "name": "source debug",
       "type": "node",
       "request": "launch",
-      "runtimeExecutable": "tsx",
+      "runtimeExecutable": "node",
+      "runtimeArgs": ["--import=tsx", "--import=./src/env.ts"],
       "program": "${workspaceFolder}/src/main.ts",
       "console": "integratedTerminal",
       "skipFiles": ["<node_internals>/**", "${workspaceFolder}/node_modules/**"]
