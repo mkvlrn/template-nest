@@ -1,0 +1,11 @@
+[tools]
+node = "24.14.0"
+pnpm = "10.32.1"
+"npm:npm-check-updates" = "19.6.5"
+
+[tasks]
+setup = { run = ["mise trust", "mise install", "pnpm install"] }
+
+[settings]
+disable_backends = ["asdf"]
+use_versions_host = false
