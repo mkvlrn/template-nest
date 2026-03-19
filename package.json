@@ -34,10 +34,10 @@
     "prepare": "husky"
   },
   "devDependencies": {
-    "@biomejs/biome": "^2.4.7",
+    "@biomejs/biome": "^2.4.8",
     "@commitlint/cli": "^20.5.0",
     "@commitlint/config-conventional": "^20.5.0",
-    "@mkvlrn/config": "^3.1.6",
+    "@mkvlrn/config": "^3.1.7",
     "@nestjs/testing": "^11.1.17",
     "@types/express": "^5.0.6",
     "@types/node": "^25.5.0",
