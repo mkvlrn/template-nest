@@ -17,34 +17,18 @@
   ],
   "engines": {
     "node": "24.14.0",
-    "pnpm": "10.32.1"
+    "pnpm": "10.33.0"
   },
   "imports": {
     "#/*": "./src/*.ts"
   },
-  "scripts": {
-    "dev": "node --import=tsx --import=./src/env.ts --watch src/main.ts",
-    "start": "node --import=tsx --import=./src/env.ts src/main.ts",
-    "test": "vitest",
-    "test-staged": "vitest related --bail=1 --reporter=github-actions",
-    "test-ci": "vitest --bail=1 --reporter=github-actions",
-    "biome-check": "biome check --diagnostic-level=warn --no-errors-on-unmatched",
-    "biome-fix": "pnpm biome-check --write",
-    "typecheck": "tsc",
-    "prepare": "husky"
-  },
   "devDependencies": {
-    "@biomejs/biome": "^2.4.8",
-    "@commitlint/cli": "^20.5.0",
-    "@commitlint/config-conventional": "^20.5.0",
     "@mkvlrn/config": "^3.1.7",
     "@nestjs/testing": "^11.1.17",
     "@types/express": "^5.0.6",
     "@types/node": "^25.5.0",
     "@types/supertest": "^7.2.0",
     "@vitest/coverage-v8": "^4.1.1",
-    "husky": "^9.1.7",
-    "lint-staged": "^16.4.0",
     "supertest": "^7.2.2",
     "tsc-files": "^1.1.4",
     "typescript": "^6.0.2",

@@ -1,0 +1,20 @@
+[commit-msg.commands]
+cog-lint = { run = "cog verify --file {1}" }
+
+[pre-commit.commands]
+typecheck = { glob = "*.{ts,tsx}", run = "mise typecheck-staged {staged_files}" }
+lint = { glob = "*.{ts,tsx,json,jsonc}", run = "mise lint-check {staged_files}" }
+test = { glob = "*.{ts,tsx}", run = "mise test-staged {staged_files}" }
+
+[pre-push.commands]
+typecheck = { run = "mise typecheck" }
+lint = { run = "mise lint-check" }
+test = { run = "mise test-ci" }
+
+[post-checkout.commands]
+sync-mise = { run = "mise install" }
+sync-pnpm = { run = "pnpm install --frozen-lockfile" }
+
+[post-merge.commands]
+sync-mise = { run = "mise install" }
+sync-pnpm = { run = "pnpm install --frozen-lockfile" }

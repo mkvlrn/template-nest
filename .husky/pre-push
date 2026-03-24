@@ -1,3 +1,0 @@
-pnpm typecheck
-pnpm biome-check
-pnpm test-ci

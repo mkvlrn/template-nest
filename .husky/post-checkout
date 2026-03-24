@@ -1,2 +1,0 @@
-pnpm install --frozen-lockfile
-mise install -q

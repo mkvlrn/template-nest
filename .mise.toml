@@ -1,10 +1,41 @@
 [tools]
 node = "24.14.0"
-pnpm = "10.32.1"
+pnpm = "10.33.0"
 "npm:npm-check-updates" = "19.6.5"
+biome = "2.4.8"
+lefthook = "2.1.4"
+cocogitto = "7.0.0"
 
-[tasks]
-setup = { run = ["mise trust", "mise install", "pnpm install"] }
+[tasks.setup]
+description = "puts everything in its place"
+run = ["mise trust --yes", "mise install", "pnpm install", "lefthook install"]
+[tasks.dev]
+description = "runs in watch mode"
+run = "node --import=tsx --watch ./src/main.ts"
+[tasks.start]
+description = "runs it for real"
+run = "node --import=tsx ./src/main.ts"
+[tasks.lint]
+description = "attempts to fix what is safe to do"
+run = "mise lint-check --write"
+[tasks.lint-check]
+description = "lint and format check with biome"
+run = "biome check --diagnostic-level=warn --no-errors-on-unmatched"
+[tasks.typecheck]
+description = "checks entire project for type errors"
+run = "pnpm tsc"
+[tasks.typecheck-staged]
+description = "checks passed/staged files for type errors"
+run = "pnpm tsc-files"
+[tasks.test]
+description = "runs all tests"
+run = "pnpm vitest"
+[tasks.test-staged]
+description = "runs tests on passed/staged files"
+run = "pnpm vitest related --bail=1 --reporter=github-actions"
+[tasks.test-ci]
+description = "runs tests silently with quick fail"
+run = "pnpm vitest --bail=1 --reporter=github-actions"
 
 [settings]
 disable_backends = ["asdf"]

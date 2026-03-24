@@ -3,17 +3,25 @@
   "extends": ["config:recommended"],
   "packageRules": [
     {
+      "matchPackageNames": ["node", "pnpm"],
+      "groupName": "engine-sync"
+    },
+    {
       "matchManagers": ["mise"],
-      "groupName": "Toolchain (mise)"
+      "groupName": "Toolchain (mise)",
+      "excludePackageNames": ["node", "pnpm"]
     },
     {
       "matchManagers": ["npm"],
-      "groupName": "Dependencies (pnpm)"
+      "groupName": "Dependencies (pnpm)",
+      "excludePackageNames": ["node", "pnpm"]
     },
     {
       "matchManagers": ["github-actions"],
       "groupName": "GitHub Actions"
     }
   ],
-  "rangeStrategy": "bump"
+  "rangeStrategy": "bump",
+  "prHourlyLimit": 0,
+  "prConcurrentLimit": 0
 }
