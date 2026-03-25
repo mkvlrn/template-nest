@@ -40,8 +40,8 @@ importers:
         version: 4.21.0
     devDependencies:
       '@mkvlrn/config':
-        specifier: ^3.1.7
-        version: 3.1.7
+        specifier: ^3.1.8
+        version: 3.1.8
       '@nestjs/testing':
         specifier: ^11.1.17
         version: 11.1.17(@nestjs/common@11.1.17(reflect-metadata@0.2.2)(rxjs@7.8.2))(@nestjs/core@11.1.17)(@nestjs/platform-express@11.1.17)
@@ -425,8 +425,8 @@ packages:
   '@mkvlrn/app-error@0.0.5':
     resolution: {integrity: sha512-w20oj9lMCgO/Sc2CHFBhRuWDm76NXVN4qmBde9ZIWFOJpRj4yo5qeMcNgtlQbMofmKkP9sHndbuPvU/Uoo02iQ==}
 
-  '@mkvlrn/config@3.1.7':
-    resolution: {integrity: sha512-HqRuV6mxbuoIAw71l12Pe89j+2kgRkTntrF5nj/3vY4O6fwzWgKmi+QpLhkoqaPt7w+sIjgK0MZUCSSJHWp+2w==}
+  '@mkvlrn/config@3.1.8':
+    resolution: {integrity: sha512-HYayqyP6GCBjpBEDtVFDSoVpaFzhHOblHM6OMm9KBuOSHzEiY1HlXOZ1/NfGb1aVnHtD4pNfXcUNzU+xsQJtSQ==}
 
   '@mkvlrn/result@5.0.8':
     resolution: {integrity: sha512-UIMy4Qj+fatNlHeC6hYFT91FAFkyHYJI01B8eVqSdpXSBKDnNKcC+A+rfbuQlWO57F/HJcBpPzP2Wyg62Ed8Mg==}
@@ -1585,7 +1585,7 @@ snapshots:
     dependencies:
       http-status-codes: 2.3.0
 
-  '@mkvlrn/config@3.1.7': {}
+  '@mkvlrn/config@3.1.8': {}
 
   '@mkvlrn/result@5.0.8': {}
 
