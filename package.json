@@ -23,7 +23,7 @@
     "#/*": "./src/*.ts"
   },
   "devDependencies": {
-    "@mkvlrn/config": "^3.1.7",
+    "@mkvlrn/config": "^3.1.8",
     "@nestjs/testing": "^11.1.17",
     "@types/express": "^5.0.6",
     "@types/node": "^25.5.0",
