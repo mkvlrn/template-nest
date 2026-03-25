@@ -1,35 +1,58 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "extends": ["config:recommended"],
+  "extends": [
+    "config:recommended"
+  ],
   "packageRules": [
     {
-      "matchPackageNames": ["node", "pnpm"],
+      "matchPackageNames": [
+        "node",
+        "pnpm"
+      ],
       "groupName": "engine-sync"
     },
     {
-      "matchPackageNames": ["github:**"],
+      "matchPackageNames": [
+        "github:**"
+      ],
       "groupName": "Toolchain (mise)"
     },
     {
-      "matchManagers": ["mise"],
+      "matchManagers": [
+        "mise"
+      ],
       "groupName": "Toolchain (mise)",
-      "excludePackageNames": ["node", "pnpm"]
+      "matchPackageNames": [
+        "!node",
+        "!pnpm"
+      ]
     },
     {
-      "matchManagers": ["npm"],
+      "matchManagers": [
+        "npm"
+      ],
       "groupName": "Dependencies (pnpm)",
-      "excludePackageNames": ["node", "pnpm"]
+      "matchPackageNames": [
+        "!node",
+        "!pnpm"
+      ]
     },
     {
-      "matchManagers": ["github-actions"],
+      "matchManagers": [
+        "github-actions"
+      ],
       "groupName": "GitHub Actions"
     }
   ],
   "customManagers": [
     {
       "customType": "regex",
-      "fileMatch": ["(^|/|\\.)mise\\.toml$"],
-      "matchStrings": ["\"github:(?<packageName>[^\"]+)\"\\s*=\\s*\"(?<currentValue>[^\"]+)\""],
+      "managerFilePatterns": [
+        "/(^|/|\\.)mise\\.toml$/"
+      ],
+      "matchStrings": [
+        "\"github:(?<packageName>[^\"]+)\"\\s*=\\s*\"(?<currentValue>[^\"]+)\""
+      ],
       "datasourceTemplate": "github-releases"
     }
   ],
