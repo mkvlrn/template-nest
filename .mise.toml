@@ -1,10 +1,9 @@
 [tools]
 node = "24.14.1"
 pnpm = "10.33.0"
-"npm:npm-check-updates" = "19.6.5"
-biome = "2.4.8"
 lefthook = "2.1.4"
-cocogitto = "7.0.0"
+"github:biomejs/biome" = { version = "2.4.8", version_prefix = "@biomejs/biome@" }
+"github:cocogitto/cocogitto" = { version = "7.0.0" }
 
 [tasks.setup]
 description = "puts everything in its place"

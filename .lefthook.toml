@@ -13,8 +13,10 @@ test = { run = "mise test-ci" }
 
 [post-checkout.commands]
 sync-mise = { run = "mise install" }
+clean-mise = { run = "mise prune -y" }
 sync-pnpm = { run = "pnpm install --frozen-lockfile" }
 
 [post-merge.commands]
 sync-mise = { run = "mise install" }
+clean-mise = { run = "mise prune -y" }
 sync-pnpm = { run = "pnpm install --frozen-lockfile" }

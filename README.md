@@ -83,12 +83,6 @@ Runs biome in fix mode to lint and format the project.
 
 Runs type checking using tsc.
 
-## npm-check-updates
-
-This global package is managed by mise as it is used as a global tool. Simply running `ncu` will list possible updates from `package.json`. `ncu -u` will set those versions in `package.json`, and `pnpm install` will upgrade them.
-
-For more info, https://github.com/raineorshine/npm-check-updates .
-
 ## ci
 
 This repository uses GitHub Actions for CI. The workflow is defined in `.github/workflows/checks.yml`.
