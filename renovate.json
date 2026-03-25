@@ -13,12 +13,12 @@
     {
       "matchManagers": ["mise"],
       "groupName": "Toolchain (mise)",
-      "excludePackageNames": ["node", "pnpm"]
+      "matchPackageNames": ["!node", "!pnpm"]
     },
     {
       "matchManagers": ["npm"],
       "groupName": "Dependencies (pnpm)",
-      "excludePackageNames": ["node", "pnpm"]
+      "matchPackageNames": ["!node", "!pnpm"]
     },
     {
       "matchManagers": ["github-actions"],
@@ -28,7 +28,7 @@
   "customManagers": [
     {
       "customType": "regex",
-      "fileMatch": ["(^|/|\\.)mise\\.toml$"],
+      "managerFilePatterns": ["/(^|/|\\.)mise\\.toml$/"],
       "matchStrings": ["\"github:(?<packageName>[^\"]+)\"\\s*=\\s*\"(?<currentValue>[^\"]+)\""],
       "datasourceTemplate": "github-releases"
     }
