@@ -1,0 +1,7 @@
+[tools]
+node = "24.14.1"
+pnpm = "10.33.0"
+
+[settings]
+disable_backends = ["asdf"]
+use_versions_host = false

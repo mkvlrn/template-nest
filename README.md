@@ -5,36 +5,36 @@
 [![mise](https://mise-versions.jdx.dev/badge.svg)](https://mise.jdx.dev)
 ![license](https://img.shields.io/github/license/mkvlrn/template-nest?style=flat)
 
-A sane, opinionated template for esm nestjs projects written in typescript that doesn't rely on transpilation - typescript is ran directly by node (currently using tsx loader while decorators aren't part of v8).
+A sane, opinionated template for esm nestjs projects written in typescript that doesn't rely on transpilation - typescript is ran directly by node.
 
-> [!IMPORTANT]
-> This template requires **mise**. It manages the correct versions of runtimes and tooling, such as Node itself, pnpm, and others.
->
-> It is also the task manager for the project, so no `package.json` scripts.
->
-> Check https://mise.jdx.dev for more details on **mise**, and the tasks section below (or the `.mise.toml` file) for the available tasks.
+> [!NOTE]
+> This template provides a [mise](https://mise.jdx.dev) configuration to make it easy to keep node and pnpm versions in sync.
 
 Uses, among other tools/packages:
 
 - [pnpm](https://github.com/pnpm/pnpm) as package manager for node
 - [biome](https://github.com/biomejs/biome) for code linting and formatting
 - [lefthook](https://github.com/evilmartians/lefthook) for git hooks
-- [cocogitto](https://github.com/cocogitto/cocogitto) for commit message linting
+- [commitlint](https://github.com/conventional-changelog/commitlint) for commit message linting
 - [vitest](https://github.com/vitest-dev/vitest) for testing
 - [tsx](https://github.com/privatenumber/tsx) for dev time typescript
 
-## setup
+## requirements and dependencies
 
-To ensure a reproducible environment, [mise](https://mise.jdx.dev/) is used:
+If you use [mise](https://mise.jdx.dev) and run `mise install` in the project root, you'll have the correct node and pnpm versions installed.
 
-1. **Install mise**: https://mise.jdx.dev/getting-started.html#installing-mise-cli
-2. **Activate mise**: https://mise.jdx.dev/getting-started.html#activate-mise
-3. **Run setup**:
-   ```bash
-   mise setup
-   ```
+This is _by far_ the easiest way to keep your environment consistent across different machines and team members, no matter the frequency of version updates. I'm not affiliated with mise but I wholeheartedly recommend it, so check it here: https://mise.jdx.dev.
 
-This task trusts the project config, installs CLI tools (Node, pnpm, ncu), and runs pnpm install. All other scripts are standard package.json commands.
+If not using mise, make sure you have:
+
+- node 24+ installed (v24.14.1 used)
+- pnpm 10+ installed (v10.33.0 used)
+
+Then, install dependencies with:
+
+```bash
+pnpm install
+```
 
 > [!NOTE]
 > Git hooks are in place to make sure both the tooling managed by mise and the project dependencies are synced with each checkout and merge.
@@ -63,23 +63,23 @@ import { add } from "#/math/basic"; // this points to ./src/math/basic.ts
 
 ## running
 
-### `mise dev`
+### `pnpm dev`
 
 Runs the project in watch mode.
 
-### `mise start`
+### `pnpm start`
 
 Runs the project.
 
-### `mise test`
+### `pnpm test`
 
 Runs tests.
 
-### `mise biome-fix`
+### `pnpm biome-fix`
 
 Runs biome in fix mode to lint and format the project.
 
-### `mise typecheck`
+### `pnpm typecheck`
 
 Runs type checking using tsc.
 

@@ -22,13 +22,29 @@
   "imports": {
     "#/*": "./src/*.ts"
   },
+  "scripts": {
+    "dev": "node --watch ./src/main.ts",
+    "start": "node ./src/main.ts",
+    "lint": "pnpm lint-check --write",
+    "lint-check": "biome check --diagnostic-level=warn --no-errors-on-unmatched",
+    "typecheck": "tsc",
+    "typecheck-staged": "tsc-files",
+    "test": "vitest",
+    "test-staged": "vitest related --bail=1 --reporter=github-actions",
+    "test-ci": "vitest --bail=1 --reporter=github-actions",
+    "prepare": "lefthook install"
+  },
   "devDependencies": {
+    "@biomejs/biome": "^2.4.10",
+    "@commitlint/cli": "^20.5.0",
+    "@commitlint/config-conventional": "^20.5.0",
     "@mkvlrn/config": "^3.1.9",
     "@nestjs/testing": "^11.1.17",
     "@types/express": "^5.0.6",
     "@types/node": "^25.5.0",
     "@types/supertest": "^7.2.0",
     "@vitest/coverage-v8": "^4.1.2",
+    "lefthook": "^2.1.5",
     "supertest": "^7.2.2",
     "tsc-files": "^1.1.4",
     "typescript": "^6.0.2",
