@@ -1,7 +1,7 @@
 [tools]
 node = "24.14.1"
 pnpm = "10.33.0"
-lefthook = "2.1.4"
+lefthook = "2.1.5"
 "github:biomejs/biome" = { version = "2.4.10", version_prefix = "@biomejs/biome@" }
 "github:cocogitto/cocogitto" = { version = "7.0.0" }
 
