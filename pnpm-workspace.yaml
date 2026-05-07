@@ -1,6 +1,4 @@
-ignoredBuiltDependencies:
-  - '@nestjs/core'
-
-onlyBuiltDependencies:
-  - esbuild
-  - lefthook
+allowBuilds:
+  '@nestjs/core': false
+  esbuild: true
+  lefthook: true
