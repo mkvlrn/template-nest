@@ -35,10 +35,10 @@
     "prepare": "lefthook install"
   },
   "devDependencies": {
-    "@biomejs/biome": "^2.4.14",
+    "@biomejs/biome": "^2.4.15",
     "@commitlint/cli": "^21.0.0",
     "@commitlint/config-conventional": "^21.0.0",
-    "@mkvlrn/config": "^4.0.1",
+    "@mkvlrn/config": "^4.0.2",
     "@nestjs/testing": "^11.1.19",
     "@types/express": "^5.0.6",
     "@types/node": "^25.6.2",
