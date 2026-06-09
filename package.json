@@ -23,8 +23,8 @@
     "#/*": "./src/*.ts"
   },
   "scripts": {
-    "dev": "node --watch ./src/main.ts",
-    "start": "node ./src/main.ts",
+    "dev": "node --import=tsx --watch ./src/main.ts",
+    "start": "node --import=tsx ./src/main.ts",
     "lint": "pnpm lint-check --write",
     "lint-check": "biome check --diagnostic-level=warn --no-errors-on-unmatched",
     "typecheck": "tsc",
