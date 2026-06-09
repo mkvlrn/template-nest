@@ -35,31 +35,31 @@
     "prepare": "lefthook install"
   },
   "devDependencies": {
-    "@biomejs/biome": "^2.4.15",
-    "@commitlint/cli": "^21.0.1",
-    "@commitlint/config-conventional": "^21.0.1",
-    "@mkvlrn/config": "^4.0.2",
-    "@nestjs/testing": "^11.1.21",
+    "@biomejs/biome": "^2.4.16",
+    "@commitlint/cli": "^21.0.2",
+    "@commitlint/config-conventional": "^21.0.2",
+    "@mkvlrn/config": "^4.0.3",
+    "@nestjs/testing": "^11.1.26",
     "@types/express": "^5.0.6",
-    "@types/node": "^25.9.1",
+    "@types/node": "^25.9.2",
     "@types/supertest": "^7.2.0",
-    "@vitest/coverage-v8": "^4.1.6",
-    "lefthook": "^2.1.8",
+    "@vitest/coverage-v8": "^4.1.8",
+    "lefthook": "^2.1.9",
     "supertest": "^7.2.2",
     "tsc-files": "^1.1.4",
     "typescript": "^6.0.3",
-    "vitest": "^4.1.6"
+    "vitest": "^4.1.8"
   },
   "dependencies": {
     "@mkvlrn/app-error": "^0.0.5",
     "@mkvlrn/result": "^5.0.8",
-    "@nestjs/common": "^11.1.21",
-    "@nestjs/core": "^11.1.21",
-    "@nestjs/platform-express": "^11.1.21",
-    "envalid": "^8.1.1",
+    "@nestjs/common": "^11.1.26",
+    "@nestjs/core": "^11.1.26",
+    "@nestjs/platform-express": "^11.1.26",
+    "envalid": "^8.2.0",
     "http-status-codes": "^2.3.0",
     "reflect-metadata": "^0.2.2",
     "rxjs": "^7.8.2",
-    "tsx": "^4.22.3"
+    "tsx": "^4.22.4"
   }
 }
