@@ -27,8 +27,8 @@ This is _by far_ the easiest way to keep your environment consistent across diff
 
 If not using mise, make sure you have:
 
-- node 24+ installed (v24.15.0 used)
-- pnpm 11+ installed (v11.0.8 used)
+- node 26+ installed
+- pnpm 11+ installed
 
 Then, install dependencies with:
 

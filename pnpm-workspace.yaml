@@ -16,5 +16,5 @@ minimumReleaseAgeExclude:
   - lefthook-windows-x64@2.1.8
   - lefthook@2.1.8
   - tsx@4.22.3
-  - '@mkvlrn/config@4.0.3'
+  - '@mkvlrn/config@4.0.3 || 4.0.4'
   - envalid@8.2.0
