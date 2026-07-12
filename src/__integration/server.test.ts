@@ -8,7 +8,7 @@ import { AppModule } from "#/modules/app/app.module";
 
 let app: INestApplication;
 let server: Agent;
-const fetchSpy = vi.spyOn(global, "fetch");
+const fetchSpy = vi.spyOn(globalThis, "fetch");
 
 beforeEach(async () => {
   const module = await Test.createTestingModule({
