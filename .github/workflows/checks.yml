@@ -17,7 +17,7 @@ jobs:
       - name: get mise cache directory
         shell: bash
         run: echo "MISE_CACHE_PATH=$(mise config show.cache.dir 2>/dev/null || echo ~/.local/cache/mise)" >> $GITHUB_ENV
-      - uses: actions/cache@v5
+      - uses: actions/cache@v6
         with:
           path: ${{ env.MISE_CACHE_PATH }}
           key: ${{ runner.os }}-mise-cache-${{ hashFiles('.mise/**') }}
@@ -25,7 +25,7 @@ jobs:
       - name: get pnpm store directory
         shell: bash
         run: echo "STORE_PATH=$(pnpm store path --silent)" >> $GITHUB_ENV
-      - uses: actions/cache@v5
+      - uses: actions/cache@v6
         with:
           path: ${{ env.STORE_PATH }}
           key: ${{ runner.os }}-pnpm-store-${{ hashFiles('**/pnpm-lock.yaml') }}
