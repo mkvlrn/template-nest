@@ -52,7 +52,7 @@
   },
   "dependencies": {
     "@mkvlrn/app-error": "^0.0.5",
-    "@mkvlrn/result": "^5.0.8",
+    "@mkvlrn/result": "^6.0.0",
     "@nestjs/common": "^11.1.28",
     "@nestjs/core": "^11.1.28",
     "@nestjs/platform-express": "^11.1.28",
