@@ -1,4 +1,4 @@
-import { err, ok } from "@mkvlrn/result";
+import { errResult, okResult } from "@mkvlrn/result";
 import { Test } from "@nestjs/testing";
 import { afterEach, beforeEach, describe, expect, test, vi } from "vitest";
 import { AppController } from "#/modules/app/app.controller";
@@ -34,7 +34,7 @@ describe("getTaskById", () => {
   test("should use the service's getTask method", async () => {
     // arrange
     const expectedGetTaskCalls = [[1]];
-    const getTaskSpy = vi.spyOn(service, "getTask").mockResolvedValue(ok(MOCK_TASK));
+    const getTaskSpy = vi.spyOn(service, "getTask").mockResolvedValue(okResult(MOCK_TASK));
     // act
     const response = await controller.getTaskById("1");
     // assert
@@ -46,7 +46,7 @@ describe("getTaskById", () => {
     // arrange
     const expectedError = apiError.create("externalApiError", "something broke");
     const expectedGetTaskCalls = [[1]];
-    const getTaskSpy = vi.spyOn(service, "getTask").mockResolvedValue(err(expectedError));
+    const getTaskSpy = vi.spyOn(service, "getTask").mockResolvedValue(errResult(expectedError));
     // act
     const act = () => controller.getTaskById("1");
     // assert

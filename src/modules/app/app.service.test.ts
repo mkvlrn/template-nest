@@ -1,4 +1,4 @@
-import { err, ok } from "@mkvlrn/result";
+import { errResult, okResult } from "@mkvlrn/result";
 import { afterEach, describe, expect, test, vi } from "vitest";
 import { AppService } from "#/modules/app/app.service";
 import type { JsonPlaceholderResponse } from "#/types/responses";
@@ -25,14 +25,16 @@ test("should return a task", async () => {
   // act
   const result = await service.getTask(5);
   // assert
-  expect(result).toStrictEqual(ok(expectedResponse));
+  expect(result).toStrictEqual(okResult(expectedResponse));
   expect(fetchSpy.mock.calls).toStrictEqual(expectedFetchCalls);
 });
 
 describe("should return error when", () => {
   test("response is 404", async () => {
     // arrange
-    const expectedError = err(apiError.create("resourceNotFound", "task with id 5 not found"));
+    const expectedError = errResult(
+      apiError.create("resourceNotFound", "task with id 5 not found"),
+    );
     const expectedFetchCalls = [[url]];
     fetchSpy = vi
       .spyOn(globalThis, "fetch")
@@ -46,7 +48,9 @@ describe("should return error when", () => {
 
   test("response is not ok and not 404", async () => {
     // arrange
-    const expectedError = err(apiError.create("externalApiError", "fetch failed with status 502"));
+    const expectedError = errResult(
+      apiError.create("externalApiError", "fetch failed with status 502"),
+    );
     const expectedFetchCalls = [[url]];
     fetchSpy = vi
       .spyOn(globalThis, "fetch")
@@ -61,7 +65,9 @@ describe("should return error when", () => {
   test("fetch itself throws", async () => {
     // arrange
     const innerError = new Error("something broke");
-    const expectedError = err(apiError.create("internalApiError", "something broke", innerError));
+    const expectedError = errResult(
+      apiError.create("internalApiError", "something broke", innerError),
+    );
     const expectedFetchCalls = [[url]];
     fetchSpy = vi.spyOn(globalThis, "fetch").mockRejectedValue(innerError);
     // act
