@@ -38,7 +38,7 @@
     "@biomejs/biome": "^2.5.5",
     "@commitlint/cli": "^21.2.1",
     "@commitlint/config-conventional": "^21.2.0",
-    "@mkvlrn/config": "jsr:^0.0.3",
+    "@mkvlrn/config": "npm:@jsr/mkvlrn__config@^0.1.9",
     "@nestjs/testing": "^11.1.28",
     "@types/express": "^5.0.6",
     "@types/node": "^26.1.1",
@@ -51,8 +51,8 @@
     "vitest": "^4.1.10"
   },
   "dependencies": {
-    "@mkvlrn/app-error": "jsr:^0.0.3",
-    "@mkvlrn/result": "jsr:^0.2.4",
+    "@mkvlrn/app-error": "npm:@jsr/mkvlrn__app-error@^0.1.2",
+    "@mkvlrn/result": "npm:@jsr/mkvlrn__result@^0.2.7",
     "@nestjs/common": "^11.1.28",
     "@nestjs/core": "^11.1.28",
     "@nestjs/platform-express": "^11.1.28",
