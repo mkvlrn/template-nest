@@ -29,7 +29,7 @@
     "#/*": "./src/*.ts"
   },
   "devDependencies": {
-    "@mkvlrn/config": "npm:@jsr/mkvlrn__config@0.2.0",
+    "@mkvlrn/config": "npm:@jsr/mkvlrn__config@0.2.1",
     "@nestjs/testing": "11.1.28",
     "@types/express": "5.0.6",
     "@types/node": "26.1.2",
@@ -41,8 +41,8 @@
     "vitest": "4.1.10"
   },
   "dependencies": {
-    "@mkvlrn/app-error": "npm:@jsr/mkvlrn__app-error@0.2.0",
-    "@mkvlrn/result": "npm:@jsr/mkvlrn__result@0.3.0",
+    "@mkvlrn/app-error": "npm:@jsr/mkvlrn__app-error@0.2.1",
+    "@mkvlrn/result": "npm:@jsr/mkvlrn__result@0.3.1",
     "@nestjs/common": "11.1.28",
     "@nestjs/core": "11.1.28",
     "@nestjs/platform-express": "11.1.28",
