@@ -26,7 +26,9 @@
     },
     {
       "matchDatasources": ["jsr"],
-      "sourceUrl": "https://jsr.io/{{{packageName}}}"
+      "datasourceTemplate": "npm",
+      "registryUrlTemplate": "https://npm.jsr.io",
+      "packageNameTemplate": "@jsr/{{namespace}}__{{package}}"
     }
   ],
   "customManagers": [
