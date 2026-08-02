@@ -23,6 +23,10 @@
     {
       "matchManagers": ["github-actions"],
       "groupName": "GitHub Actions"
+    },
+    {
+      "matchDatasources": ["jsr"],
+      "sourceUrl": "https://jsr.io/{{{packageName}}}"
     }
   ],
   "customManagers": [
