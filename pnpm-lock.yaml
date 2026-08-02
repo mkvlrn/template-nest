@@ -208,11 +208,11 @@ importers:
   .:
     dependencies:
       '@mkvlrn/app-error':
-        specifier: npm:@jsr/mkvlrn__app-error@0.2.0
-        version: '@jsr/mkvlrn__app-error@0.2.0'
+        specifier: npm:@jsr/mkvlrn__app-error@0.2.1
+        version: '@jsr/mkvlrn__app-error@0.2.1'
       '@mkvlrn/result':
-        specifier: npm:@jsr/mkvlrn__result@0.3.0
-        version: '@jsr/mkvlrn__result@0.3.0'
+        specifier: npm:@jsr/mkvlrn__result@0.3.1
+        version: '@jsr/mkvlrn__result@0.3.1'
       '@nestjs/common':
         specifier: 11.1.28
         version: 11.1.28(reflect-metadata@0.2.2)(rxjs@7.8.2)(supports-color@7.2.0)
@@ -236,8 +236,8 @@ importers:
         version: 1.16.0
     devDependencies:
       '@mkvlrn/config':
-        specifier: npm:@jsr/mkvlrn__config@0.2.0
-        version: '@jsr/mkvlrn__config@0.2.0'
+        specifier: npm:@jsr/mkvlrn__config@0.2.1
+        version: '@jsr/mkvlrn__config@0.2.1'
       '@nestjs/testing':
         specifier: 11.1.28
         version: 11.1.28(@nestjs/common@11.1.28(reflect-metadata@0.2.2)(rxjs@7.8.2)(supports-color@7.2.0))(@nestjs/core@11.1.28)(@nestjs/platform-express@11.1.28)
@@ -467,14 +467,14 @@ packages:
   '@jridgewell/trace-mapping@0.3.31':
     resolution: {integrity: sha512-zzNR+SdQSDJzc8joaeP8QQoCQr8NuYx2dIIytl1QeBEZHJ9uW6hebsrYgbz8hJwUQao3TWCMtmfV8Nu1twOLAw==}
 
-  '@jsr/mkvlrn__app-error@0.2.0':
-    resolution: {integrity: sha512-55oicDh7esMo3uSxpYFwFgBVPV6WK8vj+Be285A7UN4m5UJ+FGDEkPcxfQM0tRsriNzJL0aA4vBFTZGbmGG5HA==, tarball: https://npm.jsr.io/~/11/@jsr/mkvlrn__app-error/0.2.0.tgz}
+  '@jsr/mkvlrn__app-error@0.2.1':
+    resolution: {integrity: sha512-dZv2IkBcxkYcam+gYdnLRe2WO182BpKRf6Smo3EY8LWutp+RIcyXB5b62Dxov1AEZMwOLXm7pONcqsi3kZOwSg==, tarball: https://npm.jsr.io/~/11/@jsr/mkvlrn__app-error/0.2.1.tgz}
 
-  '@jsr/mkvlrn__config@0.2.0':
-    resolution: {integrity: sha512-D9BrO0DB7nPE3YcRxeCHiZnFFs6am6XKqmmbhjzj+LkKCt0Gn7DBymlhe7LowN+yE4ozE/oSydVSYvupQ41eEQ==, tarball: https://npm.jsr.io/~/11/@jsr/mkvlrn__config/0.2.0.tgz}
+  '@jsr/mkvlrn__config@0.2.1':
+    resolution: {integrity: sha512-DeTblNivf9cWZhmrUEuuswFIl17rNbdu6zMRXnCiBj4HE05ydZNIESkkZyBGx9aqu2YdErScyYEappjR3uSkBw==, tarball: https://npm.jsr.io/~/11/@jsr/mkvlrn__config/0.2.1.tgz}
 
-  '@jsr/mkvlrn__result@0.3.0':
-    resolution: {integrity: sha512-gt72A/2lVlx5i78yAEHuBfO5T0fcdS5yzfohCTHcfPL2KJ5j6jvc6dMWbUKcwAIKJaLO7kZlLEs9ptQNKPFbbA==, tarball: https://npm.jsr.io/~/11/@jsr/mkvlrn__result/0.3.0.tgz}
+  '@jsr/mkvlrn__result@0.3.1':
+    resolution: {integrity: sha512-5sDMzKJDdDnZ3V58r3kJ4Q71H9Mm18Xvc4noMCRdUG2KJh/qxmr6viglyXc0Is4UvfAKvbQT4b6d53Mtf5kLpw==, tarball: https://npm.jsr.io/~/11/@jsr/mkvlrn__result/0.3.1.tgz}
 
   '@lukeed/csprng@1.1.0':
     resolution: {integrity: sha512-Z7C/xXCiGWsg0KuKsHTKJxbWhpI3Vs5GwLfOean7MGyVFGqdRgBbAjOCh6u4bbjPc/8MJ2pZmK/0DLdCbivLDA==}
@@ -1735,13 +1735,13 @@ snapshots:
       '@jridgewell/resolve-uri': 3.1.2
       '@jridgewell/sourcemap-codec': 1.5.5
 
-  '@jsr/mkvlrn__app-error@0.2.0':
+  '@jsr/mkvlrn__app-error@0.2.1':
     dependencies:
       http-status-codes: 2.3.0
 
-  '@jsr/mkvlrn__config@0.2.0': {}
+  '@jsr/mkvlrn__config@0.2.1': {}
 
-  '@jsr/mkvlrn__result@0.3.0': {}
+  '@jsr/mkvlrn__result@0.3.1': {}
 
   '@lukeed/csprng@1.1.0': {}
 
