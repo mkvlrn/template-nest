@@ -33,6 +33,7 @@
       "datasourceTemplate": "github-releases"
     }
   ],
+  "minimumReleaseAge": "1 day",
   "prHourlyLimit": 0,
   "prConcurrentLimit": 0,
   "dependencyDashboard": true

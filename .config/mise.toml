@@ -1,7 +1,36 @@
 [tools]
-node = "26"
-pnpm = "11"
+biome = "2.5.6"
+cocogitto = "7.0.0"
+lefthook = "2.1.10"
+node = "24.18.1"
+pnpm = "11.19.0"
+
+[env]
+_.path = ["./node_modules/.bin"]
 
 [settings]
 disable_backends = ["asdf"]
 use_versions_host = false
+minimum_release_age = "1d"
+
+[tasks.dev]
+description = "Dev mode"
+run = "node --import=tsx --watch src/main.ts"
+[tasks.lint]
+description = "Check files with biome"
+run = "biome check --diagnostic-level=warn --no-errors-on-unmatched"
+[tasks.lint-fix]
+description = "Fix files with biome"
+run = "biome check --diagnostic-level=warn --no-errors-on-unmatched --write"
+[tasks.typecheck]
+description = "Run tsc"
+run = "tsc"
+[tasks.test]
+description = "Run vitest"
+run = "vitest --coverage"
+[tasks.test-staged]
+description = "Run vitest on staged files"
+run = "vitest related --bail=1 --reporter=github-actions"
+[tasks.test-ci]
+description = "Run vitest in ci mode"
+run = "vitest --bail=1 --reporter=github-actions"

@@ -1,22 +1,24 @@
 [commit-msg.commands]
-commitlint = { run = "pnpm commitlint -x @commitlint/config-conventional --edit $1" }
+cog-lint = { run = "cog verify --file {1}" }
 
 [pre-commit.commands]
-typecheck = { glob = "*.{ts,tsx}", run = "pnpm typecheck-staged {staged_files}" }
-lint = { glob = "*.{ts,tsx,json,jsonc}", run = "pnpm lint-check {staged_files}" }
-test = { glob = "*.{ts,tsx}", run = "pnpm test-staged {staged_files}" }
+typecheck = { glob = "*.{ts,tsx}", run = "mise typecheck" }
+lint = { glob = "*.{ts,tsx,json,jsonc}", run = "mise lint {staged_files}" }
+test = { glob = "*.{ts,tsx}", run = "mise test-staged {staged_files}" }
 
 [pre-push.commands]
-typecheck = { run = "pnpm typecheck" }
-lint = { run = "pnpm lint-check" }
-test = { run = "pnpm test-ci" }
+typecheck = { run = "mise typecheck" }
+lint = { run = "mise lint" }
+test = { run = "mise test-ci" }
 
 [post-checkout.commands]
 sync-mise = { run = "mise install" }
 clean-mise = { run = "mise prune -y" }
 sync-pnpm = { run = "pnpm install --frozen-lockfile" }
+sync-githooks = { run = "lefthook install" }
 
 [post-merge.commands]
 sync-mise = { run = "mise install" }
 clean-mise = { run = "mise prune -y" }
 sync-pnpm = { run = "pnpm install --frozen-lockfile" }
+sync-githooks = { run = "lefthook install" }

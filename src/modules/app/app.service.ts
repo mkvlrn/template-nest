@@ -10,6 +10,7 @@ export class AppService {
     try {
       const url = `https://jsonplaceholder.typicode.com/todos/${taskId}`;
       const response = await fetch(url);
+
       if (!response.ok) {
         if (response.status === StatusCodes.NOT_FOUND) {
           return errResult(apiError.create("resourceNotFound", `task with id ${taskId} not found`));
@@ -18,10 +19,13 @@ export class AppService {
           apiError.create("externalApiError", `fetch failed with status ${response.status}`),
         );
       }
+
       const result = await response.json();
+
       return okResult(result as JsonPlaceholderResponse);
     } catch (error) {
       const msg = (error as Error).message;
+
       return errResult(apiError.create("internalApiError", msg, error));
     }
   }

@@ -15,38 +15,28 @@
     "esm",
     "template"
   ],
-  "engines": {
-    "node": "26",
-    "pnpm": "11"
+  "devEngines": {
+    "runtime": {
+      "name": "node",
+      "version": "24.18.1"
+    },
+    "packageManager": {
+      "name": "pnpm",
+      "version": "11.19.0"
+    }
   },
   "imports": {
     "#/*": "./src/*.ts"
   },
-  "scripts": {
-    "dev": "node --import=tsx --watch ./src/main.ts",
-    "start": "node --import=tsx ./src/main.ts",
-    "lint": "pnpm lint-check --write",
-    "lint-check": "biome check --diagnostic-level=warn --no-errors-on-unmatched",
-    "typecheck": "tsc",
-    "typecheck-staged": "tsc-files",
-    "test": "vitest",
-    "test-staged": "vitest related --bail=1 --reporter=github-actions",
-    "test-ci": "vitest --bail=1 --reporter=github-actions",
-    "prepare": "lefthook install"
-  },
   "devDependencies": {
-    "@biomejs/biome": "2.5.6",
-    "@commitlint/cli": "21.2.1",
-    "@commitlint/config-conventional": "21.2.0",
     "@mkvlrn/config": "npm:@jsr/mkvlrn__config@0.2.0",
     "@nestjs/testing": "11.1.28",
     "@types/express": "5.0.6",
     "@types/node": "26.1.2",
     "@types/supertest": "7.2.1",
     "@vitest/coverage-v8": "4.1.10",
-    "lefthook": "2.1.10",
     "supertest": "7.2.2",
-    "tsc-files": "1.1.4",
+    "tsx": "4.23.1",
     "typescript": "7.0.2",
     "vitest": "4.1.10"
   },
@@ -56,10 +46,9 @@
     "@nestjs/common": "11.1.28",
     "@nestjs/core": "11.1.28",
     "@nestjs/platform-express": "11.1.28",
-    "envalid": "8.2.0",
     "http-status-codes": "2.3.0",
     "reflect-metadata": "0.2.2",
     "rxjs": "7.8.2",
-    "tsx": "4.23.1"
+    "varlock": "1.16.0"
   }
 }
