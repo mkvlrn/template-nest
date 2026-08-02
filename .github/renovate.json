@@ -23,12 +23,6 @@
     {
       "matchManagers": ["github-actions"],
       "groupName": "GitHub Actions"
-    },
-    {
-      "matchDatasources": ["jsr"],
-      "datasourceTemplate": "npm",
-      "registryUrlTemplate": "https://npm.jsr.io",
-      "packageNameTemplate": "@jsr/{{namespace}}__{{package}}"
     }
   ],
   "customManagers": [
