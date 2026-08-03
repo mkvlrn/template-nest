@@ -236,8 +236,8 @@ importers:
         version: 1.16.0
     devDependencies:
       '@mkvlrn/config':
-        specifier: npm:@jsr/mkvlrn__config@0.2.1
-        version: '@jsr/mkvlrn__config@0.2.1'
+        specifier: npm:@jsr/mkvlrn__config@0.3.0
+        version: '@jsr/mkvlrn__config@0.3.0'
       '@nestjs/testing':
         specifier: 11.1.28
         version: 11.1.28(@nestjs/common@11.1.28(reflect-metadata@0.2.2)(rxjs@7.8.2)(supports-color@7.2.0))(@nestjs/core@11.1.28)(@nestjs/platform-express@11.1.28)
@@ -470,8 +470,8 @@ packages:
   '@jsr/mkvlrn__app-error@0.2.1':
     resolution: {integrity: sha512-dZv2IkBcxkYcam+gYdnLRe2WO182BpKRf6Smo3EY8LWutp+RIcyXB5b62Dxov1AEZMwOLXm7pONcqsi3kZOwSg==, tarball: https://npm.jsr.io/~/11/@jsr/mkvlrn__app-error/0.2.1.tgz}
 
-  '@jsr/mkvlrn__config@0.2.1':
-    resolution: {integrity: sha512-DeTblNivf9cWZhmrUEuuswFIl17rNbdu6zMRXnCiBj4HE05ydZNIESkkZyBGx9aqu2YdErScyYEappjR3uSkBw==, tarball: https://npm.jsr.io/~/11/@jsr/mkvlrn__config/0.2.1.tgz}
+  '@jsr/mkvlrn__config@0.3.0':
+    resolution: {integrity: sha512-FT0uXQeWUViX+RIXM2LZbRMcxRhgh75hF4v+ocvDFyCFmMnHhuQrZVfJ5eydu71N8OW3t0ShwY8FYq/CtKzDng==, tarball: https://npm.jsr.io/~/11/@jsr/mkvlrn__config/0.3.0.tgz}
 
   '@jsr/mkvlrn__result@0.3.1':
     resolution: {integrity: sha512-5sDMzKJDdDnZ3V58r3kJ4Q71H9Mm18Xvc4noMCRdUG2KJh/qxmr6viglyXc0Is4UvfAKvbQT4b6d53Mtf5kLpw==, tarball: https://npm.jsr.io/~/11/@jsr/mkvlrn__result/0.3.1.tgz}
@@ -1739,7 +1739,7 @@ snapshots:
     dependencies:
       http-status-codes: 2.3.0
 
-  '@jsr/mkvlrn__config@0.2.1': {}
+  '@jsr/mkvlrn__config@0.3.0': {}
 
   '@jsr/mkvlrn__result@0.3.1': {}
 

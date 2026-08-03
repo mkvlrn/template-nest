@@ -4,6 +4,8 @@
     "noEmit": true,
     "paths": {
       "#/*": ["./src/*"]
-    }
+    },
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true
   }
 }
