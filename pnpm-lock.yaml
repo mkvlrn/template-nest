@@ -208,11 +208,11 @@ importers:
   .:
     dependencies:
       '@mkvlrn/app-error':
-        specifier: npm:@jsr/mkvlrn__app-error@0.2.1
-        version: '@jsr/mkvlrn__app-error@0.2.1'
+        specifier: npm:@jsr/mkvlrn__app-error@0.4.0
+        version: '@jsr/mkvlrn__app-error@0.4.0'
       '@mkvlrn/result':
-        specifier: npm:@jsr/mkvlrn__result@0.3.1
-        version: '@jsr/mkvlrn__result@0.3.1'
+        specifier: npm:@jsr/mkvlrn__result@0.3.2
+        version: '@jsr/mkvlrn__result@0.3.2'
       '@nestjs/common':
         specifier: 11.1.28
         version: 11.1.28(reflect-metadata@0.2.2)(rxjs@7.8.2)(supports-color@7.2.0)
@@ -222,9 +222,6 @@ importers:
       '@nestjs/platform-express':
         specifier: 11.1.28
         version: 11.1.28(@nestjs/common@11.1.28(reflect-metadata@0.2.2)(rxjs@7.8.2)(supports-color@7.2.0))(@nestjs/core@11.1.28)(supports-color@7.2.0)
-      http-status-codes:
-        specifier: 2.3.0
-        version: 2.3.0
       reflect-metadata:
         specifier: 0.2.2
         version: 0.2.2
@@ -236,8 +233,8 @@ importers:
         version: 1.16.0
     devDependencies:
       '@mkvlrn/config':
-        specifier: npm:@jsr/mkvlrn__config@0.3.0
-        version: '@jsr/mkvlrn__config@0.3.0'
+        specifier: npm:@jsr/mkvlrn__config@0.3.1
+        version: '@jsr/mkvlrn__config@0.3.1'
       '@nestjs/testing':
         specifier: 11.1.28
         version: 11.1.28(@nestjs/common@11.1.28(reflect-metadata@0.2.2)(rxjs@7.8.2)(supports-color@7.2.0))(@nestjs/core@11.1.28)(@nestjs/platform-express@11.1.28)
@@ -257,14 +254,14 @@ importers:
         specifier: 7.2.2
         version: 7.2.2(supports-color@7.2.0)
       tsx:
-        specifier: 4.23.1
-        version: 4.23.1
+        specifier: 4.23.5
+        version: 4.23.5
       typescript:
         specifier: 7.0.2
         version: 7.0.2
       vitest:
         specifier: 4.1.10
-        version: 4.1.10(@types/node@26.1.2)(@vitest/coverage-v8@4.1.10)(vite@8.2.0(@types/node@26.1.2)(esbuild@0.28.1)(tsx@4.23.1))
+        version: 4.1.10(@types/node@26.1.2)(@vitest/coverage-v8@4.1.10)(vite@8.2.0(@types/node@26.1.2)(esbuild@0.28.1)(tsx@4.23.5))
 
 packages:
 
@@ -467,14 +464,14 @@ packages:
   '@jridgewell/trace-mapping@0.3.31':
     resolution: {integrity: sha512-zzNR+SdQSDJzc8joaeP8QQoCQr8NuYx2dIIytl1QeBEZHJ9uW6hebsrYgbz8hJwUQao3TWCMtmfV8Nu1twOLAw==}
 
-  '@jsr/mkvlrn__app-error@0.2.1':
-    resolution: {integrity: sha512-dZv2IkBcxkYcam+gYdnLRe2WO182BpKRf6Smo3EY8LWutp+RIcyXB5b62Dxov1AEZMwOLXm7pONcqsi3kZOwSg==, tarball: https://npm.jsr.io/~/11/@jsr/mkvlrn__app-error/0.2.1.tgz}
+  '@jsr/mkvlrn__app-error@0.4.0':
+    resolution: {integrity: sha512-kYzlMi7bfDUhNYOmem5lRkupIXgkgEKo0PgAyfvFZjjDJfUIoIUg3kGPCukgnv2PT8N0ezwbATHY4s1xXDHwAg==, tarball: https://npm.jsr.io/~/11/@jsr/mkvlrn__app-error/0.4.0.tgz}
 
-  '@jsr/mkvlrn__config@0.3.0':
-    resolution: {integrity: sha512-FT0uXQeWUViX+RIXM2LZbRMcxRhgh75hF4v+ocvDFyCFmMnHhuQrZVfJ5eydu71N8OW3t0ShwY8FYq/CtKzDng==, tarball: https://npm.jsr.io/~/11/@jsr/mkvlrn__config/0.3.0.tgz}
+  '@jsr/mkvlrn__config@0.3.1':
+    resolution: {integrity: sha512-G5K8meXpuDVhS6M6dWYMPiNt4AXU327ESW//hSuDWvlaJ9L7DAprGpJM0JvPEp6K95kuWyy1DOo0PnwHCQgMTA==, tarball: https://npm.jsr.io/~/11/@jsr/mkvlrn__config/0.3.1.tgz}
 
-  '@jsr/mkvlrn__result@0.3.1':
-    resolution: {integrity: sha512-5sDMzKJDdDnZ3V58r3kJ4Q71H9Mm18Xvc4noMCRdUG2KJh/qxmr6viglyXc0Is4UvfAKvbQT4b6d53Mtf5kLpw==, tarball: https://npm.jsr.io/~/11/@jsr/mkvlrn__result/0.3.1.tgz}
+  '@jsr/mkvlrn__result@0.3.2':
+    resolution: {integrity: sha512-XngGDQ3UJxAszCc+YvHOX4OzMMiTy/rh/NtaqxB2ycVwE8VjqMkZiPgecp5ciX3PT+LKenfnpmUWgp57UASoRQ==, tarball: https://npm.jsr.io/~/11/@jsr/mkvlrn__result/0.3.2.tgz}
 
   '@lukeed/csprng@1.1.0':
     resolution: {integrity: sha512-Z7C/xXCiGWsg0KuKsHTKJxbWhpI3Vs5GwLfOean7MGyVFGqdRgBbAjOCh6u4bbjPc/8MJ2pZmK/0DLdCbivLDA==}
@@ -1110,9 +1107,6 @@ packages:
     resolution: {integrity: sha512-4FbRdAX+bSdmo4AUFuS0WNiPz8NgFt+r8ThgNWmlrjQjt1Q7ZR9+zTlce2859x4KSXrwIsaeTqDoKQmtP8pLmQ==}
     engines: {node: '>= 0.8'}
 
-  http-status-codes@2.3.0:
-    resolution: {integrity: sha512-RJ8XvFvpPM/Dmc5SV+dC4y5PCeOhT3x1Hq0NU3rjGeg5a/CqlhZ7uudknPwZFz4aeAXDcbAyaeP7GAo9lvngtA==}
-
   iconv-lite@0.7.3:
     resolution: {integrity: sha512-IKXpvIzjnC9XTAUbVBcMfGS0EPaIXtW6v+zr+RRp+hqULEpo0owZax6wyRwPOJbWbzjYspQwusTsfVr0ifh4uQ==}
     engines: {node: '>=0.10.0'}
@@ -1473,8 +1467,8 @@ packages:
   tslib@2.8.1:
     resolution: {integrity: sha512-oJFu94HQb+KVduSUQL7wnpmqnfmLsOA/nAh6b6EH0wCEoK0/mPeXU6c3wKDV83MkOuHPRHtSXKKU99IBazS/2w==}
 
-  tsx@4.23.1:
-    resolution: {integrity: sha512-GQHnkIfxyx1wYCOS/wonik5MVRZU9hi1TEZmzGZSCJB1y9YgoZ8H6itNE/u4suE+yLmOzuE4E5S4TZ/ZX2wcWQ==}
+  tsx@4.23.5:
+    resolution: {integrity: sha512-rw55FUaqOoI7RvlQwLbhO4nSDApnQ4/CykPuiQ/EPvtrX3WA9Ig55jIt9VvbBJbzJuj12ueRu4PMZ2SxPVbihg==}
     engines: {node: '>=18.0.0'}
     hasBin: true
 
@@ -1735,13 +1729,11 @@ snapshots:
       '@jridgewell/resolve-uri': 3.1.2
       '@jridgewell/sourcemap-codec': 1.5.5
 
-  '@jsr/mkvlrn__app-error@0.2.1':
-    dependencies:
-      http-status-codes: 2.3.0
+  '@jsr/mkvlrn__app-error@0.4.0': {}
 
-  '@jsr/mkvlrn__config@0.3.0': {}
+  '@jsr/mkvlrn__config@0.3.1': {}
 
-  '@jsr/mkvlrn__result@0.3.1': {}
+  '@jsr/mkvlrn__result@0.3.2': {}
 
   '@lukeed/csprng@1.1.0': {}
 
@@ -2010,7 +2002,7 @@ snapshots:
       obug: 2.1.4
       std-env: 4.2.0
       tinyrainbow: 3.1.1
-      vitest: 4.1.10(@types/node@26.1.2)(@vitest/coverage-v8@4.1.10)(vite@8.2.0(@types/node@26.1.2)(esbuild@0.28.1)(tsx@4.23.1))
+      vitest: 4.1.10(@types/node@26.1.2)(@vitest/coverage-v8@4.1.10)(vite@8.2.0(@types/node@26.1.2)(esbuild@0.28.1)(tsx@4.23.5))
 
   '@vitest/expect@4.1.10':
     dependencies:
@@ -2021,13 +2013,13 @@ snapshots:
       chai: 6.2.2
       tinyrainbow: 3.1.1
 
-  '@vitest/mocker@4.1.10(vite@8.2.0(@types/node@26.1.2)(esbuild@0.28.1)(tsx@4.23.1))':
+  '@vitest/mocker@4.1.10(vite@8.2.0(@types/node@26.1.2)(esbuild@0.28.1)(tsx@4.23.5))':
     dependencies:
       '@vitest/spy': 4.1.10
       estree-walker: 3.0.3
       magic-string: 0.30.21
     optionalDependencies:
-      vite: 8.2.0(@types/node@26.1.2)(esbuild@0.28.1)(tsx@4.23.1)
+      vite: 8.2.0(@types/node@26.1.2)(esbuild@0.28.1)(tsx@4.23.5)
 
   '@vitest/pretty-format@4.1.10':
     dependencies:
@@ -2344,8 +2336,6 @@ snapshots:
       setprototypeof: 1.2.0
       statuses: 2.0.2
       toidentifier: 1.0.1
-
-  http-status-codes@2.3.0: {}
 
   iconv-lite@0.7.3:
     dependencies:
@@ -2698,7 +2688,7 @@ snapshots:
 
   tslib@2.8.1: {}
 
-  tsx@4.23.1:
+  tsx@4.23.5:
     dependencies:
       esbuild: 0.28.1
     optionalDependencies:
@@ -2756,7 +2746,7 @@ snapshots:
 
   vary@1.1.2: {}
 
-  vite@8.2.0(@types/node@26.1.2)(esbuild@0.28.1)(tsx@4.23.1):
+  vite@8.2.0(@types/node@26.1.2)(esbuild@0.28.1)(tsx@4.23.5):
     dependencies:
       lightningcss: 1.33.0
       picomatch: 4.0.5
@@ -2767,12 +2757,12 @@ snapshots:
       '@types/node': 26.1.2
       esbuild: 0.28.1
       fsevents: 2.3.3
-      tsx: 4.23.1
+      tsx: 4.23.5
 
-  vitest@4.1.10(@types/node@26.1.2)(@vitest/coverage-v8@4.1.10)(vite@8.2.0(@types/node@26.1.2)(esbuild@0.28.1)(tsx@4.23.1)):
+  vitest@4.1.10(@types/node@26.1.2)(@vitest/coverage-v8@4.1.10)(vite@8.2.0(@types/node@26.1.2)(esbuild@0.28.1)(tsx@4.23.5)):
     dependencies:
       '@vitest/expect': 4.1.10
-      '@vitest/mocker': 4.1.10(vite@8.2.0(@types/node@26.1.2)(esbuild@0.28.1)(tsx@4.23.1))
+      '@vitest/mocker': 4.1.10(vite@8.2.0(@types/node@26.1.2)(esbuild@0.28.1)(tsx@4.23.5))
       '@vitest/pretty-format': 4.1.10
       '@vitest/runner': 4.1.10
       '@vitest/snapshot': 4.1.10
@@ -2789,7 +2779,7 @@ snapshots:
       tinyexec: 1.2.4
       tinyglobby: 0.2.17
       tinyrainbow: 3.1.1
-      vite: 8.2.0(@types/node@26.1.2)(esbuild@0.28.1)(tsx@4.23.1)
+      vite: 8.2.0(@types/node@26.1.2)(esbuild@0.28.1)(tsx@4.23.5)
       why-is-node-running: 2.3.0
     optionalDependencies:
       '@types/node': 26.1.2

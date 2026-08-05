@@ -1,6 +1,6 @@
+import { httpStatus } from "@mkvlrn/app-error";
 import type { ArgumentsHost } from "@nestjs/common";
 import type { HttpAdapterHost } from "@nestjs/core";
-import { StatusCodes } from "http-status-codes";
 import { expect, test, vi } from "vitest";
 import { GlobalFilter } from "#/filters/global.filter";
 import { apiError } from "#/util/api-error";
@@ -35,10 +35,10 @@ test("should handle generic Error", () => {
   expect(replySpy).toHaveBeenCalledWith(
     rawResponse,
     {
-      code: "unspecifiedError",
+      errorCode: "unspecifiedError",
       message: "fail",
       details: undefined,
     },
-    StatusCodes.INTERNAL_SERVER_ERROR,
+    httpStatus.codeFromName("InternalServerError"),
   );
 });

@@ -15,14 +15,16 @@ export class GlobalFilter implements ExceptionFilter {
     const response = host.switchToHttp().getResponse();
     let httpStatus = HttpStatus.INTERNAL_SERVER_ERROR;
     let responseBody = {
-      code: "unspecifiedError",
+      errorCode: "unspecifiedError",
       message: (exception as Error).message,
       details: (exception as Error).cause,
     };
+
     if (apiError.is(exception)) {
       httpStatus = Number(exception.statusCode);
       responseBody = exception.serialize();
     }
+
     httpAdapter.reply(response, responseBody, httpStatus);
   }
 }

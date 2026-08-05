@@ -1,9 +1,9 @@
 import { AppError } from "@mkvlrn/app-error";
 
 export const apiError = AppError.define({
-  resourceNotFound: "NOT_FOUND",
-  externalApiError: "BAD_GATEWAY",
-  internalApiError: "INTERNAL_SERVER_ERROR",
+  resourceNotFound: "NotFound",
+  externalApiError: "BadGateway",
+  internalApiError: "InternalServerError",
 });
 
 export type ApiError = ReturnType<typeof apiError.create>;

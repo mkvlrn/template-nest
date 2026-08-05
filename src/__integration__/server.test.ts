@@ -43,7 +43,10 @@ test("GET /tasks/1 should return 200", async () => {
 test("GET /tasks/-1 should return 404", async () => {
   // arrange
   const expectedResponse = {
-    code: "resourceNotFound",
+    errorCode: "resourceNotFound",
+    statusCode: 404,
+    statusName: "NotFound",
+    statusPhrase: "Not Found",
     message: "task with id -1 not found",
   };
   fetchSpy.mockResolvedValue(

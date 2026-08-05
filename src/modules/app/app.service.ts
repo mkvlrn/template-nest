@@ -1,6 +1,6 @@
+import { httpStatus } from "@mkvlrn/app-error";
 import { errResult, okResult, type ResultAsync } from "@mkvlrn/result";
 import { Injectable } from "@nestjs/common";
-import { StatusCodes } from "http-status-codes";
 import type { JsonPlaceholderResponse } from "#/types/responses";
 import { type ApiError, apiError } from "#/util/api-error";
 
@@ -12,7 +12,7 @@ export class AppService {
       const response = await fetch(url);
 
       if (!response.ok) {
-        if (response.status === StatusCodes.NOT_FOUND) {
+        if (response.status === httpStatus.codeFromName("NotFound")) {
           return errResult(apiError.create("resourceNotFound", `task with id ${taskId} not found`));
         }
         return errResult(
