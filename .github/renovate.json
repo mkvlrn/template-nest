@@ -6,6 +6,16 @@
     {
       "matchPackageNames": ["^@mkvlrn"],
       "minimumReleaseAge": null
+    },
+    {
+      "matchManagers": ["npm"],
+      "groupName": "npm dependencies",
+      "groupSlug": "npm"
+    },
+    {
+      "matchManagers": ["mise"],
+      "groupName": "mise tools",
+      "groupSlug": "mise"
     }
   ],
   "customManagers": [
