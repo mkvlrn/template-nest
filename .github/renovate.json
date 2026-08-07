@@ -1,33 +1,10 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "extends": ["config:best-practices"],
-  "ignorePresets": ["security:minimumReleaseAgeNpm"],
+  "extends": ["github>mkvlrn/ts-tools//packages/config/src/renovate"],
   "packageRules": [
     {
-      "matchPackageNames": ["^@mkvlrn"],
+      "matchPackageNames": ["^@mkvlrn", "^npm:@jsr/mkvlrn"],
       "minimumReleaseAge": null
-    },
-    {
-      "matchManagers": ["npm"],
-      "groupName": "npm dependencies",
-      "groupSlug": "npm"
-    },
-    {
-      "matchManagers": ["mise"],
-      "groupName": "mise tools",
-      "groupSlug": "mise"
     }
-  ],
-  "customManagers": [
-    {
-      "customType": "regex",
-      "managerFilePatterns": ["/(^|/|\\.)mise\\.toml$/"],
-      "matchStrings": ["\"github:(?<packageName>[^\"]+)\"\\s*=\\s*\"(?<currentValue>[^\"]+)\""],
-      "datasourceTemplate": "github-releases"
-    }
-  ],
-  "minimumReleaseAge": "1 day",
-  "prHourlyLimit": 0,
-  "prConcurrentLimit": 0,
-  "dependencyDashboard": true
+  ]
 }

@@ -2,7 +2,10 @@ allowBuilds:
   esbuild: true
 minimumReleaseAge: 1440
 minimumReleaseAgeExclude:
-  - "@jsr/mkvlrn__config"
-  - "@jsr/mkvlrn__result"
   - "@jsr/mkvlrn__app-error"
+  - "@mkvlrn/app-error"
+  - "@jsr/mkvlrn__result"
+  - "@mkvlrn/config"
+  - "@jsr/mkvlrn__config"
+  - "@mkvlrn/result"
 saveExact: true

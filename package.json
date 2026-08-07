@@ -22,21 +22,21 @@
     },
     "packageManager": {
       "name": "pnpm",
-      "version": "11.19.0"
+      "version": "11.20.0"
     }
   },
   "imports": {
     "#/*": "./src/*.ts"
   },
   "devDependencies": {
-    "@mkvlrn/config": "npm:@jsr/mkvlrn__config@0.3.1",
+    "@mkvlrn/config": "npm:@jsr/mkvlrn__config@0.4.3",
     "@nestjs/testing": "11.1.28",
     "@types/express": "5.0.6",
     "@types/node": "26.1.2",
     "@types/supertest": "7.2.1",
     "@vitest/coverage-v8": "4.1.10",
     "supertest": "7.2.2",
-    "tsx": "4.23.7",
+    "tsx": "4.23.9",
     "typescript": "7.0.2",
     "vitest": "4.1.10"
   },
