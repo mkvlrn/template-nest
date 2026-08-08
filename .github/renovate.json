@@ -3,7 +3,7 @@
   "extends": ["github>mkvlrn/ts-tools//packages/config/src/renovate"],
   "packageRules": [
     {
-      "matchPackageNames": ["/^@mkvlrn/", "/^npm:@jsr\\/mkvlrn/"],
+      "matchPackageNames": ["@mkvlrn/*"],
       "minimumReleaseAge": null
     }
   ]
