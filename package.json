@@ -48,6 +48,6 @@
     "@nestjs/platform-express": "11.1.28",
     "reflect-metadata": "0.2.2",
     "rxjs": "7.8.2",
-    "varlock": "1.16.0"
+    "varlock": "1.16.1"
   }
 }
