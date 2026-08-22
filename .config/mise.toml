@@ -1,7 +1,7 @@
 [tools]
 biome = "2.5.9"
 cocogitto = "7.0.0"
-lefthook = "2.1.10"
+lefthook = "2.1.11"
 node = "26.7.0"
 pnpm = "11.22.0"
 
