@@ -11,20 +11,8 @@ typecheck = { run = "mise typecheck" }
 lint = { run = "mise lint" }
 test = { run = "mise test-ci" }
 
-[post-checkout]
-piped = true
-
 [post-checkout.commands]
-1_sync-mise = { run = "mise install" }
-2_clean-mise = { run = "mise prune -y" }
-3_sync-pnpm = { run = "pnpm install --frozen-lockfile" }
-4_sync-githooks = { run = "lefthook install" }
-
-[post-merge]
-piped = true
+sync = { run = "mise sync-branch" }
 
 [post-merge.commands]
-1_sync-mise = { run = "mise install" }
-2_clean-mise = { run = "mise prune -y" }
-3_sync-pnpm = { run = "pnpm install --frozen-lockfile" }
-4_sync-githooks = { run = "lefthook install" }
+sync = { run = "mise sync-branch" }
