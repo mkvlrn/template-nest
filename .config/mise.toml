@@ -1,9 +1,9 @@
 [tools]
-biome = "2.5.7"
+biome = "2.5.9"
 cocogitto = "7.0.0"
 lefthook = "2.1.10"
-node = "24.19.0"
-pnpm = "11.20.0"
+node = "26.7.0"
+pnpm = "11.22.0"
 
 [hooks]
 postinstall = "lefthook install"

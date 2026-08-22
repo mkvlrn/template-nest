@@ -9,3 +9,4 @@ minimumReleaseAgeExclude:
   - "@jsr/mkvlrn__config"
   - "@mkvlrn/result"
 saveExact: true
+pmOnFail: ignore
