@@ -22,7 +22,7 @@
     },
     "packageManager": {
       "name": "pnpm",
-      "version": "11.22.0"
+      "version": "11.24.0"
     }
   },
   "imports": {
