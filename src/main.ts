@@ -9,6 +9,6 @@ const app = await NestFactory.create(AppModule);
 
 app.useGlobalFilters(new GlobalFilter(app.get(HttpAdapterHost)));
 
-await app.listen(ENV.port, () => {
+await app.listen(ENV.port, "0.0.0.0", () => {
   Logger.log(`Listening on port ${ENV.port}`, "DEBUG");
 });
