@@ -1,4 +1,4 @@
-FROM node:26.8.1-alpine@sha256:50c3b2f6988dfc307b86e5301d69611af31f4789bdf232863b07d3b02fe55ae0
+FROM node:26.8.1-alpine@sha256:2d984a15c9b54fd0aeb608b8e0d0d83529eb34d2966db27a1fb4f1edc3d298a3
 
 WORKDIR /app
 ENV NODE_ENV=production
