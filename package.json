@@ -32,13 +32,13 @@
     "@mkvlrn/config": "0.5.1",
     "@nestjs/testing": "12.0.1",
     "@types/express": "5.0.6",
-    "@types/node": "26.4.0",
+    "@types/node": "26.4.1",
     "@types/supertest": "7.2.1",
-    "@vitest/coverage-v8": "4.1.11",
+    "@vitest/coverage-v8": "5.0.0",
     "supertest": "7.2.2",
-    "tsx": "4.23.12",
+    "tsx": "4.23.13",
     "typescript": "7.0.2",
-    "vitest": "4.1.11"
+    "vitest": "5.0.0"
   },
   "dependencies": {
     "@mkvlrn/app-error": "0.4.4",
@@ -48,6 +48,6 @@
     "@nestjs/platform-express": "12.0.1",
     "reflect-metadata": "0.2.2",
     "rxjs": "7.8.2",
-    "varlock": "1.17.1"
+    "varlock": "1.18.0"
   }
 }
