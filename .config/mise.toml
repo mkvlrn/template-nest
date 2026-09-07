@@ -48,6 +48,6 @@ run = "vitest --bail=1 --reporter=github-actions"
 description = "Sync package manager deps"
 run = """
 mise prune -y
-bun install --frozen-lockfile
+pnpm install --frozen-lockfile
 lefthook install
 """
