@@ -5,7 +5,7 @@
   "license": "MIT",
   "private": true,
   "type": "module",
-  "author": "Mike Valeriano <mkvlrn@gmail.com>",
+  "author": "Mike Valeriano <dev@mkvlrn.cc>",
   "repository": {
     "type": "git",
     "url": "git@github.com:mkvlrn/template-nest"

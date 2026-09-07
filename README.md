@@ -1,57 +1,67 @@
 # template-nest
 
-![build](https://img.shields.io/github/actions/workflow/status/mkvlrn/template-nest/checks.yml?branch=main&style=flat&logo=github)
+[![ci](https://img.shields.io/github/actions/workflow/status/mkvlrn/template-nest/checks.yml?branch=main&style=flat&logo=github&label=ci)](https://github.com/mkvlrn/template-nest/actions/workflows/checks.yml?query=branch%3Amain)
 [![template](https://img.shields.io/badge/template-use_this_template-2ea44f?style=flat&logo=github)](https://github.com/mkvlrn/template-nest/generate)
 [![mise](https://mise-versions.jdx.dev/badge.svg)](https://mise.jdx.dev)
-![license](https://img.shields.io/github/license/mkvlrn/template-nest?style=flat)
+[![license](https://img.shields.io/github/license/mkvlrn/template-nest?style=flat)](https://github.com/mkvlrn/template-nest/blob/main/LICENSE)
 
-A sane, opinionated template for esm nestjs projects written in typescript that doesn't rely on transpilation - typescript is executed directly by node.
+A sane, opinionated template for ESM NestJS projects written in TypeScript without a transpilation step during development — TypeScript is executed directly by Node.js.
 
-> [!CAUTION]
-> This template requires [mise](https://mise.jdx.dev) to manage runtimes, tools, and tasks in a single workflow, providing a lightweight alternative to devcontainers.
+> [!NOTE]
+> This template includes an Arch Linux Dev Container based on [mise-devcontainers](https://github.com/mkvlrn/mise-devcontainers), providing a consistent development environment with [mise](https://mise.jdx.dev) preconfigured.
 >
-> You must [install mise](https://mise.jdx.dev/installing-mise.html) before starting. If you prefer a less opinionated setup, this template isn't for you.
+> `mise` manages the project-specific runtimes, tools, and tasks inside the container, so it does not need to be installed on the host.
 
 Uses, among other tools/packages:
 
-- [pnpm](https://github.com/pnpm/pnpm) as package manager for node
-- [biome](https://github.com/biomejs/biome) for code linting and formatting
-- [lefthook](https://github.com/evilmartians/lefthook) for git hooks
-- [cocogitto](https://github.com/cocogitto/cocogitto) for commit message linting
-- [vitest](https://github.com/vitest-dev/vitest) for testing
-- [tsx](https://github.com/privatenumber/tsx) for dev time typescript
+- [pnpm](https://github.com/pnpm/pnpm) as package manager
+- [Biome](https://github.com/biomejs/biome) for linting and formatting
+- [Lefthook](https://github.com/evilmartians/lefthook) for Git hooks
+- [Cocogitto](https://github.com/cocogitto/cocogitto) for commit message linting
+- [Vitest](https://github.com/vitest-dev/vitest) for testing
+- [tsx](https://github.com/privatenumber/tsx) for development-time TypeScript execution
 
 ## requirements and dependencies
 
-As noted at the top, you need [mise](https://mise.jdx.dev) to get started with this template. Run `mise install` in the project root to fetch the pinned versions of Node and other tools locally.
+To use the included Dev Container you need:
 
-This is _by far_ the easiest way to keep your environment consistent across different machines and team members, no matter the frequency of version updates.
+- Docker or a compatible container runtime
+- a Dev Container-compatible editor or the [Dev Container CLI](https://github.com/devcontainers/cli)
+- an SSH agent exposed through `SSH_AUTH_SOCK` with at least one key loaded
 
-Once the tooling is installed, you can install the Node dependencies with `pnpm install`.
+The SSH agent is forwarded into the container for Git authentication and commit signing. Private keys remain on the host.
+
+Once inside the container, install the project dependencies:
+
+```sh
+pnpm install
+```
+
+The project-specific runtimes and development tools are managed by `mise`.
+
+If you prefer not to use the Dev Container, install [mise](https://mise.jdx.dev) locally and run `mise install` before installing the project dependencies.
 
 > [!NOTE]
-> Git hooks are in place to make sure both the tooling managed by mise and the project dependencies are synced with each checkout and merge.
+> Git hooks keep the tooling managed by mise and the project dependencies synchronized after checkouts and merges.
 
 ## why use this template instead of nestjs-cli?
 
-- esm
-- biome is objectively faster and overall a better choice over eslint+prettier
-- no weird build-then-run-dev flow, node (with tsx loader) runs the code
-- people still using jest should... reconsider
-- any kind of code generation is ass, but nestjs's cli is _particularly_ terrible, so dependencies for that and the nest-cli.json file are gone - just add files yourself, I promise you'll be fine
-- the result pattern is used with the [@mkvlrn/result](https://www.npmjs.com/package/@mkvlrn/result) package - together with the global filter, error handling becomes a breeze; it is of course optional, but I think it's a good idea to just use it _everywhere_
-- overall it's just as opinionated, but a tad cleaner, stricter, and modernized
-
-Just check what is in it, it't not that different from what you'd get with nestjs-cli.
+- ESM
+- Biome instead of ESLint + Prettier
+- no build-then-run development flow; Node.js runs the TypeScript source using tsx
+- Vitest instead of Jest
+- no Nest CLI code-generation dependencies or `nest-cli.json`
+- the result pattern is available through [@mkvlrn/result](https://www.npmjs.com/package/@mkvlrn/result), together with the global filter, for explicit error handling
+- a smaller, stricter, and more modernized starting point while retaining the usual NestJS project structure
 
 ## subpath imports
 
-Subpath imports (`#/`) are used instead of relative paths, mapped via the `imports` field in `package.json` (allowing native Node resolution at runtime without extra build tools) and mirrored in `tsconfig.json` for IDE support.
+Subpath imports (`#/`) are used instead of relative paths. They are mapped through the `imports` field in `package.json`, allowing native Node.js resolution at runtime without additional build tooling, and mirrored in `tsconfig.json` for editor support.
 
-**Example**:
+Example:
 
 ```ts
-import { add } from "#/lib/math"; // this points to ./src/lib/math.ts
+import { add } from "#/lib/math"; // ./src/lib/math.ts
 ```
 
 ## running
@@ -62,36 +72,26 @@ Runs the project in watch mode.
 
 ### `mise test`
 
-Runs tests.
+Runs the tests.
 
 ### `mise lint-fix`
 
-Runs biome in fix mode to lint and format the project.
+Runs Biome in fix mode to lint and format the project.
 
 ### `mise typecheck`
 
-Runs type checking using tsc.
+Runs TypeScript type checking.
 
 ## ci
 
-This repository uses GitHub Actions for CI. The workflow is defined in `.github/workflows/checks.yml`.
+CI is provided by GitHub Actions through [`.github/workflows/checks.yml`](https://github.com/mkvlrn/template-nest/blob/main/.github/workflows/checks.yml).
 
-It automates:
+It runs:
 
-- **Linting & Formatting**: Running Biome.
-- **Type Checking**: Running TypeScript type checking.
-- **Testing**: Running Vitest, halting the workflow at the first test failure.
-
-## vscode
-
-You might want to install the recommended extensions in vscode. Search for **@recommended** in the extensions tab, they'll show up as _"workspace recommendations"_.
-
-If you have been using eslint and prettier and their extensions, you might want to disable eslint entirely and keep prettier as the formatter only for certain types of files.
-
-This is done by the `.vscode/settings.json` file.
-
-Debug configuration is also included for running the source directly with node.
+- Biome linting and formatting checks
+- TypeScript type checking
+- Vitest tests
 
 ## license
 
-MIT
+[MIT](https://github.com/mkvlrn/template-nest/blob/main/LICENSE)
