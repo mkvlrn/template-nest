@@ -19,24 +19,35 @@ minimum_release_age = "1d"
 [tasks.dev]
 description = "Dev mode"
 run = "node --import=tsx --watch src/main.ts"
+
 [tasks.lint]
 description = "Check files with biome"
 run = "biome check --diagnostic-level=warn --no-errors-on-unmatched"
+
 [tasks.lint-fix]
 description = "Fix files with biome"
 run = "biome check --diagnostic-level=warn --no-errors-on-unmatched --write"
+
 [tasks.typecheck]
 description = "Run tsc"
 run = "tsc"
+
 [tasks.test]
 description = "Run vitest"
 run = "vitest --coverage"
+
 [tasks.test-staged]
 description = "Run vitest on staged files"
 run = "vitest related --bail=1 --reporter=github-actions"
+
 [tasks.test-ci]
 description = "Run vitest in ci mode"
 run = "vitest --bail=1 --reporter=github-actions"
+
 [tasks.sync-branch]
 description = "Sync package manager deps"
-run = "mise install && mise prune -y && pnpm install --frozen-lockfile && lefthook install"
+run = """
+mise prune -y
+bun install --frozen-lockfile
+lefthook install
+"""
