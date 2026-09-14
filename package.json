@@ -18,11 +18,11 @@
   "devEngines": {
     "runtime": {
       "name": "node",
-      "version": "26.8.1"
+      "version": "26.8.2"
     },
     "packageManager": {
       "name": "pnpm",
-      "version": "12.3.4"
+      "version": "12.4.1"
     }
   },
   "imports": {
