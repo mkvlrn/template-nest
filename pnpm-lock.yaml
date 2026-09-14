@@ -9,8 +9,8 @@ importers:
   .:
     dependencies:
       '@mkvlrn/app-error':
-        specifier: 0.4.4
-        version: 0.4.4
+        specifier: 0.4.5
+        version: 0.4.5
       '@mkvlrn/result':
         specifier: 0.3.5
         version: 0.3.5
@@ -30,12 +30,12 @@ importers:
         specifier: 7.8.2
         version: 7.8.2
       varlock:
-        specifier: 1.18.0
-        version: 1.18.0
+        specifier: 1.19.0
+        version: 1.19.0
     devDependencies:
       '@mkvlrn/config':
-        specifier: 0.5.1
-        version: 0.5.1
+        specifier: 0.6.1
+        version: 0.6.1
       '@nestjs/testing':
         specifier: 12.0.1
         version: 12.0.1(@nestjs/common@12.0.1(reflect-metadata@0.2.2)(rxjs@7.8.2))(@nestjs/core@12.0.1)(@nestjs/platform-express@12.0.1)
@@ -43,8 +43,8 @@ importers:
         specifier: 5.0.6
         version: 5.0.6
       '@types/node':
-        specifier: 26.4.1
-        version: 26.4.1
+        specifier: 26.5.1
+        version: 26.5.1
       '@types/supertest':
         specifier: 7.2.1
         version: 7.2.1
@@ -62,7 +62,7 @@ importers:
         version: 7.0.2
       vitest:
         specifier: 5.0.0
-        version: 5.0.0(@types/node@26.4.1)(@vitest/coverage-v8@5.0.0)(vite@8.3.0(@types/node@26.4.1)(esbuild@0.28.2)(tsx@4.23.13))
+        version: 5.0.0(@types/node@26.5.1)(@vitest/coverage-v8@5.0.0)(vite@8.3.0(@types/node@26.5.1)(esbuild@0.28.2)(tsx@4.23.13))
 
 packages:
 
@@ -260,11 +260,11 @@ packages:
     resolution: {integrity: sha512-Z7C/xXCiGWsg0KuKsHTKJxbWhpI3Vs5GwLfOean7MGyVFGqdRgBbAjOCh6u4bbjPc/8MJ2pZmK/0DLdCbivLDA==}
     engines: {node: '>=8'}
 
-  '@mkvlrn/app-error@0.4.4':
-    resolution: {integrity: sha512-zLtiyvlbezCjvtntS2kQfDjPaX+y8maS7RUxMeCDuPXMXvMIIkUQpZLV00/OBt3zyzReqf6TNcG4P8cubSNH0Q==}
+  '@mkvlrn/app-error@0.4.5':
+    resolution: {integrity: sha512-D3x8x+3Fkae2h8cKGkhB/92Yq4IZvwXDTkz4xNc7u8PHOoe3LFYxxWesQsS6g2on9P37wYWeqw/kd2PanB4DcQ==}
 
-  '@mkvlrn/config@0.5.1':
-    resolution: {integrity: sha512-ltbSjkMxhRQB7p1IuOPmtJG+ZG4V+Y2LrP1vnMQBE1jlvBI3QMP52cUBf0RL0TIiPurC8xxoSeiAW4k7ArDS9w==}
+  '@mkvlrn/config@0.6.1':
+    resolution: {integrity: sha512-GvtNfyE1wyeNkzP+QuQ5/zTVqzpVgm6BZ3xjoMlCFz/B7G+SouXwkxW+WeUdymVKYLGYAIfPEHcIAcfpiipNew==}
 
   '@mkvlrn/result@0.3.5':
     resolution: {integrity: sha512-VkWOUNdUgObjb+z00Pcd2BzIH+ygXzpvBOVMwoNGyz6ulSybSkkqrFiF8xP91u3Opmh20xGF7uGX0ix77NxfeA==}
@@ -471,6 +471,9 @@ packages:
   '@types/node@26.4.1':
     resolution: {integrity: sha512-k97ENvZWtvA6yqz5/FS6a7duDgOPEeOQOc2iKS/nY6mX6qJUKtLnWzQS+Xj6tXweyj6ZcTAK2Qecetnvi9nCLA==}
 
+  '@types/node@26.5.1':
+    resolution: {integrity: sha512-CzNm2FezW4VR/LjG6yUdiEgLE/rAQ9Slj5gCu/C2VrdcW7I0ahNZ8DRbHT7zOZ6r3ONgd/bsQIeSaoDGrd1C6g==}
+
   '@types/qs@6.15.1':
     resolution: {integrity: sha512-GZHUBZR9hckSUhrxmp1nG6NwdpM9fCunJwyThLW1X3AyHgd9IlHb6VANpQQqDr2o/qQp6McZ3y/IA2rVzKzSbw==}
 
@@ -609,22 +612,22 @@ packages:
     cpu: [x64]
     os: [win32]
 
-  '@varlock/native-helper-darwin@1.18.0':
-    resolution: {integrity: sha512-O/Wn7G97N9RhdHrMNmDJtqH86+1vCKTzkThW7ICghvBtJslWAY4tpfDb32/AIh8OHOkIoHHmQ90ak6uovbZ2rw==}
+  '@varlock/native-helper-darwin@1.19.0':
+    resolution: {integrity: sha512-T8BxBz7SLTaEi/lYzn08HBc5f4Ko4wHnn8uKqO41obeFSPIiawMACV+DBtwrAILpMORMHEdGl1IUgkd/gYJDXQ==}
     os: [darwin]
 
-  '@varlock/native-helper-linux-arm64@1.18.0':
-    resolution: {integrity: sha512-oPEh5bFtBoRQlsLS0uou7vmuT3OeO0u6rvaNRuQO6P76b0hUSv/ZiNOEpUtS/e+iyJKIhl/0O1MrPq28Rxo9BQ==}
+  '@varlock/native-helper-linux-arm64@1.19.0':
+    resolution: {integrity: sha512-w0xJGQGqEbBDP/s6bjkI9O0QYjBfbGwecsIZ/izb7VswOrSCt8s17VRl+aOsm+ATROT4Mk73C/6hr3rZwg+QDw==}
     cpu: [arm64]
     os: [linux]
 
-  '@varlock/native-helper-linux-x64@1.18.0':
-    resolution: {integrity: sha512-eUz2vLIMAKwiTMXfJDbJxIgV1D/GAUH6oKHde7i0kr4F+JpbduRblwbI8Qe1XF3DeEB/OBEJrtvhu0gp6t5d/g==}
+  '@varlock/native-helper-linux-x64@1.19.0':
+    resolution: {integrity: sha512-stFot27mctUCAIDnfTtNsUyuariltvNbLKdOLCqn9Re7ksH6QYYyzE2R0bPR8jJZSjOpuhSYA4IHZf/ryRPKuA==}
     cpu: [x64]
     os: [linux]
 
-  '@varlock/native-helper-win32-x64@1.18.0':
-    resolution: {integrity: sha512-L95F5rrZtA6Fn1zjR2iIGBCHg+mA8tIylQOSo5TBZfAx0FlWd38jgwewm6b/nfYKeGrx/R6pSlSMDDuj1WsUMg==}
+  '@varlock/native-helper-win32-x64@1.19.0':
+    resolution: {integrity: sha512-3xtFmb9Ho4z4PwQCOo3RF5kgLWX5sj/7y8y0ZnjGbQptJBj4+tJC9tY7rHFuhK3nHhiPFS+f232lsyVSHj1Y7w==}
     os: [win32, linux]
 
   '@vitest/coverage-v8@5.0.0':
@@ -1257,6 +1260,9 @@ packages:
   undici-types@8.3.0:
     resolution: {integrity: sha512-j375ScV60dom+YkPFIfTLcOiPxkN/buHz5GobjLhixFuANaNs3C9l4GmrWqejgXWJ7BbJcFYpTEUkS1Ge8bpZQ==}
 
+  undici-types@8.9.0:
+    resolution: {integrity: sha512-KTDyRTYX8sWmKXAikPHHSyc63CRPETMctyjKFupcC6OBLXT3xsN0e9aF7m+mIXutFWpUXuedtowG7iLOzp0kQg==}
+
   unpipe@1.0.0:
     resolution: {integrity: sha512-pjy2bYhSsufwWlKwPc+l3cN7+wuJlK6uz0YdJEOlQDbl6jo/YlPi4mb8agUkVC8BF7V8NuzeyPNqRksA3hztKQ==}
     engines: {node: '>= 0.8'}
@@ -1264,8 +1270,8 @@ packages:
   util-deprecate@1.0.2:
     resolution: {integrity: sha512-EPD5q1uXyFxJpCrLnCc1nHnq3gOa6DZBocAIiI2TaSCA7VCJ1UJDMagCzIkXNsUYfD1daK//LTEQ8xiIbrHtcw==}
 
-  varlock@1.18.0:
-    resolution: {integrity: sha512-wGf3OuFwPXL/yxEu1yhao0pNhof1ubbpo8guQML6w3n4Rp2DLGH2PZFGgmwVmNiqULRntat7+0MEJLK2V0zIXw==}
+  varlock@1.19.0:
+    resolution: {integrity: sha512-AWXBRJq38E/ETuTCsa503iV5Eg4N54ZbbgTr0hdyNHA5XMDsMFOmNzzko0t5aj+KtVlaH/T7dH0MdPZJ0lIYNg==}
     engines: {bun: '>=1.3.3', node: '>=22.3.0'}
     hasBin: true
 
@@ -1473,9 +1479,9 @@ snapshots:
 
   '@lukeed/csprng@1.1.0': {}
 
-  '@mkvlrn/app-error@0.4.4': {}
+  '@mkvlrn/app-error@0.4.5': {}
 
-  '@mkvlrn/config@0.5.1': {}
+  '@mkvlrn/config@0.6.1': {}
 
   '@mkvlrn/result@0.3.5': {}
 
@@ -1632,6 +1638,10 @@ snapshots:
     dependencies:
       undici-types: 8.3.0
 
+  '@types/node@26.5.1':
+    dependencies:
+      undici-types: 8.9.0
+
   '@types/qs@6.15.1': {}
 
   '@types/range-parser@1.2.7': {}
@@ -1717,16 +1727,16 @@ snapshots:
   '@typescript/typescript-win32-x64@7.0.2':
     optional: true
 
-  '@varlock/native-helper-darwin@1.18.0':
+  '@varlock/native-helper-darwin@1.19.0':
     optional: true
 
-  '@varlock/native-helper-linux-arm64@1.18.0':
+  '@varlock/native-helper-linux-arm64@1.19.0':
     optional: true
 
-  '@varlock/native-helper-linux-x64@1.18.0':
+  '@varlock/native-helper-linux-x64@1.19.0':
     optional: true
 
-  '@varlock/native-helper-win32-x64@1.18.0':
+  '@varlock/native-helper-win32-x64@1.19.0':
     optional: true
 
   '@vitest/coverage-v8@5.0.0(vitest@5.0.0)':
@@ -1739,7 +1749,7 @@ snapshots:
       obug: 2.2.1
       std-env: 4.2.0
       tinyrainbow: 3.1.1
-      vitest: 5.0.0(@types/node@26.4.1)(@vitest/coverage-v8@5.0.0)(vite@8.3.0(@types/node@26.4.1)(esbuild@0.28.2)(tsx@4.23.13))
+      vitest: 5.0.0(@types/node@26.5.1)(@vitest/coverage-v8@5.0.0)(vite@8.3.0(@types/node@26.5.1)(esbuild@0.28.2)(tsx@4.23.13))
 
   '@vitest/istanbul-lib-coverage@1.0.1': {}
 
@@ -1747,14 +1757,14 @@ snapshots:
     dependencies:
       '@vitest/istanbul-lib-coverage': 1.0.1
 
-  '@vitest/mocker@5.0.0(vite@8.3.0(@types/node@26.4.1)(esbuild@0.28.2)(tsx@4.23.13))':
+  '@vitest/mocker@5.0.0(vite@8.3.0(@types/node@26.5.1)(esbuild@0.28.2)(tsx@4.23.13))':
     dependencies:
       '@jridgewell/trace-mapping': 0.3.31
       '@vitest/spy': 5.0.0
       estree-walker: 3.0.3
       magic-string: 1.3.1
     optionalDependencies:
-      vite: 8.3.0(@types/node@26.4.1)(esbuild@0.28.2)(tsx@4.23.13)
+      vite: 8.3.0(@types/node@26.5.1)(esbuild@0.28.2)(tsx@4.23.13)
 
   '@vitest/spy@5.0.0': {}
 
@@ -2420,20 +2430,22 @@ snapshots:
 
   undici-types@8.3.0: {}
 
+  undici-types@8.9.0: {}
+
   unpipe@1.0.0: {}
 
   util-deprecate@1.0.2: {}
 
-  varlock@1.18.0:
+  varlock@1.19.0:
     optionalDependencies:
-      '@varlock/native-helper-darwin': 1.18.0
-      '@varlock/native-helper-linux-arm64': 1.18.0
-      '@varlock/native-helper-linux-x64': 1.18.0
-      '@varlock/native-helper-win32-x64': 1.18.0
+      '@varlock/native-helper-darwin': 1.19.0
+      '@varlock/native-helper-linux-arm64': 1.19.0
+      '@varlock/native-helper-linux-x64': 1.19.0
+      '@varlock/native-helper-win32-x64': 1.19.0
 
   vary@1.1.2: {}
 
-  vite@8.3.0(@types/node@26.4.1)(esbuild@0.28.2)(tsx@4.23.13):
+  vite@8.3.0(@types/node@26.5.1)(esbuild@0.28.2)(tsx@4.23.13):
     dependencies:
       lightningcss: 1.33.0
       picomatch: 4.0.7
@@ -2441,15 +2453,15 @@ snapshots:
       rolldown: 1.2.8
       tinyglobby: 0.2.17
     optionalDependencies:
-      '@types/node': 26.4.1
+      '@types/node': 26.5.1
       esbuild: 0.28.2
       fsevents: 2.3.3
       tsx: 4.23.13
 
-  vitest@5.0.0(@types/node@26.4.1)(@vitest/coverage-v8@5.0.0)(vite@8.3.0(@types/node@26.4.1)(esbuild@0.28.2)(tsx@4.23.13)):
+  vitest@5.0.0(@types/node@26.5.1)(@vitest/coverage-v8@5.0.0)(vite@8.3.0(@types/node@26.5.1)(esbuild@0.28.2)(tsx@4.23.13)):
     dependencies:
       '@types/chai': 5.2.3
-      '@vitest/mocker': 5.0.0(vite@8.3.0(@types/node@26.4.1)(esbuild@0.28.2)(tsx@4.23.13))
+      '@vitest/mocker': 5.0.0(vite@8.3.0(@types/node@26.5.1)(esbuild@0.28.2)(tsx@4.23.13))
       chai: 6.2.2
       es-module-lexer: 2.3.2
       expect-type: 1.4.0
@@ -2460,10 +2472,10 @@ snapshots:
       tinybench: 6.1.4
       tinyexec: 1.3.0
       tinyglobby: 0.2.17
-      vite: 8.3.0(@types/node@26.4.1)(esbuild@0.28.2)(tsx@4.23.13)
+      vite: 8.3.0(@types/node@26.5.1)(esbuild@0.28.2)(tsx@4.23.13)
       why-is-node-running: 2.3.0
     optionalDependencies:
-      '@types/node': 26.4.1
+      '@types/node': 26.5.1
       '@vitest/coverage-v8': 5.0.0(vitest@5.0.0)
     transitivePeerDependencies:
       - msw
