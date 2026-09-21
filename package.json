@@ -30,24 +30,24 @@
   },
   "devDependencies": {
     "@mkvlrn/config": "0.6.1",
-    "@nestjs/testing": "12.0.1",
+    "@nestjs/testing": "12.0.3",
     "@types/express": "5.0.6",
-    "@types/node": "26.5.1",
+    "@types/node": "26.6.2",
     "@types/supertest": "7.2.1",
-    "@vitest/coverage-v8": "5.0.0",
+    "@vitest/coverage-v8": "5.0.1",
     "supertest": "7.2.2",
     "tsx": "4.23.13",
     "typescript": "7.0.2",
-    "vitest": "5.0.0"
+    "vitest": "5.0.1"
   },
   "dependencies": {
     "@mkvlrn/app-error": "0.4.5",
     "@mkvlrn/result": "0.3.5",
-    "@nestjs/common": "12.0.1",
-    "@nestjs/core": "12.0.1",
-    "@nestjs/platform-express": "12.0.1",
+    "@nestjs/common": "12.0.3",
+    "@nestjs/core": "12.0.3",
+    "@nestjs/platform-express": "12.0.3",
     "reflect-metadata": "0.2.2",
     "rxjs": "7.8.2",
-    "varlock": "1.19.0"
+    "varlock": "1.20.0"
   }
 }
