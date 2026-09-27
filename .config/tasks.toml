@@ -1,0 +1,49 @@
+[dev]
+description = "Dev mode"
+run = """
+mise exec -- node --watch src/main.ts
+"""
+
+[lint]
+description = "Check files with biome"
+run = """
+mise exec -- biome check --no-errors-on-unmatched
+"""
+
+[lint-fix]
+description = "Fix files with biome"
+run = """
+mise exec -- biome check --no-errors-on-unmatched --write
+"""
+
+[typecheck]
+description = "Run tsc"
+run = """
+mise exec -- tsc
+"""
+
+[test]
+description = "Run vitest"
+run = """
+mise exec -- vitest --coverage
+"""
+
+[test-staged]
+description = "Run vitest on staged files"
+run = """
+mise exec -- vitest related --bail=1 --reporter=github-actions
+"""
+
+[test-ci]
+description = "Run vitest in ci mode"
+run = """
+mise exec -- vitest --bail=1 --reporter=github-actions
+"""
+
+[sync-branch]
+description = "Sync package manager deps"
+run = """
+mise install
+mise prune -y
+mise exec -- pnpm install --frozen-lockfile
+"""
