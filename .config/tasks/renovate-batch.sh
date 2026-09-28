@@ -45,3 +45,7 @@ for branch in "${renovate_branches[@]}"; do
   echo "Merging $branch..."
   git merge --no-ff -m "chore(deps): merge Renovate update for $branch" "origin/$branch"
 done
+
+echo
+echo "Updating lockfile..."
+mise run lockfile-maintenance
