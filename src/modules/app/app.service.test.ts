@@ -5,7 +5,8 @@ import type { JsonPlaceholderResponse } from "#/types/responses";
 import { apiError } from "#/util/api-error";
 
 const service = new AppService();
-const url = "https://jsonplaceholder.typicode.com/todos/5";
+const taskId = 5;
+const url = `https://jsonplaceholder.typicode.com/todos/${taskId}`;
 let fetchSpy = vi.spyOn(globalThis, "fetch");
 
 afterEach(() => {
@@ -16,14 +17,14 @@ test("should return a task", async () => {
   // arrange
   const expectedResponse: JsonPlaceholderResponse = {
     userId: 1,
-    id: 5,
+    id: taskId,
     title: "Test task",
     completed: true,
   };
   const expectedFetchCalls = [[url]];
   fetchSpy.mockResolvedValue(Response.json(expectedResponse));
   // act
-  const result = await service.getTask(5);
+  const result = await service.getTask(taskId);
   // assert
   expect(result).toStrictEqual(okResult(expectedResponse));
   expect(fetchSpy.mock.calls).toStrictEqual(expectedFetchCalls);
@@ -33,14 +34,14 @@ describe("should return error when", () => {
   test("response is 404", async () => {
     // arrange
     const expectedError = errResult(
-      apiError.create("resourceNotFound", "task with id 5 not found"),
+      apiError.create("resourceNotFound", `task with id ${taskId} not found`),
     );
     const expectedFetchCalls = [[url]];
     fetchSpy = vi
       .spyOn(globalThis, "fetch")
       .mockResolvedValue(new Response(null, { status: 404, statusText: "NOT FOUND" }));
     // act
-    const result = await service.getTask(5);
+    const result = await service.getTask(taskId);
     // assert
     expect(result).toStrictEqual(expectedError);
     expect(fetchSpy.mock.calls).toStrictEqual(expectedFetchCalls);
@@ -56,7 +57,7 @@ describe("should return error when", () => {
       .spyOn(globalThis, "fetch")
       .mockResolvedValue(new Response("something broke", { status: 502, statusText: "MAYHEM" }));
     // act
-    const result = await service.getTask(5);
+    const result = await service.getTask(taskId);
     // assert
     expect(result).toStrictEqual(expectedError);
     expect(fetchSpy.mock.calls).toStrictEqual(expectedFetchCalls);
@@ -71,7 +72,7 @@ describe("should return error when", () => {
     const expectedFetchCalls = [[url]];
     fetchSpy = vi.spyOn(globalThis, "fetch").mockRejectedValue(innerError);
     // act
-    const result = await service.getTask(5);
+    const result = await service.getTask(taskId);
     // assert
     expect(result).toStrictEqual(expectedError);
     expect(fetchSpy.mock.calls).toStrictEqual(expectedFetchCalls);
