@@ -27,14 +27,21 @@ mapfile -t renovate_branches < <(
 )
 
 if [ -z "${renovate_branches[*]:-}" ]; then
-  echo "No open Renovate PRs to batch."
+  printf '\n\033[1;31m══════════════════════════════════════════\033[0m\n'
+  printf '\033[1;31m        NO RENOVATE PRs TO BATCH\033[0m\n'
+  printf '\033[1;31m══════════════════════════════════════════\033[0m\n\n'
   exit 0
 fi
 
-printf '\nRenovate PRs to batch:\n'
-printf '  %s\n' "${renovate_branches[@]}"
+printf '\n\033[1;32m╔══════════════════════════════════════════╗\033[0m\n'
+printf '\033[1;32m║          RENOVATE PRs TO BATCH           ║\033[0m\n'
+for branch in "${renovate_branches[@]}"; do
+  printf '\033[1;32m║  %-40s║\033[0m\n' "$branch"
+done
+printf '\033[1;32m╚══════════════════════════════════════════╝\033[0m\n\n'
 
 for branch in "${renovate_branches[@]}"; do
+  echo
   echo "Merging $branch..."
   git merge --no-ff -m "chore(deps): merge Renovate update for $branch" "origin/$branch"
 done
