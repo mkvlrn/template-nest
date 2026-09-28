@@ -2,8 +2,8 @@
 biome = "2.5.14"
 cocogitto = "7.0.0"
 lefthook = "2.1.14"
-node = "26.9.0"
-pnpm = "12.5.1"
+node = "26.10.0"
+pnpm = "12.6.0"
 
 [hooks]
 postinstall = "mise run postinstall-hook"
