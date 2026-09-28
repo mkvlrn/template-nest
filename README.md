@@ -66,19 +66,19 @@ import { add } from "#/lib/math"; // ./src/lib/math.ts
 
 ## running
 
-### `mise dev`
+### `mise run dev`
 
 Runs the project in watch mode.
 
-### `mise test`
+### `mise run test`
 
 Runs the tests.
 
-### `mise lint-fix`
+### `mise run lint-fix`
 
 Runs Biome in fix mode to lint and format the project.
 
-### `mise typecheck`
+### `mise run typecheck`
 
 Runs TypeScript type checking.
 

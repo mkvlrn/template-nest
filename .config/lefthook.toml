@@ -2,17 +2,17 @@
 cog-lint = { run = "mise exec -- cog verify --file {1}" }
 
 [pre-commit.commands]
-typecheck = { glob = "*.{ts,tsx}", run = "mise typecheck" }
-lint = { glob = "*.{ts,tsx,json,jsonc}", run = "mise lint {staged_files}" }
-test = { glob = "*.{ts,tsx}", run = "mise test-staged {staged_files}" }
+typecheck = { glob = "*.{ts,tsx}", run = "mise run typecheck" }
+lint = { glob = "*.{ts,tsx,json,jsonc}", run = "mise run lint -- {staged_files}" }
+test = { glob = "*.{ts,tsx}", run = "mise run test-staged -- {staged_files}" }
 
 [pre-push.commands]
-typecheck = { run = "mise typecheck" }
-lint = { run = "mise lint" }
-test = { run = "mise test-ci" }
+typecheck = { run = "mise run typecheck" }
+lint = { run = "mise run lint" }
+test = { run = "mise run test-ci" }
 
 [post-checkout.commands]
-sync = { run = "mise sync-branch" }
+sync = { run = "mise run sync-branch" }
 
 [post-merge.commands]
-sync = { run = "mise sync-branch" }
+sync = { run = "mise run sync-branch" }

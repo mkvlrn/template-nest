@@ -17,6 +17,6 @@ jobs:
       - uses: jdx/mise-action@c2a87611a18de5b3828c5652fe268e992400cb5c # v4
 
       - run: pnpm install
-      - run: mise typecheck
-      - run: mise lint
-      - run: mise test-ci
+      - run: mise run typecheck
+      - run: mise run lint
+      - run: mise run test-ci
