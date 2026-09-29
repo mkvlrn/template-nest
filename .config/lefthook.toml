@@ -1,5 +1,5 @@
 [commit-msg.commands]
-cog-lint = { run = "mise exec -- cog verify --file {1}" }
+commitlint = { run = "mise run commitlint {1}" }
 
 [pre-commit.commands]
 typecheck = { glob = "*.{ts,tsx}", run = "mise run typecheck" }

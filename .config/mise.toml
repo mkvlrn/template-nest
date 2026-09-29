@@ -1,7 +1,4 @@
 [tools]
-biome = "2.5.14"
-cocogitto = "7.0.0"
-lefthook = "2.1.14"
 node = "26.10.0"
 pnpm = "12.6.0"
 
