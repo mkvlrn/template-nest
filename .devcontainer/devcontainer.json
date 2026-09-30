@@ -1,7 +1,7 @@
 {
   "$schema": "https://raw.githubusercontent.com/devcontainers/spec/main/schemas/devContainer.schema.json",
   "name": "mise-devcontainer-archlinux-${localWorkspaceFolderBasename}",
-  "image": "ghcr.io/mkvlrn/mise-devcontainer-archlinux:current@sha256:6d72908d2158bf8e5840c74f40b7b6d9b66469519ad5df164bdb7ac65bf3e784",
+  "image": "ghcr.io/mkvlrn/mise-devcontainer-archlinux:current@sha256:c207756b557b789a0e74794b4ad74f2afa23692f928173940685a1eaa6cbc690",
   "containerUser": "root",
   "remoteUser": "dev",
   "privileged": true,
