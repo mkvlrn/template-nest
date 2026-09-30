@@ -30,8 +30,8 @@ importers:
         specifier: 7.8.2
         version: 7.8.2
       varlock:
-        specifier: 1.21.0
-        version: 1.21.0
+        specifier: 1.21.1
+        version: 1.21.1
     devDependencies:
       '@biomejs/biome':
         specifier: 2.5.14
@@ -778,22 +778,22 @@ packages:
     cpu: [x64]
     os: [win32]
 
-  '@varlock/native-helper-darwin@1.21.0':
-    resolution: {integrity: sha512-rPjYt5vrcGuKx5YblF1y8xLDChN8YTjgllzslkB4CJRXEjGAPye2r76FZH6bppLV1KCbU+TcIOWrWX/2+OhASw==}
+  '@varlock/native-helper-darwin@1.21.1':
+    resolution: {integrity: sha512-hh7lB6cO/qEVJTgPY5ebVicwnbM7ROkIWjOkZ+k6PYWaoyj+UrUTymF5nHkqzg0TaZ+EA5z/eboFoZhrbsOHGw==}
     os: [darwin]
 
-  '@varlock/native-helper-linux-arm64@1.21.0':
-    resolution: {integrity: sha512-NcinlqO9wmvhhC2cOYzFZVqYneuDhZY4nBY0NgknnBqDOv6orzT8MoV4cEbnGkEtHL1daTr7EyxZrA91oUYpFQ==}
+  '@varlock/native-helper-linux-arm64@1.21.1':
+    resolution: {integrity: sha512-ppN2UIrJKDVALBzZwVXzIokAch8j2eyeABEHZn5LkMS3auXBVdVVkqN9QPIe7/Ii91LIV5mwWMeVJrV1paTI5Q==}
     cpu: [arm64]
     os: [linux]
 
-  '@varlock/native-helper-linux-x64@1.21.0':
-    resolution: {integrity: sha512-vhiK600924a6RZ4M5BNqkPd/PFwhQJaw6/aBJsnLiLZgWo4f0Pa/4Mh31YALg5MYUFWZKgUEhM0mzGbVVllu+A==}
+  '@varlock/native-helper-linux-x64@1.21.1':
+    resolution: {integrity: sha512-jAbIyjBJ0gyyg4C95P7KXufXtCR/K624Gib/6CUasO6dBnYVJ0SpbK2Ym41jgDYlJuYgkLKJuUHSrGNcAflzcA==}
     cpu: [x64]
     os: [linux]
 
-  '@varlock/native-helper-win32-x64@1.21.0':
-    resolution: {integrity: sha512-412NhbNBL51yygJcqDDrJvZZk7BgbyrBy3CpiHQ2evzJi3LTlIeeVCA9FUtuzEH4Thf6vnbTTRsehihffUm07w==}
+  '@varlock/native-helper-win32-x64@1.21.1':
+    resolution: {integrity: sha512-HaEry0HnJPY+opHiNUgQvpQ1yFZMMIVmpLZExTinQXu9Im81aovoR1By6LQsx1H4qFDyeEqcq2glV74WzHCNyA==}
     os: [win32, linux]
 
   '@vitest/coverage-v8@5.0.2':
@@ -1621,8 +1621,8 @@ packages:
     resolution: {integrity: sha512-pjy2bYhSsufwWlKwPc+l3cN7+wuJlK6uz0YdJEOlQDbl6jo/YlPi4mb8agUkVC8BF7V8NuzeyPNqRksA3hztKQ==}
     engines: {node: '>= 0.8'}
 
-  varlock@1.21.0:
-    resolution: {integrity: sha512-Tc9UETRkEiSFh0LzWWgNKtPte4rEEvdaNP2/Llj7dT9LuHVYIdYnw6/mPi39ZOlRcCUFK1sm8VIP0qs1t6/hqQ==}
+  varlock@1.21.1:
+    resolution: {integrity: sha512-Qfy8/3DBEDlPcfQ8gR/Qs7YA5ERmUT2g0GqMPwz/uL00UqP8/heAAUGrwoBO8H6l4tWjPG35Ews680I78Ci0Aw==}
     engines: {bun: '>=1.3.3', node: '>=22.3.0'}
     hasBin: true
 
@@ -2260,16 +2260,16 @@ snapshots:
   '@typescript/typescript-win32-x64@7.0.2':
     optional: true
 
-  '@varlock/native-helper-darwin@1.21.0':
+  '@varlock/native-helper-darwin@1.21.1':
     optional: true
 
-  '@varlock/native-helper-linux-arm64@1.21.0':
+  '@varlock/native-helper-linux-arm64@1.21.1':
     optional: true
 
-  '@varlock/native-helper-linux-x64@1.21.0':
+  '@varlock/native-helper-linux-x64@1.21.1':
     optional: true
 
-  '@varlock/native-helper-win32-x64@1.21.0':
+  '@varlock/native-helper-win32-x64@1.21.1':
     optional: true
 
   '@vitest/coverage-v8@5.0.2(vitest@5.0.2)':
@@ -3115,12 +3115,12 @@ snapshots:
 
   unpipe@1.0.0: {}
 
-  varlock@1.21.0:
+  varlock@1.21.1:
     optionalDependencies:
-      '@varlock/native-helper-darwin': 1.21.0
-      '@varlock/native-helper-linux-arm64': 1.21.0
-      '@varlock/native-helper-linux-x64': 1.21.0
-      '@varlock/native-helper-win32-x64': 1.21.0
+      '@varlock/native-helper-darwin': 1.21.1
+      '@varlock/native-helper-linux-arm64': 1.21.1
+      '@varlock/native-helper-linux-x64': 1.21.1
+      '@varlock/native-helper-win32-x64': 1.21.1
 
   vary@1.1.2: {}
 
