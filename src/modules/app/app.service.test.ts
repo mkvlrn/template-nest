@@ -1,4 +1,4 @@
-import { errResult, okResult } from "@mkvlrn/result";
+import { Result } from "@mkvlrn/result";
 import { afterEach, describe, expect, test, vi } from "vitest";
 import { AppService } from "#/modules/app/app.service";
 import type { JsonPlaceholderResponse } from "#/types/responses";
@@ -26,14 +26,14 @@ test("should return a task", async () => {
   // act
   const result = await service.getTask(taskId);
   // assert
-  expect(result).toStrictEqual(okResult(expectedResponse));
+  expect(result).toStrictEqual(Result.ok(expectedResponse));
   expect(fetchSpy.mock.calls).toStrictEqual(expectedFetchCalls);
 });
 
 describe("should return error when", () => {
   test("response is 404", async () => {
     // arrange
-    const expectedError = errResult(
+    const expectedError = Result.err(
       apiError.create("resourceNotFound", `task with id ${taskId} not found`),
     );
     const expectedFetchCalls = [[url]];
@@ -49,7 +49,7 @@ describe("should return error when", () => {
 
   test("response is not ok and not 404", async () => {
     // arrange
-    const expectedError = errResult(
+    const expectedError = Result.err(
       apiError.create("externalApiError", "fetch failed with status 502"),
     );
     const expectedFetchCalls = [[url]];
@@ -66,7 +66,7 @@ describe("should return error when", () => {
   test("fetch itself throws", async () => {
     // arrange
     const innerError = new Error("something broke");
-    const expectedError = errResult(
+    const expectedError = Result.err(
       apiError.create("internalApiError", "something broke", innerError),
     );
     const expectedFetchCalls = [[url]];

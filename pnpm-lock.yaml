@@ -9,11 +9,11 @@ importers:
   .:
     dependencies:
       '@mkvlrn/app-error':
-        specifier: 0.4.5
-        version: 0.4.5
+        specifier: 0.4.7
+        version: 0.4.7
       '@mkvlrn/result':
-        specifier: 0.3.5
-        version: 0.3.5
+        specifier: 0.4.2
+        version: 0.4.2
       '@nestjs/common':
         specifier: 12.1.1
         version: 12.1.1(reflect-metadata@0.2.2)(rxjs@7.8.2)
@@ -43,8 +43,8 @@ importers:
         specifier: 21.2.3
         version: 21.2.3
       '@mkvlrn/config':
-        specifier: 0.9.0
-        version: 0.9.0
+        specifier: 0.9.2
+        version: 0.9.2
       '@nestjs/testing':
         specifier: 12.1.1
         version: 12.1.1(@nestjs/common@12.1.1(reflect-metadata@0.2.2)(rxjs@7.8.2))(@nestjs/core@12.1.1)(@nestjs/platform-express@12.1.1)
@@ -418,14 +418,14 @@ packages:
     resolution: {integrity: sha512-Z7C/xXCiGWsg0KuKsHTKJxbWhpI3Vs5GwLfOean7MGyVFGqdRgBbAjOCh6u4bbjPc/8MJ2pZmK/0DLdCbivLDA==}
     engines: {node: '>=8'}
 
-  '@mkvlrn/app-error@0.4.5':
-    resolution: {integrity: sha512-D3x8x+3Fkae2h8cKGkhB/92Yq4IZvwXDTkz4xNc7u8PHOoe3LFYxxWesQsS6g2on9P37wYWeqw/kd2PanB4DcQ==}
+  '@mkvlrn/app-error@0.4.7':
+    resolution: {integrity: sha512-3E7bnCgkA0QTwV5I8gc42sSRMHUFwKlTpPMinSrFQpxIjCA4Esa/Cc0ZkU3UNl1FssEP8Ys+eSSogirB36ZtHw==}
 
-  '@mkvlrn/config@0.9.0':
-    resolution: {integrity: sha512-XwpSme82appTU0+qummQA4Fl1nElMCy3F99fU46QvQZZuQYMfJtabnHlAIEfbS9Bc5ZwzqYQji3L3uwBWiJpfg==}
+  '@mkvlrn/config@0.9.2':
+    resolution: {integrity: sha512-e2jDLGNjnn3wt/IbGURE/G3rQs8/VuyUNn7705UUrBEcxkDfhXipaexWYYZMhT9ItRjIoFBw1rC1sgwXW252Kw==}
 
-  '@mkvlrn/result@0.3.5':
-    resolution: {integrity: sha512-VkWOUNdUgObjb+z00Pcd2BzIH+ygXzpvBOVMwoNGyz6ulSybSkkqrFiF8xP91u3Opmh20xGF7uGX0ix77NxfeA==}
+  '@mkvlrn/result@0.4.2':
+    resolution: {integrity: sha512-5qHbqmlw48q6rFmzW6MTuhSgSIY6ZcwfHtswECONSA8QdI2cX6/W2wbaZI/NExafoSOivE7Qb4tjt18yQobA7w==}
 
   '@nestjs/common@12.1.1':
     resolution: {integrity: sha512-foR+9SDz53vd4WXvN5UEXbcU0i/i9mf/zXqbAWlEDQlxAooS4kZoY5X/Zr2DsUJZaLPOk3kFQdu6EhbWrhAoDQ==}
@@ -2006,11 +2006,11 @@ snapshots:
 
   '@lukeed/csprng@1.1.0': {}
 
-  '@mkvlrn/app-error@0.4.5': {}
+  '@mkvlrn/app-error@0.4.7': {}
 
-  '@mkvlrn/config@0.9.0': {}
+  '@mkvlrn/config@0.9.2': {}
 
-  '@mkvlrn/result@0.3.5': {}
+  '@mkvlrn/result@0.4.2': {}
 
   '@nestjs/common@12.1.1(reflect-metadata@0.2.2)(rxjs@7.8.2)':
     dependencies:

@@ -1,5 +1,5 @@
 import { httpStatus } from "@mkvlrn/app-error";
-import { errResult, okResult, type ResultAsync } from "@mkvlrn/result";
+import { ResultAsync } from "@mkvlrn/result";
 import { Injectable } from "@nestjs/common";
 import type { JsonPlaceholderResponse } from "#/types/responses";
 import { type ApiError, apiError } from "#/util/api-error";
@@ -13,20 +13,22 @@ export class AppService {
 
       if (!response.ok) {
         if (response.status === httpStatus.codeFromName("NotFound")) {
-          return errResult(apiError.create("resourceNotFound", `task with id ${taskId} not found`));
+          return ResultAsync.err(
+            apiError.create("resourceNotFound", `task with id ${taskId} not found`),
+          );
         }
-        return errResult(
+        return ResultAsync.err(
           apiError.create("externalApiError", `fetch failed with status ${response.status}`),
         );
       }
 
       const result = await response.json();
 
-      return okResult(result as JsonPlaceholderResponse);
+      return ResultAsync.ok(result as JsonPlaceholderResponse);
     } catch (error) {
       const msg = (error as Error).message;
 
-      return errResult(apiError.create("internalApiError", msg, error));
+      return ResultAsync.err(apiError.create("internalApiError", msg, error));
     }
   }
 }
