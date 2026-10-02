@@ -44,6 +44,9 @@ The project-specific runtimes and development tools are managed by `mise`.
 If you do not use the Dev Container, install [mise](https://mise.jdx.dev) locally and run `mise install` before installing the project dependencies.
 
 > [!NOTE]
+> After mise installs the configured tools, the post-install hook installs project packages and then sets up the Lefthook Git hooks.
+
+> [!NOTE]
 > Git hooks keep the tooling managed by mise and the project dependencies synchronized after checkouts and merges.
 
 ## why use this template instead of nestjs-cli?
