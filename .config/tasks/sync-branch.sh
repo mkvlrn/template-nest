@@ -5,4 +5,3 @@ set -euo pipefail
 
 mise install
 mise prune -y
-mise exec -- pnpm install --frozen-lockfile
